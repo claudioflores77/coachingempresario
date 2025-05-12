@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Clock, TrendingUp, Heart, CheckCircle } from 'lucide-react';
 
@@ -40,7 +39,7 @@ const Results: React.FC = () => {
           <ResultCard
             icon={<CheckCircle className="h-12 w-12 mx-auto" />}
             title="Recuperación del Control"
-            value="100%"
+            value="97%"
             description="De nuestros clientes logran independizarse de la operativa diaria"
           />
           
