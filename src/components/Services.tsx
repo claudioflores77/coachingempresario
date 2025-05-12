@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Users, TrendingUp, LucideIcon, Brain, PresentationChart } from 'lucide-react';
+import { Users, TrendingUp, Brain, Presentation } from 'lucide-react';
 
 interface ServiceCardProps {
   title: string;
