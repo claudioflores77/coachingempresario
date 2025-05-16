@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Users, TrendingUp, Brain, Presentation, Layers, GraduationCap } from 'lucide-react';
+import { Users, TrendingUp, Brain, Presentation, Layers, GraduationCap, Search, FileDigit, ClipboardCheck, BarChart3, RefreshCcw } from 'lucide-react';
 
 interface ServiceCardProps {
   title: string;
@@ -91,31 +91,52 @@ const Services: React.FC = () => {
         </div>
 
         <div className="mt-16 bg-white p-8 md:p-12 rounded-lg shadow-lg">
-          <h3 className="text-2xl font-bold mb-6 text-center">Nuestro Proceso en Cuatro Etapas</h3>
+          <h3 className="text-2xl font-bold mb-6 text-center">Nuestro Proceso en Cinco Etapas</h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 rounded-full bg-brand-black text-white flex items-center justify-center mx-auto mb-4 text-xl font-bold">1</div>
               <h4 className="text-lg font-bold mb-2">Evaluación y Diagnóstico</h4>
               <p className="text-sm text-consulting-gray">Analizamos profundamente tu situación actual y tus principales desafíos.</p>
+              <div className="mt-4 text-brand-red">
+                <Search className="h-6 w-6 mx-auto" />
+              </div>
             </div>
 
             <div className="text-center">
               <div className="w-16 h-16 rounded-full bg-brand-black text-white flex items-center justify-center mx-auto mb-4 text-xl font-bold">2</div>
               <h4 className="text-lg font-bold mb-2">Diseño del Plan Personalizado</h4>
               <p className="text-sm text-consulting-gray">Creamos un plan estratégico a medida, priorizando acciones urgentes e importantes.</p>
+              <div className="mt-4 text-brand-red">
+                <FileDigit className="h-6 w-6 mx-auto" />
+              </div>
             </div>
 
             <div className="text-center">
               <div className="w-16 h-16 rounded-full bg-brand-black text-white flex items-center justify-center mx-auto mb-4 text-xl font-bold">3</div>
               <h4 className="text-lg font-bold mb-2">Implementación y Acompañamiento</h4>
               <p className="text-sm text-consulting-gray">Ejecutamos el plan con asesoría constante y ajustes en tiempo real.</p>
+              <div className="mt-4 text-brand-red">
+                <ClipboardCheck className="h-6 w-6 mx-auto" />
+              </div>
             </div>
 
             <div className="text-center">
               <div className="w-16 h-16 rounded-full bg-brand-black text-white flex items-center justify-center mx-auto mb-4 text-xl font-bold">4</div>
               <h4 className="text-lg font-bold mb-2">Medición de Resultados</h4>
               <p className="text-sm text-consulting-gray">Usamos herramientas y métricas específicas para ver el impacto tangible.</p>
+              <div className="mt-4 text-brand-red">
+                <BarChart3 className="h-6 w-6 mx-auto" />
+              </div>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 rounded-full bg-brand-black text-white flex items-center justify-center mx-auto mb-4 text-xl font-bold">5</div>
+              <h4 className="text-lg font-bold mb-2">Aseguramiento y Mejora Continua</h4>
+              <p className="text-sm text-consulting-gray">Implementamos sistemas para mantener los logros y seguir mejorando constantemente.</p>
+              <div className="mt-4 text-brand-red">
+                <RefreshCcw className="h-6 w-6 mx-auto" />
+              </div>
             </div>
           </div>
         </div>
