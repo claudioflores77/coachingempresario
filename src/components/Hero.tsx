@@ -57,7 +57,8 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>
+        {`
         .responsive-iframe-container {
           width: 100%;
           max-width: 853px;
@@ -71,7 +72,8 @@ const Hero: React.FC = () => {
             aspect-ratio: 16 / 9;
           }
         }
-      `}</style>
+        `}
+      </style>
     </section>
   );
 };
