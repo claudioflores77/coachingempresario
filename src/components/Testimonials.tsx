@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Star, MessageSquare } from 'lucide-react';
 
 interface Testimonial {
   id: number;
@@ -116,6 +115,18 @@ const Testimonials: React.FC = () => {
           >
             Ver más testimonios en Google Business Profile
           </a>
+          
+          <div className="mt-8">
+            <a 
+              href="https://api.whatsapp.com/send/?phone=5493624236611&text=Hola%2C+quiero+hacer+una+pregunta+&type=phone_number&app_absent=0"
+              className="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-all"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <MessageSquare className="mr-2 h-5 w-5" />
+              Pregúntanos ahora
+            </a>
+          </div>
         </div>
       </div>
     </section>

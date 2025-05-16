@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Users, TrendingUp, Brain, Presentation, Layers, GraduationCap, Search, FileDigit, ClipboardCheck, BarChart3, RefreshCcw } from 'lucide-react';
+import { Users, TrendingUp, Brain, Presentation, Layers, GraduationCap, Search, FileDigit, ClipboardCheck, BarChart3, RefreshCcw, MessageSquare } from 'lucide-react';
 
 interface ServiceCardProps {
   title: string;
@@ -139,6 +138,18 @@ const Services: React.FC = () => {
               </div>
             </div>
           </div>
+        </div>
+        
+        <div className="mt-10 text-center">
+          <a 
+            href="https://api.whatsapp.com/send/?phone=5493624236611&text=Hola%2C+quiero+hacer+una+pregunta+&type=phone_number&app_absent=0"
+            className="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-all"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <MessageSquare className="mr-2 h-5 w-5" />
+            Pregúntanos ahora
+          </a>
         </div>
       </div>
     </section>

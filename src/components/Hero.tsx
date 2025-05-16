@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, MessageSquare } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
@@ -35,8 +35,10 @@ const Hero: React.FC = () => {
             
             <div className="space-y-4 md:space-y-0 md:space-x-4 flex flex-col md:flex-row">
               <a 
-                href="#contacto" 
+                href="https://bit.ly/1SESIONLN" 
                 className="btn-primary flex items-center justify-center md:justify-start"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Agendar Sesión Estratégica Gratis
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -54,6 +56,18 @@ const Hero: React.FC = () => {
         <div className="mt-12 md:mt-20 animate-slide-up" style={{ animationDelay: '0.4s' }}>
           <p className="text-lg font-semibold text-consulting-gold-light">Claudio Flores</p>
           <p className="text-lg">17 años de experiencia | 22 países | Cientos de empresarios transformados</p>
+        </div>
+        
+        <div className="mt-8 text-center">
+          <a 
+            href="https://api.whatsapp.com/send/?phone=5493624236611&text=Hola%2C+quiero+hacer+una+pregunta+&type=phone_number&app_absent=0"
+            className="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-all"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <MessageSquare className="mr-2 h-5 w-5" />
+            Pregúntanos ahora
+          </a>
         </div>
       </div>
 

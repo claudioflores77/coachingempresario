@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Clock, Target, BarChart4 } from 'lucide-react';
+import { Clock, Target, BarChart4, MessageSquare } from 'lucide-react';
 
 const MethodSection: React.FC = () => {
   return (
@@ -78,6 +77,18 @@ const MethodSection: React.FC = () => {
               Mi misión es clara: ayudarte a recuperar tu vida mientras haces que tu empresa crezca y prospere.
             </p>
           </div>
+        </div>
+        
+        <div className="mt-10 text-center">
+          <a 
+            href="https://api.whatsapp.com/send/?phone=5493624236611&text=Hola%2C+quiero+hacer+una+pregunta+&type=phone_number&app_absent=0"
+            className="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-all"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <MessageSquare className="mr-2 h-5 w-5" />
+            Pregúntanos ahora
+          </a>
         </div>
       </div>
     </section>

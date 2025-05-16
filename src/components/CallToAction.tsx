@@ -34,7 +34,7 @@ const CallToAction: React.FC = () => {
               </div>
               
               <a 
-                href="https://bit.ly/SESION1A1" 
+                href="https://bit.ly/1SESIONLN" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary flex items-center justify-center"
@@ -115,7 +115,7 @@ const CallToAction: React.FC = () => {
 
                 <div className="pt-4 mt-4 border-t border-white/20">
                   <a 
-                    href="https://bit.ly/SESION1A1" 
+                    href="https://bit.ly/1SESIONLN" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-consulting-gold-light hover:text-white transition-all font-bold flex items-center"
