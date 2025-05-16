@@ -115,18 +115,18 @@
   }
   
   .gradient-bg {
-    @apply bg-gradient-to-r from-consulting-navy to-consulting-blue;
+    @apply bg-gradient-to-r from-brand-green to-brand-black;
   }
   
   .gold-text {
-    @apply text-consulting-gold;
+    @apply text-brand-red;
   }
   
   .btn-primary {
-    @apply px-6 py-3 bg-consulting-gold text-white font-semibold rounded-md hover:bg-consulting-gold-light transition-all duration-300 inline-block;
+    @apply px-6 py-3 bg-brand-red text-white font-semibold rounded-md hover:bg-red-600 transition-all duration-300 inline-block;
   }
   
   .btn-secondary {
-    @apply px-6 py-3 border-2 border-consulting-gold text-consulting-gold font-semibold rounded-md hover:bg-consulting-gold/10 transition-all duration-300 inline-block;
+    @apply px-6 py-3 border-2 border-brand-red text-brand-red font-semibold rounded-md hover:bg-brand-red/10 transition-all duration-300 inline-block;
   }
 }

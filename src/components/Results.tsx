@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Clock, TrendingUp, Heart, CheckCircle } from 'lucide-react';
 
@@ -11,11 +12,11 @@ interface ResultCardProps {
 const ResultCard: React.FC<ResultCardProps> = ({ icon, title, value, description }) => {
   return (
     <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all text-center">
-      <div className="text-consulting-gold mb-4">
+      <div className="text-brand-red mb-4">
         {icon}
       </div>
       <h3 className="text-lg font-bold mb-2">{title}</h3>
-      <p className="text-3xl font-bold text-consulting-blue mb-3">{value}</p>
+      <p className="text-3xl font-bold text-brand-black mb-3">{value}</p>
       <p className="text-sm text-consulting-gray">{description}</p>
     </div>
   );
@@ -27,7 +28,7 @@ const Results: React.FC = () => {
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Resultados <span className="text-consulting-gold">Tangibles</span>
+            Resultados <span className="text-brand-red">Tangibles</span>
           </h2>
           <p className="text-lg">
             Nuestros clientes han experimentado transformaciones significativas
@@ -65,7 +66,7 @@ const Results: React.FC = () => {
           />
         </div>
 
-        <div className="bg-white text-consulting-navy rounded-lg p-8 md:p-12">
+        <div className="bg-white text-brand-green rounded-lg p-8 md:p-12">
           <h3 className="text-2xl font-bold mb-6 text-center">Transformaciones Reales</h3>
 
           <div className="space-y-8">
@@ -74,23 +75,23 @@ const Results: React.FC = () => {
                 <h4 className="text-xl font-bold mb-3">Antes de Implementar el Método P.U.D.E.R.</h4>
                 <ul className="space-y-3">
                   <li className="flex items-start">
-                    <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 text-red-500 flex items-center justify-center mr-3 mt-0.5">×</div>
+                    <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 text-brand-red flex items-center justify-center mr-3 mt-0.5">×</div>
                     <p>Jornadas laborales extendidas, trabajando noches y fines de semana</p>
                   </li>
                   <li className="flex items-start">
-                    <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 text-red-500 flex items-center justify-center mr-3 mt-0.5">×</div>
+                    <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 text-brand-red flex items-center justify-center mr-3 mt-0.5">×</div>
                     <p>Operación caótica con falta de sistemas y procesos definidos</p>
                   </li>
                   <li className="flex items-start">
-                    <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 text-red-500 flex items-center justify-center mr-3 mt-0.5">×</div>
+                    <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 text-brand-red flex items-center justify-center mr-3 mt-0.5">×</div>
                     <p>Alta dependencia del dueño para la toma de decisiones operativas</p>
                   </li>
                   <li className="flex items-start">
-                    <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 text-red-500 flex items-center justify-center mr-3 mt-0.5">×</div>
+                    <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 text-brand-red flex items-center justify-center mr-3 mt-0.5">×</div>
                     <p>Incumplimiento de metas financieras o de crecimiento</p>
                   </li>
                   <li className="flex items-start">
-                    <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 text-red-500 flex items-center justify-center mr-3 mt-0.5">×</div>
+                    <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 text-brand-red flex items-center justify-center mr-3 mt-0.5">×</div>
                     <p>Problemas de salud relacionados con el estrés</p>
                   </li>
                 </ul>
@@ -100,23 +101,23 @@ const Results: React.FC = () => {
                 <h4 className="text-xl font-bold mb-3">Después de Implementar el Método P.U.D.E.R.</h4>
                 <ul className="space-y-3">
                   <li className="flex items-start">
-                    <div className="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 text-green-500 flex items-center justify-center mr-3 mt-0.5">✓</div>
+                    <div className="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 text-brand-green flex items-center justify-center mr-3 mt-0.5">✓</div>
                     <p>Horarios de trabajo equilibrados que respetan la vida personal</p>
                   </li>
                   <li className="flex items-start">
-                    <div className="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 text-green-500 flex items-center justify-center mr-3 mt-0.5">✓</div>
+                    <div className="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 text-brand-green flex items-center justify-center mr-3 mt-0.5">✓</div>
                     <p>Sistemas y procesos claros que funcionan independientemente del dueño</p>
                   </li>
                   <li className="flex items-start">
-                    <div className="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 text-green-500 flex items-center justify-center mr-3 mt-0.5">✓</div>
+                    <div className="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 text-brand-green flex items-center justify-center mr-3 mt-0.5">✓</div>
                     <p>Equipos empoderados que toman decisiones alineadas con la visión</p>
                   </li>
                   <li className="flex items-start">
-                    <div className="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 text-green-500 flex items-center justify-center mr-3 mt-0.5">✓</div>
+                    <div className="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 text-brand-green flex items-center justify-center mr-3 mt-0.5">✓</div>
                     <p>Incremento en rentabilidad del 25-40% en seis meses</p>
                   </li>
                   <li className="flex items-start">
-                    <div className="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 text-green-500 flex items-center justify-center mr-3 mt-0.5">✓</div>
+                    <div className="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 text-brand-green flex items-center justify-center mr-3 mt-0.5">✓</div>
                     <p>Mayor bienestar físico y mental, con renovada pasión por el emprendimiento</p>
                   </li>
                 </ul>

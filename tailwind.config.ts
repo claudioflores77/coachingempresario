@@ -63,15 +63,24 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom colors for the business consulting site
+				// Nuevos colores de marca basados en el adjunto
+				brand: {
+					'black': '#171717',
+					'red': '#ed2334',
+					'green': '#013206',
+					'yellow': '#fbbe28',
+					'white': '#f5f8fa',
+				},
+				// Reconfigurar los colores de consultoría para usar los colores de la marca
 				consulting: {
-					'blue': '#0A3161',
-					'blue-light': '#1A5999',
-					'gold': '#BF9B30',
-					'gold-light': '#D4AF37',
-					'navy': '#0F1E2D',
+					'blue': '#171717', // Reemplazado por negro de la marca
+					'blue-light': '#333333', // Versión más clara del negro
+					'gold': '#ed2334', // Reemplazado por rojo de la marca
+					'gold-light': '#ff3a4b', // Versión más clara del rojo
+					'navy': '#013206', // Reemplazado por verde de la marca
 					'gray': '#6B7280',
-					'gray-light': '#F3F4F6'
+					'gray-light': '#F3F4F6',
+					'accent': '#fbbe28', // Amarillo de la marca como acento
 				}
 			},
 			borderRadius: {

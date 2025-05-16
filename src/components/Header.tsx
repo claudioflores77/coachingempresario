@@ -28,12 +28,20 @@ const Header: React.FC = () => {
       <div className="container flex items-center justify-between">
         <div>
           <a href="/" className="flex items-center">
-            <h1 className={`text-2xl font-bold ${isScrolled ? 'text-consulting-navy' : 'text-white'}`}>
-              Claudio Flores
-            </h1>
-            <span className={`ml-2 text-sm ${isScrolled ? 'text-consulting-gold' : 'text-consulting-gold-light'}`}>
-              Consultoría Estratégica
-            </span>
+            {/* Logo Image */}
+            <img 
+              src="/lovable-uploads/135f3f99-d5f9-4f4d-8213-675e650f3f18.png" 
+              alt="Claudio Flores Logo"
+              className="h-10 mr-3"
+            />
+            <div>
+              <h1 className={`text-2xl font-bold ${isScrolled ? 'text-brand-black' : 'text-white'}`}>
+                Claudio Flores
+              </h1>
+              <span className={`ml-2 text-sm ${isScrolled ? 'text-brand-red' : 'text-brand-red'}`}>
+                Consultoría Estratégica
+              </span>
+            </div>
           </a>
         </div>
 
@@ -43,8 +51,8 @@ const Header: React.FC = () => {
             <li>
               <a 
                 href="#metodo" 
-                className={`font-medium hover:text-consulting-gold transition-all ${
-                  isScrolled ? 'text-consulting-navy' : 'text-white'
+                className={`font-medium hover:text-brand-red transition-all ${
+                  isScrolled ? 'text-brand-black' : 'text-white'
                 }`}
               >
                 El Método
@@ -53,8 +61,8 @@ const Header: React.FC = () => {
             <li>
               <a 
                 href="#servicios" 
-                className={`font-medium hover:text-consulting-gold transition-all ${
-                  isScrolled ? 'text-consulting-navy' : 'text-white'
+                className={`font-medium hover:text-brand-red transition-all ${
+                  isScrolled ? 'text-brand-black' : 'text-white'
                 }`}
               >
                 Servicios
@@ -63,8 +71,8 @@ const Header: React.FC = () => {
             <li>
               <a 
                 href="#resultados" 
-                className={`font-medium hover:text-consulting-gold transition-all ${
-                  isScrolled ? 'text-consulting-navy' : 'text-white'
+                className={`font-medium hover:text-brand-red transition-all ${
+                  isScrolled ? 'text-brand-black' : 'text-white'
                 }`}
               >
                 Resultados
@@ -73,8 +81,8 @@ const Header: React.FC = () => {
             <li>
               <a 
                 href="#testimonios" 
-                className={`font-medium hover:text-consulting-gold transition-all ${
-                  isScrolled ? 'text-consulting-navy' : 'text-white'
+                className={`font-medium hover:text-brand-red transition-all ${
+                  isScrolled ? 'text-brand-black' : 'text-white'
                 }`}
               >
                 Testimonios
@@ -83,7 +91,7 @@ const Header: React.FC = () => {
           </ul>
           <a 
             href="#contacto" 
-            className={`btn-primary ${!isScrolled && 'bg-white text-consulting-navy hover:bg-consulting-gold hover:text-white'}`}
+            className={`btn-primary ${!isScrolled && 'bg-white text-brand-black hover:bg-brand-red hover:text-white'}`}
           >
             Agendar Sesión
           </a>
@@ -96,9 +104,9 @@ const Header: React.FC = () => {
           aria-label="Toggle menu"
         >
           {isMobileMenuOpen ? (
-            <X className={`h-6 w-6 ${isScrolled ? 'text-consulting-navy' : 'text-white'}`} />
+            <X className={`h-6 w-6 ${isScrolled ? 'text-brand-black' : 'text-white'}`} />
           ) : (
-            <Menu className={`h-6 w-6 ${isScrolled ? 'text-consulting-navy' : 'text-white'}`} />
+            <Menu className={`h-6 w-6 ${isScrolled ? 'text-brand-black' : 'text-white'}`} />
           )}
         </button>
       </div>
@@ -110,7 +118,7 @@ const Header: React.FC = () => {
             <li>
               <a 
                 href="#metodo" 
-                className="block font-medium text-consulting-navy hover:text-consulting-gold"
+                className="block font-medium text-brand-black hover:text-brand-red"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 El Método
@@ -119,7 +127,7 @@ const Header: React.FC = () => {
             <li>
               <a 
                 href="#servicios" 
-                className="block font-medium text-consulting-navy hover:text-consulting-gold"
+                className="block font-medium text-brand-black hover:text-brand-red"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Servicios
@@ -128,7 +136,7 @@ const Header: React.FC = () => {
             <li>
               <a 
                 href="#resultados" 
-                className="block font-medium text-consulting-navy hover:text-consulting-gold"
+                className="block font-medium text-brand-black hover:text-brand-red"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Resultados
@@ -137,7 +145,7 @@ const Header: React.FC = () => {
             <li>
               <a 
                 href="#testimonios" 
-                className="block font-medium text-consulting-navy hover:text-consulting-gold"
+                className="block font-medium text-brand-black hover:text-brand-red"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Testimonios
