@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Clock, TrendingUp, Heart, CheckCircle, MessageSquare } from 'lucide-react';
+import { Clock, TrendingUp, Heart, CheckCircle, MessageSquare, ArrowRight } from 'lucide-react';
 
 interface ResultCardProps {
   icon: React.ReactNode;
