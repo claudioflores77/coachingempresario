@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Star, MessageSquare } from 'lucide-react';
 
@@ -108,7 +109,7 @@ const Testimonials: React.FC = () => {
 
         <div className="text-center mt-12">
           <a 
-            href="https://www.google.com/search?sca_esv=4271166684a7579e&hl=en-GB&authuser=0&si=APYL9bs7Hg2KMLB-4tSoTdxuOx8BdRvHbByC_AuVpNyh0x2KzUd-Dw0QauE20Tk8kT9_3BvGhnyaT-guKDcWi5Xf0Q02Tsi3UQ2A_23q4MEfNyi9Hyhb-Q_6H-8t1tgNukKBOMfyvvRcg6pBjZuPcUGvpDuVQpCxDw%3D%3D&q=Business+Strategy+Consulting+Reviews&sa=X&ved=2ahUKEwjol5botbKLAxWEILkGHf7TAEcQ0bkNegQINBAD&biw=1366&bih=607" 
+            href="https://www.google.com/search?q=Claudio+Flores+%7C+Coaching+y+Estrategia+Empresarial+%7C+Mentor+de+Empresarios+%7C+L%C3%ADderazgo&rlz=1C1YTUH_esAR1025AR1027&oq=Claudio+Flores+%7C+Coaching+y+Estrategia+Empresarial+%7C+Mentor+de+Empresarios+%7C+L%C3%ADderazgo&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRhAMgYIAhBFGDwyBggDEEUYPDIGCAQQRRg80gEIMjgxNGowajGoAgCwAgA&sourceid=chrome&ie=UTF-8#" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-brand-green hover:text-brand-red underline"
