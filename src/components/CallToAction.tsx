@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Calendar, ArrowRight } from 'lucide-react';
+import { Calendar, ArrowRight, Clock, Check, MessageSquare } from 'lucide-react';
 
 const CallToAction: React.FC = () => {
   return (
@@ -9,46 +9,74 @@ const CallToAction: React.FC = () => {
         <div className="bg-white rounded-lg overflow-hidden shadow-xl">
           <div className="md:flex">
             <div className="md:w-1/2 p-8 md:p-12">
-              <h2 className="text-3xl font-bold mb-4">¿Estás listo para transformar tu empresa y recuperar tu vida?</h2>
+              <span className="inline-block py-1 px-3 bg-brand-red text-white text-sm font-semibold rounded-full mb-4">
+                ¡ÚLTIMO PASO!
+              </span>
+              <h2 className="text-3xl font-bold mb-4">¿Estás listo para recuperar tu vida y hacer crecer tu empresa?</h2>
               <p className="text-lg text-consulting-gray mb-6">
-                Agenda una sesión de diagnóstico gratuita y descubre cómo "El Método P.U.D.E.R." 
-                puede cambiar tu futuro empresarial y personal.
+                No tienes que elegir entre tu negocio o tu vida personal. Con el Método P.U.D.E.R. 
+                puedes tener ambos. Agenda ahora tu sesión estratégica <span className="font-bold text-brand-red">100% GRATUITA</span> y sin compromisos.
               </p>
               
-              <div className="mb-8">
-                <h3 className="text-xl font-bold mb-4">En esta sesión gratuita:</h3>
+              <div className="mb-8 bg-gray-50 p-6 rounded-lg border-l-4 border-brand-red">
+                <h3 className="text-xl font-bold mb-4">En esta sesión gratuita de 45 minutos:</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
-                    <div className="flex-shrink-0 h-6 w-6 rounded-full bg-consulting-gold text-white flex items-center justify-center mr-3 mt-0.5">✓</div>
-                    <p>Identificaremos los principales obstáculos que frenan tu crecimiento</p>
+                    <div className="flex-shrink-0 h-6 w-6 rounded-full bg-brand-red text-white flex items-center justify-center mr-3 mt-0.5">
+                      <Clock className="h-3 w-3" />
+                    </div>
+                    <p><span className="font-semibold">Analizaremos tu situación actual</span> para identificar los obstáculos que te mantienen atrapado</p>
                   </li>
                   <li className="flex items-start">
-                    <div className="flex-shrink-0 h-6 w-6 rounded-full bg-consulting-gold text-white flex items-center justify-center mr-3 mt-0.5">✓</div>
-                    <p>Evaluaremos cómo el Método P.U.D.E.R. puede adaptarse a tu situación</p>
+                    <div className="flex-shrink-0 h-6 w-6 rounded-full bg-brand-red text-white flex items-center justify-center mr-3 mt-0.5">
+                      <Check className="h-3 w-3" />
+                    </div>
+                    <p><span className="font-semibold">Crearemos un plan inicial personalizado</span> que podrás empezar a implementar inmediatamente</p>
                   </li>
                   <li className="flex items-start">
-                    <div className="flex-shrink-0 h-6 w-6 rounded-full bg-consulting-gold text-white flex items-center justify-center mr-3 mt-0.5">✓</div>
-                    <p>Trazaremos un plan inicial para empezar a recuperar el control</p>
+                    <div className="flex-shrink-0 h-6 w-6 rounded-full bg-brand-red text-white flex items-center justify-center mr-3 mt-0.5">
+                      <ArrowRight className="h-3 w-3" />
+                    </div>
+                    <p><span className="font-semibold">Te mostraremos los siguientes pasos</span> para transformar tu negocio en un sistema que funcione sin ti</p>
                   </li>
                 </ul>
+
+                <div className="mt-6 text-center p-3 bg-yellow-50 rounded-lg border border-yellow-200">
+                  <p className="font-semibold text-sm">⚠️ Disponibilidad limitada: Solo 5 sesiones gratuitas esta semana</p>
+                </div>
               </div>
               
               <a 
                 href="https://bit.ly/1SESIONLN" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary flex items-center justify-center"
+                className="btn-primary flex items-center justify-center animate-pulse"
               >
                 <Calendar className="mr-2 h-5 w-5" />
-                Agendar Sesión Estratégica Gratis
+                RESERVAR MI SESIÓN ESTRATÉGICA GRATIS
                 <ArrowRight className="ml-2 h-4 w-4" />
               </a>
+
+              <p className="text-sm text-center mt-3 text-gray-500">
+                Sin costo y sin compromiso - Valorada en $150 USD
+              </p>
             </div>
             
             <div className="md:w-1/2 bg-consulting-blue-light p-8 md:p-12 text-white">
               <h3 className="text-2xl font-bold mb-6">Conéctate con Claudio Flores</h3>
               
               <div className="space-y-6">
+                <div className="mb-8">
+                  <img 
+                    src="/lovable-uploads/135f3f99-d5f9-4f4d-8213-675e650f3f18.png" 
+                    alt="Claudio Flores" 
+                    className="w-24 h-24 mx-auto rounded-full border-4 border-white mb-4"
+                  />
+                  <p className="text-center italic">
+                    "Mi misión es ayudar a empresarios como tú a construir negocios que funcionen sin su presencia constante, permitiéndoles recuperar su tiempo y disfrutar de la vida que merecen."
+                  </p>
+                </div>
+
                 <div>
                   <h4 className="text-lg font-semibold mb-2">Perfiles Profesionales</h4>
                   <ul className="space-y-3">
@@ -122,6 +150,18 @@ const CallToAction: React.FC = () => {
                   >
                     Agendar Sesión Estratégica 1a1 (¡Gratis!)
                     <ArrowRight className="ml-2 h-4 w-4" />
+                  </a>
+                </div>
+
+                <div className="mt-6">
+                  <a 
+                    href="https://api.whatsapp.com/send/?phone=5493624236611&text=Hola%2C+quiero+hacer+una+pregunta+&type=phone_number&app_absent=0"
+                    className="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-all w-full justify-center"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <MessageSquare className="mr-2 h-5 w-5" />
+                    Pregúntanos ahora por WhatsApp
                   </a>
                 </div>
               </div>

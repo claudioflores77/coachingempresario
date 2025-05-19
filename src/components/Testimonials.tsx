@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight, Star, MessageSquare } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Star, MessageSquare, ArrowRight } from 'lucide-react';
 
 interface Testimonial {
   id: number;
@@ -8,6 +8,7 @@ interface Testimonial {
   role: string;
   company: string;
   content: string;
+  results: string;
   image: string;
 }
 
@@ -18,7 +19,8 @@ const Testimonials: React.FC = () => {
       name: "Carlos Ramírez",
       role: "CEO",
       company: "Innovatech Solutions",
-      content: "El método de Claudio transformó completamente mi empresa. Pasé de trabajar 70 horas semanales a menos de 40, y aún así nuestros ingresos aumentaron un 35%. Ahora tengo tiempo para mi familia y para mí mismo.",
+      content: "Antes de conocer a Claudio trabajaba 70 horas semanales, dormía poco y mi familia me reclamaba tiempo. El método P.U.D.E.R. cambió mi vida empresarial por completo.",
+      results: "En 4 meses reduje mi jornada a 35 horas semanales y aumentamos ingresos un 35%",
       image: "https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?q=80&w=2076"
     },
     {
@@ -26,7 +28,8 @@ const Testimonials: React.FC = () => {
       name: "Laura Méndez",
       role: "Fundadora",
       company: "CreaSoft",
-      content: "Estaba al borde del burnout cuando encontré a Claudio. Su enfoque sistemático me ayudó a recuperar el control, implementar procesos claros y construir un equipo autosuficiente. Mi calidad de vida ha mejorado enormemente.",
+      content: "El burnout me estaba consumiendo. No podía dejar el negocio ni un día sin que todo se descontrolara. Claudio me ayudó a implementar sistemas que funcionan sin mí.",
+      results: "Hoy puedo tomarme vacaciones de 2 semanas y el negocio sigue creciendo",
       image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2076"
     },
     {
@@ -34,7 +37,8 @@ const Testimonials: React.FC = () => {
       name: "Miguel Ángel Torres",
       role: "Director",
       company: "Construye SA",
-      content: "Implementar los sistemas que Claudio recomendó nos permitió escalar nuestro negocio en un 40% en solo 8 meses. Lo más importante es que ya no dependo de estar presente para que todo funcione correctamente.",
+      content: "Mi empresa crecía pero mis beneficios no. Estaba atrapado resolviendo problemas diarios sin poder dedicarme a la estrategia. El Método P.U.D.E.R. reorganizó todo.",
+      results: "Escalamos un 40% en 8 meses y aumentamos el margen de beneficio un 15%",
       image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2074"
     }
   ];
@@ -53,17 +57,20 @@ const Testimonials: React.FC = () => {
     <section id="testimonios" className="section bg-white">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-12">
+          <span className="inline-block py-1 px-3 bg-brand-red text-white text-sm font-semibold rounded-full mb-4">
+            HISTORIAS DE ÉXITO
+          </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Lo Que Dicen <span className="text-brand-red">Nuestros Clientes</span>
+            Empresarios Que Han <span className="text-brand-red">Recuperado Sus Vidas</span>
           </h2>
           <p className="text-lg text-consulting-gray">
-            Empresarios como tú que han transformado sus negocios y sus vidas
-            gracias al Método P.U.D.E.R.
+            Estos son emprendedores que, como tú, estaban atrapados en sus negocios
+            y ahora disfrutan de libertad y prosperidad.
           </p>
         </div>
 
         <div className="relative max-w-4xl mx-auto">
-          <div className="bg-consulting-gray-light p-8 md:p-12 rounded-lg">
+          <div className="bg-consulting-gray-light p-8 md:p-12 rounded-lg shadow-lg">
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="md:w-1/3">
                 <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-brand-red">
@@ -80,7 +87,8 @@ const Testimonials: React.FC = () => {
                     <Star key={i} className="h-5 w-5 text-brand-yellow fill-brand-yellow" />
                   ))}
                 </div>
-                <p className="text-lg italic mb-6">{testimonials[activeIndex].content}</p>
+                <p className="text-lg italic mb-3">{testimonials[activeIndex].content}</p>
+                <p className="text-lg font-bold text-brand-red mb-6">"{testimonials[activeIndex].results}"</p>
                 <div>
                   <p className="font-bold text-lg">{testimonials[activeIndex].name}</p>
                   <p className="text-consulting-gray">
@@ -88,6 +96,18 @@ const Testimonials: React.FC = () => {
                   </p>
                 </div>
               </div>
+            </div>
+
+            <div className="mt-6 text-center">
+              <a 
+                href="https://bit.ly/1SESIONLN" 
+                className="btn-primary inline-flex items-center mt-4"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                ¡QUIERO RESULTADOS SIMILARES! - Agendar Sesión
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
             </div>
           </div>
 

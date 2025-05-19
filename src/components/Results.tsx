@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Clock, TrendingUp, Heart, CheckCircle } from 'lucide-react';
+import { Clock, TrendingUp, Heart, CheckCircle, MessageSquare } from 'lucide-react';
 
 interface ResultCardProps {
   icon: React.ReactNode;
@@ -11,7 +11,7 @@ interface ResultCardProps {
 
 const ResultCard: React.FC<ResultCardProps> = ({ icon, title, value, description }) => {
   return (
-    <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all text-center">
+    <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all text-center transform hover:scale-105 duration-300">
       <div className="text-brand-red mb-4">
         {icon}
       </div>
@@ -27,8 +27,11 @@ const Results: React.FC = () => {
     <section id="resultados" className="section gradient-bg text-white">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-12">
+          <span className="inline-block py-1 px-3 bg-brand-red text-white text-sm font-semibold rounded-full mb-4">
+            RESULTADOS COMPROBADOS
+          </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Resultados <span className="text-brand-red">Tangibles</span>
+            De la Supervivencia al <span className="text-brand-red">Crecimiento Sostenible</span>
           </h2>
           <p className="text-lg">
             Nuestros clientes han experimentado transformaciones significativas
@@ -66,13 +69,13 @@ const Results: React.FC = () => {
           />
         </div>
 
-        <div className="bg-white text-brand-green rounded-lg p-8 md:p-12">
-          <h3 className="text-2xl font-bold mb-6 text-center">Transformaciones Reales</h3>
+        <div className="bg-white text-brand-black rounded-lg p-8 md:p-12 shadow-xl">
+          <h3 className="text-2xl font-bold mb-6 text-center">La Transformación que <span className="text-brand-red">Buscas</span></h3>
 
           <div className="space-y-8">
             <div className="flex flex-col md:flex-row gap-6">
-              <div className="md:w-1/2">
-                <h4 className="text-xl font-bold mb-3">Antes de Implementar el Método P.U.D.E.R.</h4>
+              <div className="md:w-1/2 bg-red-50 p-6 rounded-lg">
+                <h4 className="text-xl font-bold mb-3 text-brand-red">TU SITUACIÓN ACTUAL:</h4>
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <div className="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 text-brand-red flex items-center justify-center mr-3 mt-0.5">×</div>
@@ -97,8 +100,8 @@ const Results: React.FC = () => {
                 </ul>
               </div>
 
-              <div className="md:w-1/2">
-                <h4 className="text-xl font-bold mb-3">Después de Implementar el Método P.U.D.E.R.</h4>
+              <div className="md:w-1/2 bg-green-50 p-6 rounded-lg">
+                <h4 className="text-xl font-bold mb-3 text-brand-green">TU FUTURO CON EL MÉTODO P.U.D.E.R.:</h4>
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <div className="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 text-brand-green flex items-center justify-center mr-3 mt-0.5">✓</div>
@@ -122,6 +125,30 @@ const Results: React.FC = () => {
                   </li>
                 </ul>
               </div>
+            </div>
+          </div>
+
+          <div className="mt-8 text-center">
+            <a 
+              href="https://bit.ly/1SESIONLN" 
+              className="btn-primary inline-flex items-center animate-pulse"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ¡QUIERO ESTOS RESULTADOS! - Agendar Sesión Estratégica Gratis
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </a>
+            
+            <div className="mt-4">
+              <a 
+                href="https://api.whatsapp.com/send/?phone=5493624236611&text=Hola%2C+quiero+hacer+una+pregunta+&type=phone_number&app_absent=0"
+                className="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-all"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MessageSquare className="mr-2 h-5 w-5" />
+                Pregúntanos ahora
+              </a>
             </div>
           </div>
         </div>

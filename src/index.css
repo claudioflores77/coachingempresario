@@ -123,10 +123,38 @@
   }
   
   .btn-primary {
-    @apply px-6 py-3 bg-brand-red text-white font-semibold rounded-md hover:bg-red-600 transition-all duration-300 inline-block;
+    @apply px-6 py-3 bg-brand-red text-white font-semibold rounded-md hover:bg-red-700 transition-all duration-300 inline-block shadow-md hover:shadow-lg transform hover:-translate-y-1;
   }
   
   .btn-secondary {
-    @apply px-6 py-3 border-2 border-brand-red text-brand-red font-semibold rounded-md hover:bg-brand-red/10 transition-all duration-300 inline-block;
+    @apply px-6 py-3 border-2 border-brand-red text-brand-red font-semibold rounded-md hover:bg-brand-red/10 transition-all duration-300 inline-block shadow-md hover:shadow-lg transform hover:-translate-y-1;
+  }
+
+  /* Animations */
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+
+  .hover-shadow {
+    @apply transition-all duration-300 hover:shadow-xl;
+  }
+  
+  /* Improve readability with text shadow */
+  .text-shadow {
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+  }
+  
+  .text-shadow-light {
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
   }
 }
