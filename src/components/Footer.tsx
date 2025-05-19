@@ -10,8 +10,11 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <div className="flex items-center">
+              <div className="mr-3 text-2xl text-consulting-gold">
+                <span className="font-bold">CF</span>
+              </div>
               <h3 className="text-xl font-bold">Claudio Flores</h3>
-              <span className="ml-2 text-sm text-consulting-gold">Consultoría Estratégica</span>
+              <span className="ml-2 text-sm text-consulting-gold">Consultora Estratégica Empresarial</span>
             </div>
             <p className="text-sm mt-2">Transformando empresas y vidas desde hace más de 17 años</p>
           </div>
