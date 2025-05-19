@@ -10,9 +10,6 @@ const Hero: React.FC = () => {
       
       <div className="container relative z-10">
         <div className="max-w-3xl">
-          <span className="inline-block py-1 px-3 bg-brand-red text-white text-sm font-semibold rounded-full mb-4 animate-pulse">
-            ¿Tu negocio te está consumiendo?
-          </span>
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight animate-slide-up drop-shadow-lg">
             Transforma Tu Empresa Para Que <span className="text-brand-red">Trabaje Para Ti</span>
           </h1>
