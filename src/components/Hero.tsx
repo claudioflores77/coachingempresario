@@ -53,7 +53,7 @@ const Hero: React.FC = () => {
             
             <div className="space-y-4 md:space-y-0 md:space-x-4 flex flex-col md:flex-row">
               <a 
-                href="https://bit.ly/1SESIONLN" 
+                href="https://estrategiaempresaria.systeme.io/sesionestrategica1a1" 
                 className="btn-primary flex items-center justify-center md:justify-start animate-pulse"
                 target="_blank"
                 rel="noopener noreferrer"

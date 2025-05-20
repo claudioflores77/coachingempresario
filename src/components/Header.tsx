@@ -91,7 +91,7 @@ const Header: React.FC = () => {
             </li>
           </ul>
           <a 
-            href="https://bit.ly/1SESIONLN" 
+            href="https://estrategiaempresaria.systeme.io/sesionestrategica1a1" 
             target="_blank"
             rel="noopener noreferrer"
             className={`btn-primary ${!isScrolled && 'bg-white text-brand-black hover:bg-brand-red hover:text-white'}`}
@@ -156,7 +156,7 @@ const Header: React.FC = () => {
             </li>
             <li>
               <a 
-                href="https://bit.ly/1SESIONLN" 
+                href="https://estrategiaempresaria.systeme.io/sesionestrategica1a1" 
                 className="btn-primary block text-center"
                 target="_blank"
                 rel="noopener noreferrer"
