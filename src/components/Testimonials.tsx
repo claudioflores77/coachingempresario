@@ -100,7 +100,7 @@ const Testimonials: React.FC = () => {
 
             <div className="mt-6 text-center">
               <a 
-                href="https://bit.ly/1SESIONLN" 
+                href="https://estrategiaempresaria.systeme.io/sesionestrategica1a1" 
                 className="btn-primary inline-flex items-center mt-4"
                 target="_blank"
                 rel="noopener noreferrer"

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Clock, TrendingUp, Heart, CheckCircle, MessageSquare, ArrowRight } from 'lucide-react';
 
@@ -129,7 +130,7 @@ const Results: React.FC = () => {
 
           <div className="mt-8 text-center">
             <a 
-              href="https://bit.ly/1SESIONLN" 
+              href="https://estrategiaempresaria.systeme.io/sesionestrategica1a1" 
               className="btn-primary inline-flex items-center animate-pulse"
               target="_blank"
               rel="noopener noreferrer"
