@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Clock, Target, BarChart4, MessageSquare } from 'lucide-react';
 
@@ -56,7 +57,7 @@ const MethodSection: React.FC = () => {
         <div className="md:flex items-center bg-consulting-navy text-white rounded-lg overflow-hidden">
           <div className="md:w-1/2">
             <img 
-              src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2071" 
+              src="/lovable-uploads/0b84250d-4c53-48c5-9471-1227bf9ff0fb.png" 
               alt="Claudio Flores" 
               className="w-full h-full object-cover"
             />
