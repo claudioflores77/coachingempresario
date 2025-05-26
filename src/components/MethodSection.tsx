@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Clock, Target, BarChart4, MessageSquare } from 'lucide-react';
+import { Clock, Target, BarChart4, MessageSquare, Linkedin } from 'lucide-react';
 
 const MethodSection: React.FC = () => {
   return (
@@ -57,7 +57,7 @@ const MethodSection: React.FC = () => {
         <div className="md:flex items-center bg-consulting-navy text-white rounded-lg overflow-hidden">
           <div className="md:w-1/2">
             <img 
-              src="/lovable-uploads/0b84250d-4c53-48c5-9471-1227bf9ff0fb.png" 
+              src="/lovable-uploads/135f3f99-d5f9-4f4d-8213-675e650f3f18.png" 
               alt="Claudio Flores" 
               className="w-full h-full object-cover"
             />
@@ -74,9 +74,19 @@ const MethodSection: React.FC = () => {
               A través de un proceso de aprendizaje y transformación, desarrollé "El Método P.U.D.E.R." 
               que no solo cambió mi vida, sino la de cientos de empresarios alrededor del mundo.
             </p>
-            <p className="text-consulting-gold font-semibold">
+            <p className="text-consulting-gold font-semibold mb-6">
               Mi misión es clara: ayudarte a recuperar tu vida mientras haces que tu empresa crezca y prospere.
             </p>
+            
+            <a 
+              href="https://www.linkedin.com/in/claudioflores-coach/"
+              className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-all"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Linkedin className="mr-2 h-5 w-5" />
+              Ver mi currículum en LinkedIn
+            </a>
           </div>
         </div>
         
