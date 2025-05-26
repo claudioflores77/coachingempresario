@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Users, TrendingUp, Brain, Presentation, Layers, GraduationCap, Search, FileDigit, ClipboardCheck, BarChart3, RefreshCcw, MessageSquare } from 'lucide-react';
 
@@ -142,7 +143,7 @@ const Services: React.FC = () => {
         
         <div className="mt-10 text-center">
           <a 
-            href="https://api.whatsapp.com/send/?phone=5493624236611&text=Hola%2C+quiero+hacer+una+pregunta+&type=phone_number&app_absent=0"
+            href="https://api.whatsapp.com/send/?phone=19786629364&text=Hola%2C+quiero+hacer+una+pregunta+&type=phone_number&app_absent=0"
             className="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-all"
             target="_blank"
             rel="noopener noreferrer"
