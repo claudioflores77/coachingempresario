@@ -57,7 +57,7 @@ const MethodSection: React.FC = () => {
         <div className="md:flex items-center bg-consulting-navy text-white rounded-lg overflow-hidden">
           <div className="md:w-1/2">
             <img 
-              src="/lovable-uploads/135f3f99-d5f9-4f4d-8213-675e650f3f18.png" 
+              src="/lovable-uploads/0b84250d-4c53-48c5-9471-1227bf9ff0fb.png" 
               alt="Claudio Flores" 
               className="w-full h-full object-cover"
             />
