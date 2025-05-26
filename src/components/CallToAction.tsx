@@ -68,9 +68,9 @@ const CallToAction: React.FC = () => {
               <div className="space-y-6">
                 <div className="mb-8">
                   <img 
-                    src="/lovable-uploads/135f3f99-d5f9-4f4d-8213-675e650f3f18.png" 
+                    src="/lovable-uploads/dfb8fb00-5dee-4b16-9bac-410b330236fb.png" 
                     alt="Claudio Flores" 
-                    className="w-24 h-24 mx-auto rounded-full border-4 border-white mb-4"
+                    className="w-24 h-24 mx-auto rounded-full border-4 border-white mb-4 object-cover"
                   />
                   <p className="text-center italic">
                     "Mi misión es ayudar a empresarios como tú a construir negocios que funcionen sin su presencia constante, permitiéndoles recuperar su tiempo y disfrutar de la vida que merecen."

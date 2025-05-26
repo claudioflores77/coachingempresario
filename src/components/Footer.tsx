@@ -10,8 +10,12 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <div className="flex items-center">
-              <div className="mr-3 text-2xl text-consulting-gold">
-                <span className="font-bold">CF</span>
+              <div className="mr-3">
+                <img 
+                  src="/lovable-uploads/dfb8fb00-5dee-4b16-9bac-410b330236fb.png" 
+                  alt="Claudio Flores Logo" 
+                  className="w-8 h-8 rounded-full object-cover"
+                />
               </div>
               <h3 className="text-xl font-bold">Claudio Flores</h3>
               <span className="ml-2 text-sm text-consulting-gold">Consultora Estratégica Empresarial</span>
