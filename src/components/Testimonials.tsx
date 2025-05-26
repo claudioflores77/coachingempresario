@@ -129,7 +129,7 @@ const Testimonials: React.FC = () => {
 
         <div className="text-center mt-12">
           <a 
-            href="https://www.google.com/search?q=Claudio+Flores+%7C+Coaching+y+Estrategia+Empresarial+%7C+Mentor+de+Empresarios+%7C+L%C3%ADderazgo&rlz=1C1YTUH_esAR1025AR1027&oq=Claudio+Flores+%7C+Coaching+y+Estrategia+Empresarial+%7C+Mentor+de+Empresarios+%7C+L%C3%ADderazgo&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRhAMgYIAhBFGDwyBggDEEUYPDIGCAQQRRg80gEIMjgxNGowajGoAgCwAgA&sourceid=chrome&ie=UTF-8#" 
+            href="https://www.google.com/search?q=Claudio+Flores+%7C+Coaching+y+Estrategia+Empresarial+%7C+Mentor+de+Empresarios+%7C+L%C3%ADderazgo&stick=H4sIAAAAAAAA_-NgU1I1qLA0MTE1SDEwtkg2SjJOM0yyMqgwNUgzMDa0TDY3Mk5JTUq1XMQa7pyTWJqSma_glpNflFqsUKPgnJ-YnJGZl65QqeBaXFKUWJKanpmo4JpbAJROLMpMzAGq8U3NK8kvUkhJRYjng_T6HF6bklqUWJWeDwBAeyO3gwAAAA&hl=en-GB&mat=CV1k0EzVfvQRElYBYJahab2Xi7KGBYlz7DUFsSUns4j4MH9RAtRlS5coiWv6IkF-qjDNx3s-9uyJwgrnopT2PPTvbZR5IckEa1vGwtEhb-FXyCyv1ghBdmPFZeQtFS8t0g&authuser=0#" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-brand-green hover:text-brand-red underline"
