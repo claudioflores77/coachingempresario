@@ -1,8 +1,10 @@
-
 import React from 'react';
 import { Clock, Target, BarChart4, MessageSquare, Linkedin } from 'lucide-react';
+import SafeImage from './SafeImage';
 
 const MethodSection: React.FC = () => {
+  console.log('MethodSection component rendering');
+
   return (
     <section id="metodo" className="section bg-white">
       <div className="container">
@@ -56,8 +58,8 @@ const MethodSection: React.FC = () => {
 
         <div className="md:flex items-center bg-consulting-navy text-white rounded-lg overflow-hidden">
           <div className="md:w-1/2">
-            <img 
-              src="/lovable-uploads/0b84250d-4c53-48c5-9471-1227bf9ff0fb.png" 
+            <SafeImage 
+              src="/lovable-uploads/0b84250d-4c53-48c5-9471-1227bf9ff0fb.png"
               alt="Claudio Flores" 
               className="w-full h-full object-cover"
             />

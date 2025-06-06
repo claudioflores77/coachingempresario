@@ -1,22 +1,27 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>puder-empresa-liberada</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+    <title>Claudio Flores - Consultoría Estratégica Empresarial</title>
+    <meta name="description" content="Transforma tu empresa para que trabaje para ti. Método P.U.D.E.R. - 17 años de experiencia ayudando a empresarios a recuperar su vida." />
+    <meta name="author" content="Claudio Flores" />
+    <meta name="keywords" content="consultoría empresarial, coaching empresarial, método PUDER, estrategia empresarial" />
     <meta name="p:domain_verify" content="6f224c38d8fa6eef4fd1a1a329cb54f0"/>
 
-    <meta property="og:title" content="puder-empresa-liberada" />
-    <meta property="og:description" content="Lovable Generated Project" />
+    <meta property="og:title" content="Claudio Flores - Consultoría Estratégica Empresarial" />
+    <meta property="og:description" content="Transforma tu empresa para que trabaje para ti. Recupera tu tiempo y disfruta de tu familia." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@lovable_dev" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/lovable-uploads/135f3f99-d5f9-4f4d-8213-675e650f3f18.png" as="image" />
+    <link rel="preload" href="/lovable-uploads/0b84250d-4c53-48c5-9471-1227bf9ff0fb.png" as="image" />
   </head>
 
   <body>
@@ -24,6 +29,28 @@
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script type="module" src="/src/main.tsx"></script>
-    <script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"7e2b91ef6ba3fdf4953784cfc66502e2"})});</script>
+    <script>
+      // Metricool script with error handling
+      function loadScript(a){
+        try {
+          var b=document.getElementsByTagName("head")[0],c=document.createElement("script");
+          c.type="text/javascript";
+          c.src="https://tracker.metricool.com/resources/be.js";
+          c.onreadystatechange=a;
+          c.onload=a;
+          c.onerror=function(){console.log("Metricool script failed to load")};
+          b.appendChild(c)
+        } catch(error) {
+          console.log("Error loading Metricool script:", error);
+        }
+      }
+      loadScript(function(){
+        try {
+          beTracker.t({hash:"7e2b91ef6ba3fdf4953784cfc66502e2"})
+        } catch(error) {
+          console.log("Error initializing Metricool tracker:", error);
+        }
+      });
+    </script>
   </body>
 </html>

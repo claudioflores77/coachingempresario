@@ -1,7 +1,12 @@
+
 import React from 'react';
 import { ArrowRight, MessageSquare } from 'lucide-react';
+import SafeImage from './SafeImage';
+import SafeIframe from './SafeIframe';
 
 const Hero: React.FC = () => {
+  console.log('Hero component rendering');
+
   return (
     <section className="relative min-h-screen flex items-center bg-gray-900 text-white pt-20">
       <div className="absolute inset-0 bg-consulting-navy opacity-70"></div>
@@ -37,17 +42,11 @@ const Hero: React.FC = () => {
             </p>
             
             <div className="responsive-iframe-container mb-8">
-              <iframe 
-                width="853" 
-                height="480" 
-                src="https://www.youtube.com/embed/HE4E1z77eOg" 
-                title="¡5 Señales de que TU EMPRESA TE ESTÁ CONSUMIENDO!🥴" 
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerPolicy="strict-origin-when-cross-origin" 
-                allowFullScreen
+              <SafeIframe 
+                src="https://www.youtube.com/embed/HE4E1z77eOg"
+                title="¡5 Señales de que TU EMPRESA TE ESTÁ CONSUMIENDO!🥴"
                 className="mx-auto shadow-lg rounded"
-              ></iframe>
+              />
             </div>
             
             <div className="space-y-4 md:space-y-0 md:space-x-4 flex flex-col md:flex-row">

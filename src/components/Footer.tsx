@@ -1,8 +1,11 @@
 
 import React from 'react';
+import SafeImage from './SafeImage';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
+  
+  console.log('Footer component rendering');
   
   return (
     <footer className="bg-consulting-navy text-white py-8">
@@ -11,8 +14,8 @@ const Footer: React.FC = () => {
           <div className="mb-4 md:mb-0">
             <div className="flex items-center">
               <div className="mr-3">
-                <img 
-                  src="/lovable-uploads/135f3f99-d5f9-4f4d-8213-675e650f3f18.png" 
+                <SafeImage 
+                  src="/lovable-uploads/135f3f99-d5f9-4f4d-8213-675e650f3f18.png"
                   alt="Claudio Flores Logo" 
                   className="w-8 h-8 rounded-full object-cover"
                 />

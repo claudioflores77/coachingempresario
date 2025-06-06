@@ -11,23 +11,33 @@ import Footer from '../components/Footer';
 
 const Index = () => {
   useEffect(() => {
+    console.log('Index page loading...');
+    
     // Update page title
     document.title = "Claudio Flores - Consultoría Estratégica Empresarial";
     
     // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href') as string);
-        if (target) {
-          window.scrollTo({
-            top: (target as HTMLElement).offsetTop - 80, // Adjust for header height
-            behavior: 'smooth'
-          });
-        }
+    try {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href') as string);
+          if (target) {
+            window.scrollTo({
+              top: (target as HTMLElement).offsetTop - 80, // Adjust for header height
+              behavior: 'smooth'
+            });
+          }
+        });
       });
-    });
+    } catch (error) {
+      console.error('Error setting up smooth scroll:', error);
+    }
+
+    console.log('Index page loaded successfully');
   }, []);
+
+  console.log('Index component rendering');
 
   return (
     <div className="min-h-screen">
