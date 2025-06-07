@@ -133,7 +133,7 @@ const Hero: React.FC = () => {
           <div className="mt-8 text-center">
             <a 
               href="https://api.whatsapp.com/send/?phone=19786629364&text=Hola%2C+quiero+hacer+una+pregunta+sobre+consultoría+empresarial&type=phone_number&app_absent=0"
-              className="inline-flex items-center px-6 py-3 bg-brand-black hover:bg-gray-800 text-white font-medium rounded-lg transition-all focus:outline-none focus:ring-2 focus:ring-brand-black focus:ring-offset-2 shadow-lg hover:shadow-xl"
+              className="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-all focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Iniciar consulta gratuita por WhatsApp"
