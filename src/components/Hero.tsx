@@ -20,11 +20,11 @@ const Hero: React.FC = () => {
       
       <section 
         id="hero" 
-        className="relative min-h-screen flex items-center bg-gray-900 text-white pt-20"
+        className="relative min-h-screen flex items-center bg-brand-black text-white pt-20"
         role="banner"
       >
-        <div className="absolute inset-0 bg-consulting-navy opacity-70"></div>
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070')] bg-cover bg-center mix-blend-overlay"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-black via-brand-black to-brand-green opacity-85"></div>
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070')] bg-cover bg-center mix-blend-overlay opacity-30"></div>
         
         <div className="container relative z-10">
           <div className="max-w-3xl">
