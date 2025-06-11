@@ -34,7 +34,7 @@ const Results: React.FC = () => {
             De la Supervivencia al <span className="text-brand-red">Crecimiento Sostenible</span>
           </h2>
           <p className="text-lg">
-            Nuestros clientes han experimentado transformaciones significativas
+            Mis clientes han experimentado transformaciones significativas
             tanto en sus negocios como en sus vidas personales.
           </p>
         </div>
@@ -44,7 +44,7 @@ const Results: React.FC = () => {
             icon={<CheckCircle className="h-12 w-12 mx-auto" />}
             title="Recuperación del Control"
             value="97%"
-            description="De nuestros clientes logran independizarse de la operativa diaria"
+            description="El cliente típico logra independizarse de la operativa diaria"
           />
           
           <ResultCard

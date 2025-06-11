@@ -16,7 +16,7 @@ const HelpSection: React.FC = () => {
     },
     {
       question: "¿Qué tipo de empresas se benefician más de este método?",
-      answer: "Empresas de servicios, retail, manufactura y tecnología con 5-100 empleados que dependen excesivamente del fundador. Especialmente efectivo para empresarios que trabajan más de 60 horas semanales y quieren recuperar su vida personal."
+      answer: "Empresas de servicios, retail, manufactura y tecnología con 5-100 empleados que dependen excesivamente del fundador. Especialmente efectivo para el empresario que trabaja más de 60 horas semanales y quiere recuperar su vida personal."
     },
     {
       question: "¿Cómo se realiza el proceso de consultoría?",
@@ -24,7 +24,7 @@ const HelpSection: React.FC = () => {
     },
     {
       question: "¿Qué garantías ofrecen en el proceso?",
-      answer: "Garantizamos resultados medibles en los primeros 90 días o devolvemos tu inversión. Nuestros clientes típicamente reducen 50% sus horas de trabajo y aumentan 25-40% su rentabilidad en el primer año."
+      answer: "Garantizamos resultados medibles en los primeros 90 días o devolvemos tu inversión. Mis clientes típicamente reducen 50% sus horas de trabajo y aumentan 25-40% su rentabilidad en el primer año."
     }
   ];
 

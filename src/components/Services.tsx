@@ -37,7 +37,7 @@ const Services: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <ServiceCard
             title="Consultoría Estratégica Empresarial"
-            description="Asesoría personalizada para dueños de PYMEs. Identificamos las áreas críticas y establecemos sistemas y rutinas para liberar tu tiempo y energía."
+            description="Asesoría personalizada para el dueño de PYME. Identificamos las áreas críticas y establecemos sistemas y rutinas para liberar tu tiempo y energía."
             icon={<TrendingUp className="h-10 w-10" />}
           />
 

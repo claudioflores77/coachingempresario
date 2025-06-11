@@ -41,13 +41,13 @@ const Hero: React.FC = () => {
               <p className="text-lg mb-6">
                 Soy Claudio Flores, consultor estratégico empresarial con más de 17 años de experiencia 
                 ayudando a empresarios en 22 países a transformar sus negocios. He desarrollado el 
-                Método P.U.D.E.R., un sistema probado que permite a empresarios como tú recuperar 
+                Método P.U.D.E.R., un sistema probado que permite a un empresario como tú recuperar 
                 el control de su tiempo, reducir el estrés y hacer crecer su negocio de manera sostenible.
               </p>
 
               <p className="text-lg mb-6">
-                Mi método no solo transforma empresas, transforma vidas. Ayudo a empresarios que están 
-                atrapados en la operación diaria de sus negocios a crear sistemas y procesos que les 
+                Mi método no solo transforma empresas, transforma vidas. Ayudo al empresario que está 
+                atrapado en la operación diaria de su negocio a crear sistemas y procesos que le 
                 permiten delegar, automatizar y escalar sin comprometer la calidad ni los resultados.
               </p>
             </div>

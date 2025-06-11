@@ -95,7 +95,7 @@ const MethodSection: React.FC = () => {
               <h4 className="text-xl font-bold mb-3 text-consulting-blue">Resultados Medibles y Comprobables</h4>
               <p className="text-consulting-gray mb-4">
                 Cada implementación del método incluye métricas específicas y KPIs claramente definidos que permiten 
-                medir el progreso de manera objetiva. Nuestros clientes experimentan mejoras promedio del 50% en 
+                medir el progreso de manera objetiva. Mis clientes experimentan mejoras promedio del 50% en 
                 eficiencia operativa y entre 25-40% de incremento en rentabilidad.
               </p>
             </div>
