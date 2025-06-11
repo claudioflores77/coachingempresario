@@ -89,6 +89,16 @@ const Header: React.FC = () => {
                 Testimonios
               </a>
             </li>
+            <li>
+              <a 
+                href="#contacto" 
+                className={`font-medium hover:text-brand-red transition-all ${
+                  isScrolled ? 'text-brand-black' : 'text-white'
+                }`}
+              >
+                Contacto
+              </a>
+            </li>
           </ul>
           <a 
             href="https://estrategiaempresaria.systeme.io/sesionestrategica1a1" 
@@ -152,6 +162,15 @@ const Header: React.FC = () => {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Testimonios
+              </a>
+            </li>
+            <li>
+              <a 
+                href="#contacto" 
+                className="block font-medium text-brand-black hover:text-brand-red"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Contacto
               </a>
             </li>
             <li>
