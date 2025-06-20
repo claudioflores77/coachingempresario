@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Clock, Target, BarChart4, MessageSquare, Linkedin } from 'lucide-react';
+import { Clock, Target, BarChart4, MessageSquare, Linkedin, Shield, AlertTriangle } from 'lucide-react';
 import SafeImage from './SafeImage';
 
 const MethodSection: React.FC = () => {
@@ -13,11 +13,73 @@ const MethodSection: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             <span className="text-consulting-gold">El Método P.U.D.E.R.</span> - Tu Camino Hacia la Libertad Empresarial
           </h2>
-          <p className="text-lg text-consulting-gray mb-4">
+          <p className="text-lg text-consulting-gray mb-6">
             Un sistema estructurado y probado que transforma tu empresa para que trabaje para ti, no al revés.
             Con este método revolucionario, recuperarás el control total de tu negocio, optimizarás todos tus procesos 
             y alcanzarás resultados tangibles y medibles que te permitirán disfrutar de una vida equilibrada.
           </p>
+          
+          <div className="bg-consulting-gray-light p-6 rounded-lg mb-6">
+            <h3 className="text-xl font-bold mb-4 text-consulting-navy">
+              P.U.D.E.R.: <span className="text-consulting-blue">Plan, Único, Desarrollo Económico-Financiero-Organizacional, Estándar, Repetir</span>
+            </h3>
+            <p className="text-lg text-consulting-gray mb-4">
+              El objetivo es vacunar a tu empresa, a ti como líder y a tu equipo contra las 5 principales causas de muerte empresarial:
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+              <div className="flex items-start space-x-3">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 flex items-center justify-center">
+                  <span className="text-brand-red font-bold text-sm">1</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-brand-red">El problema de la Coyuntura</h4>
+                  <p className="text-sm text-consulting-gray">La Falta de Planificación a Largo Plazo</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-3">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 flex items-center justify-center">
+                  <span className="text-brand-red font-bold text-sm">2</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-brand-red">El problema de los mercados tradicionales</h4>
+                  <p className="text-sm text-consulting-gray">La Falta de diferenciación</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-3">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 flex items-center justify-center">
+                  <span className="text-brand-red font-bold text-sm">3</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-brand-red">El problema del Emprendedor/Empresario</h4>
+                  <p className="text-sm text-consulting-gray">La lentitud para la adaptación al cambio de roles que demanda la organización</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-3">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 flex items-center justify-center">
+                  <span className="text-brand-red font-bold text-sm">4</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-brand-red">El problema de la falta de financiamiento</h4>
+                  <p className="text-sm text-consulting-gray">La falta de preparación para buscar y obtener financiamientos</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-3 md:col-span-2 justify-center">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 flex items-center justify-center">
+                  <span className="text-brand-red font-bold text-sm">5</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-brand-red">El problema de la Innovación</h4>
+                  <p className="text-sm text-consulting-gray">La lentitud para actuar frente al contexto VICA (Volátil, Incierto, Cambiante y Ambiguo)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
           <p className="text-lg text-consulting-gray">
             El Método P.U.D.E.R. es el resultado de más de 17 años de experiencia trabajando con empresarios de 22 países diferentes, 
             transformando negocios desde pequeñas empresas familiares hasta corporaciones medianas. Este sistema ha sido refinado 
