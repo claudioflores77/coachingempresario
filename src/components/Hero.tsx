@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ArrowRight, MessageSquare } from 'lucide-react';
+import { ArrowRight, MessageSquare, Clock, TrendingUp, Users } from 'lucide-react';
 import SafeImage from './SafeImage';
 import SafeIframe from './SafeIframe';
 
@@ -20,147 +20,162 @@ const Hero: React.FC = () => {
       
       <section 
         id="hero" 
-        className="relative min-h-screen flex items-center bg-brand-black text-white pt-20"
+        className="relative min-h-screen flex items-center bg-gradient-to-br from-brand-black via-gray-900 to-brand-green text-white pt-20"
         role="banner"
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-black via-brand-black to-brand-green opacity-85"></div>
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070')] bg-cover bg-center mix-blend-overlay opacity-30"></div>
+        {/* Background with better overlay */}
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070')] bg-cover bg-center"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-black/95 via-brand-black/90 to-brand-green/95"></div>
         
         <div className="container relative z-10">
-          <div className="max-w-3xl">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight animate-slide-up drop-shadow-lg">
-              Transforma Tu Empresa Para Que <span className="text-brand-red">Trabaje Para Ti</span>
-            </h1>
-
-            <div className="mb-8 animate-slide-up" style={{ animationDelay: '0.1s' }}>
-              <p className="text-xl md:text-2xl mb-4 text-consulting-gold-light">
-                ¿Estás trabajando más de 60 horas semanales sin tiempo para tu familia? 
-                ¿Tu negocio depende totalmente de ti para funcionar? Es momento de cambiar esto.
-              </p>
-              
-              <p className="text-lg mb-6">
-                Soy Claudio Flores, consultor estratégico empresarial con más de 17 años de experiencia 
-                ayudando a empresarios en 22 países a transformar sus negocios. He desarrollado el 
-                Método P.U.D.E.R., un sistema probado que permite a un empresario como tú recuperar 
-                el control de su tiempo, reducir el estrés y hacer crecer su negocio de manera sostenible.
-              </p>
-
-              <p className="text-lg mb-6">
-                Mi método no solo transforma empresas, transforma vidas. Ayudo al empresario que está 
-                atrapado en la operación diaria de su negocio a crear sistemas y procesos que le 
-                permiten delegar, automatizar y escalar sin comprometer la calidad ni los resultados.
-              </p>
-            </div>
+          <div className="max-w-4xl mx-auto text-center">
             
-            <div className="space-y-4 animate-slide-up bg-black/30 p-5 rounded-lg backdrop-blur-sm" style={{ animationDelay: '0.2s' }}>
-              <h2 className="text-xl md:text-2xl font-bold text-brand-red mb-2">
-                ¿Te identificas con alguno de estos problemas empresariales?
-              </h2>
-              <ul className="space-y-2 text-lg mb-6" role="list">
-                <li className="flex items-center">
-                  <span className="text-brand-red mr-2" aria-hidden="true">✗</span> 
-                  <span>Trabajas más de 60 horas semanales sin ver a tu familia ni disfrutar de tu vida personal</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="text-brand-red mr-2" aria-hidden="true">✗</span> 
-                  <span>Tu negocio depende totalmente de ti para funcionar y no puedes tomarte vacaciones</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="text-brand-red mr-2" aria-hidden="true">✗</span> 
-                  <span>El estrés constante está afectando tu salud física y mental, así como tus relaciones familiares</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="text-brand-red mr-2" aria-hidden="true">✗</span> 
-                  <span>Tu rentabilidad no justifica todo el esfuerzo que inviertes en el negocio</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="text-brand-red mr-2" aria-hidden="true">✗</span> 
-                  <span>No tienes sistemas claros ni procesos definidos que funcionen sin tu supervisión constante</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="text-brand-red mr-2" aria-hidden="true">✗</span> 
-                  <span>Tu equipo no puede tomar decisiones importantes sin consultarte todo</span>
-                </li>
-              </ul>
+            {/* Main Headline - Much more prominent */}
+            <div className="mb-8 animate-slide-up">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white">
+                Deja de Trabajar
+                <span className="block text-brand-red text-5xl md:text-7xl lg:text-8xl font-black">
+                  60+ HORAS
+                </span>
+                <span className="block text-3xl md:text-5xl lg:text-6xl">
+                  Sin Ver a Tu Familia
+                </span>
+              </h1>
               
-              <p className="text-xl font-semibold mb-4">
-                Si respondiste "sí" a alguna de estas situaciones, tengo la solución que necesitas.
-              </p>
+              <div className="bg-brand-red/20 backdrop-blur-sm border-2 border-brand-red rounded-xl p-6 md:p-8 mb-8">
+                <p className="text-xl md:text-3xl font-bold text-brand-yellow mb-4">
+                  ¡TRANSFORMA TU EMPRESA EN 90 DÍAS!
+                </p>
+                <p className="text-lg md:text-xl text-white">
+                  Reduce <span className="text-brand-yellow font-bold">50% tus horas</span> • 
+                  Aumenta <span className="text-brand-yellow font-bold">40% tu rentabilidad</span> • 
+                  Recupera <span className="text-brand-yellow font-bold">tu vida personal</span>
+                </p>
+              </div>
+            </div>
 
-              <p className="text-lg mb-6">
-                A través de mi Método P.U.D.E.R., he ayudado a cientos de empresarios a transformar 
-                completamente sus negocios y sus vidas. Mis clientes han logrado reducir sus horas 
-                de trabajo en un 50%, aumentar su rentabilidad entre 25-40%, y lo más importante: 
-                recuperar el control de sus vidas y el tiempo con sus familias.
-              </p>
+            {/* Key Stats - Visual Impact */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-8 animate-slide-up" style={{ animationDelay: '0.2s' }}>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                <div className="flex items-center justify-center mb-2">
+                  <Clock className="h-8 w-8 text-brand-yellow mr-2" />
+                  <span className="text-2xl md:text-3xl font-bold text-brand-yellow">17</span>
+                </div>
+                <p className="text-sm md:text-base font-medium">Años de Experiencia</p>
+              </div>
               
-              <div className="responsive-iframe-container mb-8">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                <div className="flex items-center justify-center mb-2">
+                  <Users className="h-8 w-8 text-brand-yellow mr-2" />
+                  <span className="text-2xl md:text-3xl font-bold text-brand-yellow">22</span>
+                </div>
+                <p className="text-sm md:text-base font-medium">Países Transformados</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                <div className="flex items-center justify-center mb-2">
+                  <TrendingUp className="h-8 w-8 text-brand-yellow mr-2" />
+                  <span className="text-2xl md:text-3xl font-bold text-brand-yellow">500+</span>
+                </div>
+                <p className="text-sm md:text-base font-medium">Empresarios Exitosos</p>
+              </div>
+            </div>
+
+            {/* Problem identification - More visual */}
+            <div className="bg-black/40 backdrop-blur-sm rounded-xl p-6 md:p-8 mb-8 border border-brand-red/30 animate-slide-up" style={{ animationDelay: '0.3s' }}>
+              <h2 className="text-2xl md:text-3xl font-bold text-brand-red mb-4">
+                ¿Te Sientes Atrapado en Tu Negocio?
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+                <div className="space-y-3">
+                  <div className="flex items-start">
+                    <span className="text-brand-red text-xl mr-3 mt-1">✗</span>
+                    <span className="text-base md:text-lg">Trabajas más de 60 horas sin descanso</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-brand-red text-xl mr-3 mt-1">✗</span>
+                    <span className="text-base md:text-lg">Tu negocio no puede funcionar sin ti</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-brand-red text-xl mr-3 mt-1">✗</span>
+                    <span className="text-base md:text-lg">El estrés está afectando tu salud</span>
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex items-start">
+                    <span className="text-brand-red text-xl mr-3 mt-1">✗</span>
+                    <span className="text-base md:text-lg">No tienes tiempo para tu familia</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-brand-red text-xl mr-3 mt-1">✗</span>
+                    <span className="text-base md:text-lg">La rentabilidad no justifica el esfuerzo</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-brand-red text-xl mr-3 mt-1">✗</span>
+                    <span className="text-base md:text-lg">No puedes tomar vacaciones</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Video Section - More prominent */}
+            <div className="mb-8 animate-slide-up" style={{ animationDelay: '0.4s' }}>
+              <h3 className="text-xl md:text-2xl font-bold mb-4 text-brand-yellow">
+                👇 Descubre las 5 Señales de que Tu Empresa Te Está Consumiendo
+              </h3>
+              <div className="relative max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl border-4 border-brand-red/50">
                 <SafeIframe 
                   src="https://www.youtube.com/embed/HE4E1z77eOg"
                   title="¡5 Señales de que TU EMPRESA TE ESTÁ CONSUMIENDO!🥴"
-                  className="mx-auto shadow-lg rounded"
+                  className="w-full aspect-video"
                 />
               </div>
+            </div>
+            
+            {/* Main CTAs - More prominent */}
+            <div className="space-y-4 animate-slide-up" style={{ animationDelay: '0.5s' }}>
+              <a 
+                href="https://estrategiaempresaria.systeme.io/sesionestrategica1a1" 
+                className="block w-full max-w-lg mx-auto bg-gradient-to-r from-brand-red to-red-600 text-white font-bold text-xl md:text-2xl py-4 md:py-6 px-8 rounded-xl shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-300 animate-pulse border-4 border-white"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Agendar sesión estratégica gratuita"
+              >
+                🚀 SESIÓN ESTRATÉGICA GRATUITA
+                <div className="text-base md:text-lg font-normal mt-1">
+                  ¡Recupera tu vida en 90 días!
+                </div>
+              </a>
               
-              <div className="space-y-4 md:space-y-0 md:space-x-4 flex flex-col md:flex-row">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-lg mx-auto">
                 <a 
-                  href="https://estrategiaempresaria.systeme.io/sesionestrategica1a1" 
-                  className="btn-primary flex items-center justify-center md:justify-start animate-pulse"
+                  href="#sobre-metodo" 
+                  className="flex-1 w-full sm:w-auto bg-transparent border-2 border-brand-yellow text-brand-yellow font-semibold text-lg py-3 px-6 rounded-lg hover:bg-brand-yellow hover:text-black transition-all duration-300 text-center"
+                >
+                  Ver el Método P.U.D.E.R.
+                </a>
+                
+                <a 
+                  href="https://api.whatsapp.com/send/?phone=19786629364&text=Hola%2C+quiero+hacer+una+pregunta+sobre+consultoría+empresarial&type=phone_number&app_absent=0"
+                  className="flex-1 w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white font-semibold text-lg py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Agendar sesión estratégica gratuita"
                 >
-                  ¡QUIERO RECUPERAR MI VIDA! - Sesión Estratégica Gratis
-                  <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
-                </a>
-                <a 
-                  href="#metodo" 
-                  className="btn-secondary flex items-center justify-center md:justify-start"
-                  aria-label="Conocer más sobre el Método P.U.D.E.R."
-                >
-                  Conocer El Método P.U.D.E.R.
+                  <MessageSquare className="mr-2 h-5 w-5" />
+                  WhatsApp
                 </a>
               </div>
             </div>
-          </div>
-          
-          <div className="mt-12 md:mt-20 animate-slide-up" style={{ animationDelay: '0.4s' }}>
-            <p className="text-lg font-semibold text-consulting-gold-light">Claudio Flores - Consultor Estratégico Empresarial</p>
-            <p className="text-lg">17 años de experiencia transformando empresas | 22 países | Cientos de empresarios exitosos</p>
-            <p className="text-md mt-2">Especializado en consultoría estratégica, coaching ejecutivo y desarrollo organizacional</p>
-          </div>
-          
-          <div className="mt-8 text-center">
-            <a 
-              href="https://api.whatsapp.com/send/?phone=19786629364&text=Hola%2C+quiero+hacer+una+pregunta+sobre+consultoría+empresarial&type=phone_number&app_absent=0"
-              className="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-all focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Iniciar consulta gratuita por WhatsApp"
-            >
-              <MessageSquare className="mr-2 h-5 w-5" aria-hidden="true" />
-              Consulta gratuita por WhatsApp
-            </a>
+            
+            {/* Credibility line - Simplified */}
+            <div className="mt-12 animate-slide-up" style={{ animationDelay: '0.6s' }}>
+              <div className="bg-brand-yellow/20 backdrop-blur-sm rounded-lg p-4 border border-brand-yellow/30">
+                <p className="text-lg md:text-xl font-bold text-brand-yellow">Claudio Flores</p>
+                <p className="text-base md:text-lg text-white">Consultor Estratégico Empresarial | Método P.U.D.E.R.</p>
+              </div>
+            </div>
           </div>
         </div>
-
-        <style>
-          {`
-          .responsive-iframe-container {
-            width: 100%;
-            max-width: 853px;
-            margin: 0 auto;
-          }
-          
-          @media (max-width: 853px) {
-            .responsive-iframe-container iframe {
-              width: 100%;
-              height: auto;
-              aspect-ratio: 16 / 9;
-            }
-          }
-          `}
-        </style>
       </section>
     </>
   );
