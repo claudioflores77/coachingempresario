@@ -51,32 +51,22 @@ const Header: React.FC = () => {
           <ul className="flex space-x-8">
             <li>
               <a 
-                href="#metodo" 
+                href="#por-que-conmigo" 
+                className={`font-medium hover:text-brand-red transition-all ${
+                  isScrolled ? 'text-brand-black' : 'text-white'
+                }`}
+              >
+                ¿Por Qué Conmigo?
+              </a>
+            </li>
+            <li>
+              <a 
+                href="#sobre-metodo" 
                 className={`font-medium hover:text-brand-red transition-all ${
                   isScrolled ? 'text-brand-black' : 'text-white'
                 }`}
               >
                 El Método
-              </a>
-            </li>
-            <li>
-              <a 
-                href="#servicios" 
-                className={`font-medium hover:text-brand-red transition-all ${
-                  isScrolled ? 'text-brand-black' : 'text-white'
-                }`}
-              >
-                Servicios
-              </a>
-            </li>
-            <li>
-              <a 
-                href="#resultados" 
-                className={`font-medium hover:text-brand-red transition-all ${
-                  isScrolled ? 'text-brand-black' : 'text-white'
-                }`}
-              >
-                Resultados
               </a>
             </li>
             <li>
@@ -91,12 +81,12 @@ const Header: React.FC = () => {
             </li>
             <li>
               <a 
-                href="#contacto" 
+                href="#faq" 
                 className={`font-medium hover:text-brand-red transition-all ${
                   isScrolled ? 'text-brand-black' : 'text-white'
                 }`}
               >
-                Contacto
+                FAQ
               </a>
             </li>
           </ul>
@@ -106,7 +96,7 @@ const Header: React.FC = () => {
             rel="noopener noreferrer"
             className={`btn-primary ${!isScrolled && 'bg-white text-brand-black hover:bg-brand-red hover:text-white'}`}
           >
-            Agendar Sesión
+            Sesión Gratis
           </a>
         </nav>
 
@@ -130,29 +120,20 @@ const Header: React.FC = () => {
           <ul className="container py-4 space-y-4">
             <li>
               <a 
-                href="#metodo" 
+                href="#por-que-conmigo" 
+                className="block font-medium text-brand-black hover:text-brand-red"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                ¿Por Qué Conmigo?
+              </a>
+            </li>
+            <li>
+              <a 
+                href="#sobre-metodo" 
                 className="block font-medium text-brand-black hover:text-brand-red"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 El Método
-              </a>
-            </li>
-            <li>
-              <a 
-                href="#servicios" 
-                className="block font-medium text-brand-black hover:text-brand-red"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Servicios
-              </a>
-            </li>
-            <li>
-              <a 
-                href="#resultados" 
-                className="block font-medium text-brand-black hover:text-brand-red"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Resultados
               </a>
             </li>
             <li>
@@ -166,11 +147,11 @@ const Header: React.FC = () => {
             </li>
             <li>
               <a 
-                href="#contacto" 
+                href="#faq" 
                 className="block font-medium text-brand-black hover:text-brand-red"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Contacto
+                FAQ
               </a>
             </li>
             <li>
@@ -181,7 +162,7 @@ const Header: React.FC = () => {
                 rel="noopener noreferrer"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Agendar Sesión
+                Sesión Gratis
               </a>
             </li>
           </ul>

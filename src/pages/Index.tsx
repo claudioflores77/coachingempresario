@@ -2,12 +2,11 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
-import MethodSection from '../components/MethodSection';
-import Services from '../components/Services';
-import Results from '../components/Results';
-import Testimonials from '../components/Testimonials';
-import HelpSection from '../components/HelpSection';
+import WhyChooseMe from '../components/WhyChooseMe';
+import AboutMethod from '../components/AboutMethod';
 import CallToAction from '../components/CallToAction';
+import Testimonials from '../components/Testimonials';
+import FAQ from '../components/FAQ';
 import Footer from '../components/Footer';
 import BackToTop from '../components/BackToTop';
 import BreadcrumbNav from '../components/BreadcrumbNav';
@@ -92,7 +91,7 @@ const Index = () => {
     }, observerOptions);
 
     // Observe all main sections
-    const sections = ['hero', 'metodo', 'servicios', 'resultados', 'testimonios', 'ayuda'];
+    const sections = ['hero', 'por-que-conmigo', 'sobre-metodo', 'testimonios', 'faq'];
     sections.forEach(sectionId => {
       const element = document.getElementById(sectionId);
       if (element) observer.observe(element);
@@ -119,11 +118,10 @@ const Index = () => {
   const breadcrumbItems = [
     { 
       label: currentSection === 'inicio' ? 'Inicio' : 
-             currentSection === 'metodo' ? 'Método P.U.D.E.R.' :
-             currentSection === 'servicios' ? 'Servicios' :
-             currentSection === 'resultados' ? 'Resultados' :
+             currentSection === 'por-que-conmigo' ? '¿Por qué conmigo?' :
+             currentSection === 'sobre-metodo' ? 'Sobre el Método' :
              currentSection === 'testimonios' ? 'Testimonios' :
-             currentSection === 'ayuda' ? 'Ayuda' : 'Inicio',
+             currentSection === 'faq' ? 'Preguntas Frecuentes' : 'Inicio',
       current: true 
     }
   ];
@@ -136,15 +134,33 @@ const Index = () => {
       {currentSection !== 'inicio' && <BreadcrumbNav items={breadcrumbItems} />}
       
       <main role="main">
+        {/* 1. Título atractivo enfocado en el resultado + CTA */}
         <section id="hero">
           <Hero />
         </section>
-        <MethodSection />
-        <Services />
-        <Results />
-        <Testimonials />
-        <HelpSection />
+        
+        {/* 2. ¿Por qué estudiar/trabajar conmigo? */}
+        <section id="por-que-conmigo">
+          <WhyChooseMe />
+        </section>
+        
+        {/* 3. Sobre el Método (descripción del vehículo) */}
+        <section id="sobre-metodo">
+          <AboutMethod />
+        </section>
+        
+        {/* 4. CTA reforzada */}
         <CallToAction />
+        
+        {/* 5. Reseñas/Testimonios/Validación Social */}
+        <section id="testimonios">
+          <Testimonials />
+        </section>
+        
+        {/* 6. Preguntas Frecuentes (7 objeciones) */}
+        <section id="faq">
+          <FAQ />
+        </section>
       </main>
       
       <Footer />
