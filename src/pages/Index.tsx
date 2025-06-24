@@ -23,7 +23,7 @@ interface Notification {
 
 const Index = () => {
   const [notifications, setNotifications] = useState<Notification[]>([]);
-  const [currentSection, setCurrentSection] = useState('inicio');
+  const [currentSection, setCurrentSection] = useState('hero');
 
   useEffect(() => {
     console.log('Index page loading...');
@@ -37,55 +37,17 @@ const Index = () => {
         'Transforma tu empresa con el Método P.U.D.E.R. Consultoría estratégica empresarial. Reduce 50% tus horas de trabajo y aumenta 25-40% tu rentabilidad.'
       );
     }
-    
-    // Smooth scroll for anchor links with improved accessibility
-    const handleAnchorClick = (e: Event) => {
-      const target = e.target as HTMLAnchorElement;
-      if (target.getAttribute('href')?.startsWith('#')) {
-        e.preventDefault();
-        const targetId = target.getAttribute('href')?.substring(1);
-        const targetElement = document.getElementById(targetId || '');
-        if (targetElement) {
-          const headerHeight = 80;
-          const targetPosition = targetElement.offsetTop - headerHeight;
-          
-          window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth'
-          });
-          
-          // Update focus for accessibility
-          targetElement.focus({ preventScroll: true });
-        }
-      }
-    };
-
-    // Add event listeners for anchor links
-    document.addEventListener('click', handleAnchorClick);
-
-    // Keyboard shortcuts for accessibility
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        // Close any open modals or focus traps
-        const activeElement = document.activeElement as HTMLElement;
-        if (activeElement && activeElement.blur) {
-          activeElement.blur();
-        }
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
 
     // Section tracking for breadcrumbs
     const observerOptions = {
-      threshold: 0.5,
+      threshold: 0.3,
       rootMargin: '-80px 0px -50% 0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          setCurrentSection(entry.target.id || 'inicio');
+          setCurrentSection(entry.target.id || 'hero');
         }
       });
     }, observerOptions);
@@ -100,8 +62,6 @@ const Index = () => {
     console.log('Index page loaded successfully');
 
     return () => {
-      document.removeEventListener('click', handleAnchorClick);
-      document.removeEventListener('keydown', handleKeyDown);
       observer.disconnect();
     };
   }, []);
@@ -117,7 +77,7 @@ const Index = () => {
 
   const breadcrumbItems = [
     { 
-      label: currentSection === 'inicio' ? 'Inicio' : 
+      label: currentSection === 'hero' ? 'Inicio' : 
              currentSection === 'por-que-conmigo' ? '¿Por qué conmigo?' :
              currentSection === 'sobre-metodo' ? 'Sobre el Método' :
              currentSection === 'testimonios' ? 'Testimonios' :
@@ -131,13 +91,11 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      {currentSection !== 'inicio' && <BreadcrumbNav items={breadcrumbItems} />}
+      {currentSection !== 'hero' && <BreadcrumbNav items={breadcrumbItems} />}
       
       <main role="main">
         {/* 1. Título atractivo enfocado en el resultado + CTA */}
-        <section id="hero">
-          <Hero />
-        </section>
+        <Hero />
         
         {/* 2. ¿Por qué estudiar/trabajar conmigo? */}
         <section id="por-que-conmigo">

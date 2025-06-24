@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
     <>
       {/* Skip link for accessibility */}
       <a 
-        href="#metodo" 
+        href="#hero-content" 
         className="skip-link focus:translate-y-0"
         tabIndex={0}
       >
@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
       
       <section 
         id="hero" 
-        className="relative min-h-screen flex items-center bg-gradient-to-br from-brand-black via-gray-900 to-brand-green text-white pt-20"
+        className="relative min-h-screen flex items-center bg-gradient-to-br from-brand-black via-gray-900 to-brand-green text-white pt-24 md:pt-20"
         role="banner"
       >
         {/* Background with better overlay */}
@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-brand-black/95 via-brand-black/90 to-brand-green/95"></div>
         
         <div className="container relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
+          <div id="hero-content" className="max-w-4xl mx-auto text-center">
             
             {/* Main Headline - Much more prominent */}
             <div className="mb-8 animate-slide-up">

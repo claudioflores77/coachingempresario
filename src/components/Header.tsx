@@ -19,6 +19,21 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault();
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      const headerHeight = 80;
+      const targetPosition = targetElement.offsetTop - headerHeight;
+      
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+    }
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <header 
       className={`fixed w-full top-0 left-0 z-50 transition-all duration-300 ${
@@ -27,7 +42,11 @@ const Header: React.FC = () => {
     >
       <div className="container flex items-center justify-between">
         <div>
-          <a href="/" className="flex items-center">
+          <a 
+            href="#hero" 
+            className="flex items-center"
+            onClick={(e) => handleSmoothScroll(e, 'hero')}
+          >
             {/* Logo Image */}
             <img 
               src="/lovable-uploads/135f3f99-d5f9-4f4d-8213-675e650f3f18.png" 
@@ -55,6 +74,7 @@ const Header: React.FC = () => {
                 className={`font-medium hover:text-brand-red transition-all ${
                   isScrolled ? 'text-brand-black' : 'text-white'
                 }`}
+                onClick={(e) => handleSmoothScroll(e, 'por-que-conmigo')}
               >
                 ¿Por Qué Conmigo?
               </a>
@@ -65,6 +85,7 @@ const Header: React.FC = () => {
                 className={`font-medium hover:text-brand-red transition-all ${
                   isScrolled ? 'text-brand-black' : 'text-white'
                 }`}
+                onClick={(e) => handleSmoothScroll(e, 'sobre-metodo')}
               >
                 El Método
               </a>
@@ -75,6 +96,7 @@ const Header: React.FC = () => {
                 className={`font-medium hover:text-brand-red transition-all ${
                   isScrolled ? 'text-brand-black' : 'text-white'
                 }`}
+                onClick={(e) => handleSmoothScroll(e, 'testimonios')}
               >
                 Testimonios
               </a>
@@ -85,6 +107,7 @@ const Header: React.FC = () => {
                 className={`font-medium hover:text-brand-red transition-all ${
                   isScrolled ? 'text-brand-black' : 'text-white'
                 }`}
+                onClick={(e) => handleSmoothScroll(e, 'faq')}
               >
                 FAQ
               </a>
@@ -122,7 +145,7 @@ const Header: React.FC = () => {
               <a 
                 href="#por-que-conmigo" 
                 className="block font-medium text-brand-black hover:text-brand-red"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={(e) => handleSmoothScroll(e, 'por-que-conmigo')}
               >
                 ¿Por Qué Conmigo?
               </a>
@@ -131,7 +154,7 @@ const Header: React.FC = () => {
               <a 
                 href="#sobre-metodo" 
                 className="block font-medium text-brand-black hover:text-brand-red"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={(e) => handleSmoothScroll(e, 'sobre-metodo')}
               >
                 El Método
               </a>
@@ -140,7 +163,7 @@ const Header: React.FC = () => {
               <a 
                 href="#testimonios" 
                 className="block font-medium text-brand-black hover:text-brand-red"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={(e) => handleSmoothScroll(e, 'testimonios')}
               >
                 Testimonios
               </a>
@@ -149,7 +172,7 @@ const Header: React.FC = () => {
               <a 
                 href="#faq" 
                 className="block font-medium text-brand-black hover:text-brand-red"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={(e) => handleSmoothScroll(e, 'faq')}
               >
                 FAQ
               </a>
