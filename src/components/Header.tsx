@@ -34,7 +34,7 @@ const Header: React.FC = () => {
             {/* Logo Image */}
             <img src="/lovable-uploads/135f3f99-d5f9-4f4d-8213-675e650f3f18.png" alt="Claudio Flores Logo" className="h-10 mr-3" />
             <div>
-              <h1 className="text-center text-base font-bold">
+              <h1 className="text-center text-base font-bold text-slate-100">
                 Claudio Flores
               </h1>
               <div className={`text-sm ${isScrolled ? 'text-brand-red' : 'text-brand-red'} flex flex-col text-center`}>
