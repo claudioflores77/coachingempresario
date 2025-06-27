@@ -38,7 +38,7 @@ const Header: React.FC = () => {
                 Claudio Flores
               </h1>
               <div className={`text-sm ${isScrolled ? 'text-brand-red' : 'text-brand-red'} flex flex-col text-center`}>
-                <span>Consultoría Estratégica</span>
+                <span className="font-medium text-center">Consultora Estratégica</span>
                 <span>Empresarial</span>
               </div>
             </div>
