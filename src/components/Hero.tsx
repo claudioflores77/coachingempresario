@@ -18,8 +18,54 @@ const Hero: React.FC = () => {
         <div className="container relative z-10 my-[25px]">
           <div id="hero-content" className="max-w-4xl mx-auto text-center">
             
-            {/* Main Headline - Separated from header */}
-            <div className="mb-8 animate-slide-up">
+            {/* Video Section - Moved to top for attention */}
+            <div className="mb-16 animate-slide-up">
+              <div className="bg-black/40 backdrop-blur-sm rounded-xl p-6 md:p-8 mb-8 border border-brand-red/30">
+                <h2 className="text-2xl md:text-3xl font-bold text-brand-red mb-4">
+                  ¿Te Sientes Atrapado en Tu Negocio?
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left mb-6">
+                  <div className="space-y-3">
+                    <div className="flex items-start">
+                      <span className="text-brand-red text-xl mr-3 mt-1">✗</span>
+                      <span className="text-base md:text-lg">Trabajas más de 60 horas sin descanso</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="text-brand-red text-xl mr-3 mt-1">✗</span>
+                      <span className="text-base md:text-lg">Tu negocio no puede funcionar sin ti</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="text-brand-red text-xl mr-3 mt-1">✗</span>
+                      <span className="text-base md:text-lg">El estrés está afectando tu salud</span>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <div className="flex items-start">
+                      <span className="text-brand-red text-xl mr-3 mt-1">✗</span>
+                      <span className="text-base md:text-lg">No tienes tiempo para tu familia</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="text-brand-red text-xl mr-3 mt-1">✗</span>
+                      <span className="text-base md:text-lg">La rentabilidad no justifica el esfuerzo</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="text-brand-red text-xl mr-3 mt-1">✗</span>
+                      <span className="text-base md:text-lg">No puedes tomar vacaciones</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <h3 className="text-xl md:text-2xl font-bold mb-4 text-brand-yellow">
+                  👇 Descubre las 5 Señales de que Tu Empresa Te Está Consumiendo
+                </h3>
+                <div className="relative max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl border-4 border-brand-red/50">
+                  <SafeIframe src="https://www.youtube.com/embed/HE4E1z77eOg" title="¡5 Señales de que TU EMPRESA TE ESTÁ CONSUMIENDO!🥴" className="w-full aspect-video" />
+                </div>
+              </div>
+            </div>
+
+            {/* Main Headline - After video */}
+            <div className="mb-8 animate-slide-up" style={{animationDelay: '0.2s'}}>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white">
                 Deja de Trabajar
                 <span className="block text-brand-red text-5xl md:text-7xl lg:text-8xl font-black mt-2">
@@ -115,53 +161,6 @@ const Hero: React.FC = () => {
               </div>
             </div>
 
-            {/* Video Section - Moved to second fold to avoid cluttering first screen */}
-            <div className="mt-20 animate-slide-up" style={{
-            animationDelay: '0.5s'
-          }}>
-              <div className="bg-black/40 backdrop-blur-sm rounded-xl p-6 md:p-8 mb-8 border border-brand-red/30">
-                <h2 className="text-2xl md:text-3xl font-bold text-brand-red mb-4">
-                  ¿Te Sientes Atrapado en Tu Negocio?
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left mb-6">
-                  <div className="space-y-3">
-                    <div className="flex items-start">
-                      <span className="text-brand-red text-xl mr-3 mt-1">✗</span>
-                      <span className="text-base md:text-lg">Trabajas más de 60 horas sin descanso</span>
-                    </div>
-                    <div className="flex items-start">
-                      <span className="text-brand-red text-xl mr-3 mt-1">✗</span>
-                      <span className="text-base md:text-lg">Tu negocio no puede funcionar sin ti</span>
-                    </div>
-                    <div className="flex items-start">
-                      <span className="text-brand-red text-xl mr-3 mt-1">✗</span>
-                      <span className="text-base md:text-lg">El estrés está afectando tu salud</span>
-                    </div>
-                  </div>
-                  <div className="space-y-3">
-                    <div className="flex items-start">
-                      <span className="text-brand-red text-xl mr-3 mt-1">✗</span>
-                      <span className="text-base md:text-lg">No tienes tiempo para tu familia</span>
-                    </div>
-                    <div className="flex items-start">
-                      <span className="text-brand-red text-xl mr-3 mt-1">✗</span>
-                      <span className="text-base md:text-lg">La rentabilidad no justifica el esfuerzo</span>
-                    </div>
-                    <div className="flex items-start">
-                      <span className="text-brand-red text-xl mr-3 mt-1">✗</span>
-                      <span className="text-base md:text-lg">No puedes tomar vacaciones</span>
-                    </div>
-                  </div>
-                </div>
-                
-                <h3 className="text-xl md:text-2xl font-bold mb-4 text-brand-yellow">
-                  👇 Descubre las 5 Señales de que Tu Empresa Te Está Consumiendo
-                </h3>
-                <div className="relative max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl border-4 border-brand-red/50">
-                  <SafeIframe src="https://www.youtube.com/embed/HE4E1z77eOg" title="¡5 Señales de que TU EMPRESA TE ESTÁ CONSUMIENDO!🥴" className="w-full aspect-video" />
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
