@@ -83,9 +83,6 @@ const FAQ: React.FC = () => {
                     <h3 className="text-lg font-semibold text-consulting-navy mb-2">
                       {faq.question}
                     </h3>
-                    <span className="text-sm text-brand-red font-medium">
-                      {faq.objection}
-                    </span>
                   </div>
                   {openFaq === index ? (
                     <ChevronUp className="h-6 w-6 text-consulting-blue flex-shrink-0 mt-1" />
