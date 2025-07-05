@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
                   <div className="space-y-3">
                     <div className="flex items-start">
                       <span className="text-brand-red text-xl mr-3 mt-1">✗</span>
-                      <span className="text-base md:text-lg">Trabajas más de 60 horas sin descanso</span>
+                      <span className="text-base md:text-lg">Trabajas más de 50 horas sin descanso</span>
                     </div>
                     <div className="flex items-start">
                       <span className="text-brand-red text-xl mr-3 mt-1">✗</span>
@@ -65,7 +65,9 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Main Headline - After video */}
-            <div className="mb-8 animate-slide-up" style={{animationDelay: '0.2s'}}>
+            <div className="mb-8 animate-slide-up" style={{
+            animationDelay: '0.2s'
+          }}>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white">
                 Deja de Trabajar
                 <span className="block text-brand-red text-5xl md:text-7xl lg:text-8xl font-black mt-2">
