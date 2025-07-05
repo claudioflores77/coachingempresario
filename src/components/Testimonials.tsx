@@ -36,7 +36,7 @@ const Testimonials: React.FC = () => {
       id: 3,
       name: "Miguel Ángel Torres",
       role: "Director",
-      company: "Construye SA",
+      company: "ConstrucArte S.A.C.I.F.i.A.",
       content: "Mi empresa crecía pero mis beneficios no. Estaba atrapado resolviendo problemas diarios sin poder dedicarme a la estrategia. El Método P.U.D.E.R. reorganizó todo.",
       results: "Escalamos un 40% en 8 meses y aumentamos el margen de beneficio un 15%",
       image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2074"
