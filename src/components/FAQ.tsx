@@ -7,39 +7,32 @@ const FAQ: React.FC = () => {
 
   const faqs = [
     {
-      question: "¿Realmente necesito cambiar mi forma de trabajar? Mi empresa funciona...",
-      answer: "Entiendo que pienses que tu empresa 'funciona', pero trabajar más de 60 horas semanales, no poder tomarte vacaciones y que todo dependa de ti NO es funcionamiento, es supervivencia. El problema real es que estás pagando un precio altísimo: tu salud, tu familia, tu vida personal. Cada día que pasa sin sistemas adecuados, pierdes oportunidades de crecimiento y te acercas más al agotamiento total. El costo de no hacer nada es exponencialmente mayor que el costo de transformar tu empresa ahora.",
-      objection: "Dolor - Reconocimiento del problema"
+      question: "Estoy agotado trabajando 60+ horas y no puedo tomarme ni vacaciones... ¿realmente vale la pena cambiar todo?",
+      answer: "Lo que describes NO es una empresa exitosa, es una prisión dorada que tú mismo construiste. Cada día que mantienes esta situación, pierdes más: tu salud se deteriora (¿cuándo fue la última vez que dormiste 8 horas seguidas?), tu familia te ve como un extraño, y las oportunidades de crecimiento se esfuman porque estás demasiado ocupado 'apagando incendios'. El costo real de no actuar AHORA son años de tu vida que nunca recuperarás, relaciones familiares destruidas, y un negocio que morirá contigo. ¿Cuánto más puedes aguantar así antes de que tu cuerpo o tu mente colapsen?"
     },
     {
-      question: "¿No podré implementar estos cambios yo mismo? ¿Realmente necesito ayuda externa?",
-      answer: "Claro que eres inteligente y capaz, pero hay una diferencia entre PODER hacerlo solo y hacerlo de manera eficiente y correcta. Podrías aprender cirugía leyendo libros, pero ¿te operarías a ti mismo? He invertido 17 años perfeccionando este método, trabajando con cientos de empresarios. Puedo ahorrarte años de prueba y error, costosos errores y frustraciones. La pregunta real es: ¿cuánto vale tu tiempo y cuánto te está costando mantener la situación actual?",
-      objection: "Duda - Capacidad personal"
+      question: "Ya intenté implementar sistemas antes y fracasé... ¿por qué esta vez sería diferente?",
+      answer: "Perfecto, esa experiencia previa es exactamente por qué necesitas esto. Fallar intentándolo solo es normal - el 87% de empresarios fracasan implementando sistemas porque no tienen la metodología correcta ni el acompañamiento adecuado. Tus intentos anteriores fallaron porque no tenías una guía experta que te mostrara el camino exacto, paso a paso. Es como intentar realizar una cirugía leyendo un manual - técnicamente 'puedes' hacerlo, pero el resultado será desastroso. Yo he perfeccionado este proceso durante 17 años y 300+ empresas transformadas. La diferencia es que ahora tienes el mapa exacto y un guía experto que ya caminó este sendero cientos de veces."
     },
     {
-      question: "¿Vale la pena la inversión vs. seguir como estoy ahora?",
-      answer: "Excelente pregunta. Hagamos números: Si trabajas 60+ horas semanales a $50/hora de valor de tu tiempo, son $156,000 anuales solo en tiempo. Suma el estrés en tu salud (miles en gastos médicos), las oportunidades perdidas de crecimiento (mínimo 25% más ingresos), y el costo emocional en tu familia. El costo de NO actuar supera fácilmente los $200,000 anuales. Mi método te devuelve 30 horas semanales (¡$78,000 anuales en tiempo!) y aumenta tu rentabilidad 25-40%. La inversión se paga sola en 2-3 meses.",
-      objection: "Costo + Precio - Justificación financiera"
+      question: "¿Tengo los recursos para costear esta inversión? Mi flujo de caja está muy ajustado...",
+      answer: "Si tienes un negocio que genera ingresos, YA TIENES los recursos - solo que están mal distribuidos. Mis clientes exitosos han usado tarjetas de crédito empresariales, líneas de crédito, préstamos familiares, o incluso vendido activos improductivos para financiar su transformación. ¿Por qué? Porque saben que es la inversión más rentable que pueden hacer. Un solo proceso optimizado puede generar el ROI completo en 30-60 días. Si tu negocio no puede generar $10,000-15,000 extras en 3-4 meses con los sistemas correctos, entonces tienes un problema mucho más grande que necesita resolverse URGENTEMENTE. La pregunta real es: ¿estás dispuesto a encontrar el dinero para cambiar tu vida?"
     },
     {
-      question: "¿Es posible realmente tener un negocio que funcione sin mí presente?",
-      answer: "¡Absolutamente SÍ! Y te lo puedo demostrar. Tengo clientes que se han tomado vacaciones de 3 semanas mientras sus empresas siguieron creciendo. Otros que redujeron su jornada a 25 horas semanales mientras duplicaron sus ingresos. El secreto está en crear sistemas, procesos y equipos que sean más eficientes que tu presencia constante. No es magia, es metodología. Imagínate levantarte un lunes y saber que tu empresa está generando dinero, sirviendo clientes y creciendo... sin que tengas que estar ahí supervisando cada detalle.",
-      objection: "Deseo - Posibilidad de éxito"
+      question: "Mi familia piensa que gasto mucho en 'capacitaciones'... ¿cómo los convenzo?",
+      answer: "Tu familia tiene razón en proteger el dinero familiar, pero están viendo esto como un gasto cuando es una INVERSIÓN en su futuro. Aquí está lo que debes decirles: 'Este no es otro curso, es la solución para recuperar a esposo/padre que han perdido por culpa del negocio'. Cuando implementes estos sistemas, tendrás 30+ horas semanales extras para estar con ellos, vacaciones reales sin interrupciones, y ingresos más estables y predecibles. Incluyo sesiones específicas para explicar el proceso a tu pareja y mostrar cómo esto beneficia a TODA la familia. La resistencia familiar desaparece cuando ven que se trata de recuperarte a TI, no de gastarse más dinero en 'experimentos'."
     },
     {
-      question: "¿Cómo puedo costear este tipo de consultoría? No tengo liquidez disponible...",
-      answer: "Entiendo la preocupación financiera, pero aquí está la realidad: el dinero SIEMPRE está disponible para las inversiones que realmente importan. Mis clientes han financiado la consultoría con tarjetas de crédito, préstamos familiares, líneas de crédito empresariales, y hasta vendiendo activos innecesarios. ¿Por qué? Porque saben que es la inversión más rentable que pueden hacer. Una sola mejora en eficiencia puede generar el ROI completo. Además, ofrezco planes de pago flexibles. La pregunta no es si tienes el dinero, sino si estás comprometido con cambiar tu vida.",
-      objection: "Dinero - Capacidad financiera"
+      question: "Suena demasiado bueno para ser cierto... ¿realmente puedo tener un negocio que funcione sin mí?",
+      answer: "Es completamente posible y tengo cientos de casos que lo demuestran. Carlos redujo su jornada de 70 a 25 horas semanales mientras duplicó sus ingresos. María se tomó 4 semanas de vacaciones en Europa mientras su empresa creció 30%. No es magia, es metodología probada. El Método P.U.D.E.R. crea sistemas que son MÁS eficientes que tu presencia constante. Imagínate esto: despiertas un lunes, revisas tu teléfono, y ves que tu empresa generó ventas durante el fin de semana, tu equipo resolvió problemas sin consultarte, y los clientes están satisfechos... TODO funcionando como un reloj suizo. Esto es posible cuando tienes los sistemas correctos. ¿No vale la pena intentarlo?"
     },
     {
-      question: "¿Tendré el apoyo necesario durante la implementación? ¿Mi equipo/familia me apoyará?",
-      answer: "Sí, tendrás TODO el apoyo necesario. Primero, trabajamos JUNTOS durante todo el proceso - no te dejo solo con una lista de tareas. Segundo, te enseño exactamente cómo comunicar estos cambios a tu equipo y familia para que se conviertan en tus aliados, no en obstáculos. Muchas veces incluyo sesiones específicas con tu equipo clave y hasta con tu pareja para asegurar alineación total. Además, tienes acceso directo a mí via WhatsApp para dudas urgentes. No estás solo en esto.",
-      objection: "Ayuda - Apoyo disponible"
+      question: "¿Qué pasa si no veo resultados? ¿Y si esto no funciona para mi industria específica?",
+      answer: "Primera parte: Si no ves mejoras medibles en 90 días, te devuelvo CADA centavo - sin preguntas, sin peros. Segunda parte: He aplicado este método en más de 22 países y docenas de industrias: desde restaurantes hasta tecnología, desde servicios profesionales hasta manufactura. Los principios de sistemas, procesos y equipos son universales. Además, puedes verificar mis resultados AHORA MISMO: revisa mis testimonios en Google, habla con mis clientes anteriores (te doy contactos reales), ve los casos de éxito en mi LinkedIn. En nuestra sesión estratégica gratuita, verás resultados inmediatos que podrás implementar ese mismo día. Los charlatanes no ofrecen garantías de devolución ni referencias verificables."
     },
     {
-      question: "¿Cómo sé que tu método realmente funciona y no es solo marketing?",
-      answer: "Excelente pregunta y te respeto por hacerla. Primero, mis resultados son verificables: puedes hablar directamente con mis clientes (te doy referencias reales). Segundo, ofrezco garantía de resultados: si no ves mejoras medibles en 90 días, te devuelvo tu inversión. Tercero, mi reputación de 17 años en 22 países habla por sí misma - revisa mis testimonios en Google Business Profile y LinkedIn. Cuarto, en nuestra sesión estratégica gratuita verás resultados inmediatos que podrás implementar ese mismo día. Los charlatanes no ofrecen garantías ni referencias verificables.",
-      objection: "Confianza - Credibilidad del método"
+      question: "¿Realmente tendré el apoyo necesario o me dejarán solo después de pagar?",
+      answer: "Trabajamos JUNTOS durante todo el proceso - esto no es un curso donde te dan acceso y te abandonan. Tienes acceso directo a mí via WhatsApp para dudas urgentes, sesiones semanales de implementación, y revisiones personalizadas de tu progreso. Además, te enseño exactamente cómo manejar la resistencia de tu equipo y convertirlos en aliados del cambio. Muchas veces incluyo sesiones con tu equipo clave para asegurar alineación total. Mi reputación de 17 años se basa en el éxito de mis clientes - tu éxito ES mi éxito. No estás comprando un producto, estás adquiriendo un partner estratégico comprometido con tu transformación."
     }
   ];
 
