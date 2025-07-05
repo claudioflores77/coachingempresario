@@ -12,7 +12,7 @@ const FAQ: React.FC = () => {
     },
     {
       question: "Ya intenté implementar sistemas antes y fracasé... ¿por qué esta vez sería diferente?",
-      answer: "Perfecto, esa experiencia previa es exactamente por qué necesitas esto. Fallar intentándolo solo es normal - el 87% de empresarios fracasan implementando sistemas porque no tienen la metodología correcta ni el acompañamiento adecuado. Tus intentos anteriores fallaron porque no tenías una guía experta que te mostrara el camino exacto, paso a paso. Es como intentar realizar una cirugía leyendo un manual - técnicamente 'puedes' hacerlo, pero el resultado será desastroso. Yo he perfeccionado este proceso durante 17 años y 300+ empresas transformadas. La diferencia es que ahora tienes el mapa exacto y un guía experto que ya caminó este sendero cientos de veces."
+      answer: "Perfecto, esa experiencia previa es exactamente por qué necesitas esto. Fallar intentándolo solo es normal - el 87% de empresarios fracasan implementando sistemas porque no tienen la metodología correcta ni el acompañamiento adecuado. Tus intentos anteriores fallaron porque no tenías una guía experta que te mostrara el camino exacto, paso a paso. Es como intentar realizar una cirugía leyendo un manual - técnicamente 'puedes' hacerlo, pero el resultado será desastroso. Yo he perfeccionado este proceso durante 17 años y 500+ empresas transformadas. La diferencia es que ahora tienes el mapa exacto y un guía experto que ya caminó este sendero cientos de veces."
     },
     {
       question: "¿Tengo los recursos para costear esta inversión? Mi flujo de caja está muy ajustado...",
