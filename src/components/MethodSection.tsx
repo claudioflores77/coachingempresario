@@ -207,7 +207,7 @@ const MethodSection: React.FC = () => {
         
         <div className="mt-10 text-center">
           <a 
-            href="https://api.whatsapp.com/send/?phone=19786629364&text=Hola%2C+quiero+conocer+más+sobre+el+Método+P.U.D.E.R.+y+cómo+puede+transformar+mi+empresa&type=phone_number&app_absent=0"
+            href="https://api.whatsapp.com/send/?phone=5493624236611&text=Hola%2C+quiero+conocer+más+sobre+el+Método+P.U.D.E.R.+y+cómo+puede+transformar+mi+empresa&type=phone_number&app_absent=0"
             className="inline-flex items-center px-6 py-3 bg-green-600 hover:green-700 text-white font-medium rounded-lg transition-all"
             target="_blank"
             rel="noopener noreferrer"

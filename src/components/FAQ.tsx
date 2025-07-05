@@ -130,7 +130,7 @@ const FAQ: React.FC = () => {
               ¿Prefieres una conversación más directa?
             </p>
             <a 
-              href="https://api.whatsapp.com/send/?phone=19786629364&text=Hola%2C+tengo+algunas+dudas+específicas+sobre+el+método+y+la+consultoría&type=phone_number&app_absent=0"
+              href="https://api.whatsapp.com/send/?phone=5493624236611&text=Hola%2C+tengo+algunas+dudas+específicas+sobre+el+método+y+la+consultoría&type=phone_number&app_absent=0"
               className="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-all shadow-md hover:shadow-lg"
               target="_blank"
               rel="noopener noreferrer"

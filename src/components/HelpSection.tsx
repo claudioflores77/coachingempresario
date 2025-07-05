@@ -92,7 +92,7 @@ const HelpSection: React.FC = () => {
               Nuestro equipo está disponible para resolver todas tus dudas sobre consultoría empresarial.
             </p>
             <a 
-              href="https://api.whatsapp.com/send/?phone=19786629364&text=Hola%2C+tengo+una+pregunta+sobre+consultoría+empresarial+que+no+encontré+en+las+FAQ&type=phone_number&app_absent=0"
+              href="https://api.whatsapp.com/send/?phone=5493624236611&text=Hola%2C+tengo+una+pregunta+sobre+consultoría+empresarial+que+no+encontré+en+las+FAQ&type=phone_number&app_absent=0"
               className="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-all shadow-md hover:shadow-lg"
               target="_blank"
               rel="noopener noreferrer"

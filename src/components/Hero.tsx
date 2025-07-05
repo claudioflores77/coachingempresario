@@ -144,7 +144,7 @@ const Hero: React.FC = () => {
                   Ver el Método P.U.D.E.R.
                 </a>
                 
-                <a href="https://api.whatsapp.com/send/?phone=19786629364&text=Hola%2C+quiero+hacer+una+pregunta+sobre+consultoría+empresarial&type=phone_number&app_absent=0" className="flex-1 w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white font-semibold text-lg py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center" target="_blank" rel="noopener noreferrer">
+                <a href="https://api.whatsapp.com/send/?phone=5493624236611&text=Hola%2C+quiero+hacer+una+pregunta+sobre+consultoría+empresarial&type=phone_number&app_absent=0" className="flex-1 w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white font-semibold text-lg py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center" target="_blank" rel="noopener noreferrer">
                   <MessageSquare className="mr-2 h-5 w-5" />
                   WhatsApp
                 </a>
