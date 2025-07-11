@@ -24,7 +24,7 @@ const HelpSection: React.FC = () => {
     },
     {
       question: "¿Qué garantías ofrecen en el proceso?",
-      answer: "Garantizamos resultados medibles en los primeros 90 días o devolvemos tu inversión. Mis clientes típicamente reducen 50% sus horas de trabajo y aumentan 25-40% su rentabilidad en el primer año."
+      answer: "Mi método está probado por más de 17 años y ha funcionado en más de 22 países diferentes, con empresas de todos los tamaños y complejidades. No hacemos reembolsos porque queremos clientes comprometidos. Nuestro trabajo es 50% del resultado, pero el 50% restante depende totalmente de tu compromiso y acciones. Mis clientes típicamente reducen 50% sus horas de trabajo y aumentan 25-40% su rentabilidad en el primer año."
     }
   ];
 

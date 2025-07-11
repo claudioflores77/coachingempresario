@@ -65,11 +65,11 @@ const WhyChooseMe: React.FC = () => {
                   <TrendingUp className="h-6 w-6" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Resultados Medibles y Garantizados</h3>
+                  <h3 className="text-xl font-bold mb-2">Resultados Probados Durante 17 Años</h3>
                   <p className="text-consulting-gray">
                     Mis clientes reducen <span className="font-bold text-brand-red">50% sus horas de trabajo</span> 
                     y aumentan <span className="font-bold text-brand-red">25-40% su rentabilidad</span> en el primer año. 
-                    Si no obtienes resultados en 90 días, te devuelvo tu inversión.
+                    Mi método está probado en más de 22 países con empresas de todos los tamaños y complejidades.
                   </p>
                 </div>
               </div>

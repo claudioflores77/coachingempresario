@@ -28,7 +28,7 @@ const FAQ: React.FC = () => {
     },
     {
       question: "¿Qué pasa si no veo resultados? ¿Y si esto no funciona para mi industria específica?",
-      answer: "Primera parte: Si no ves mejoras medibles en 90 días, te devuelvo CADA centavo - sin preguntas, sin peros. Segunda parte: He aplicado este método en más de 22 países y docenas de industrias: desde restaurantes hasta tecnología, desde servicios profesionales hasta manufactura. Los principios de sistemas, procesos y equipos son universales. Además, puedes verificar mis resultados AHORA MISMO: revisa mis testimonios en Google, habla con mis clientes anteriores (te doy contactos reales), ve los casos de éxito en mi LinkedIn. En nuestra sesión estratégica gratuita, verás resultados inmediatos que podrás implementar ese mismo día. Los charlatanes no ofrecen garantías de devolución ni referencias verificables."
+      answer: "Mi método está probado por más de 17 años y ha funcionado en más de 22 países diferentes, con empresas de todos los tamaños y complejidades. Los principios de sistemas, procesos y equipos son universales - desde restaurantes hasta tecnología, desde servicios profesionales hasta manufactura. No hacemos reembolsos porque queremos clientes verdaderamente comprometidos. Nuestro trabajo es 50% del resultado, pero el 50% restante depende totalmente de tu compromiso y acciones. Si no estás dispuesto a mejorar y ejecutar, nadie te podrá ayudar. Puedes verificar mis resultados AHORA MISMO: revisa mis testimonios en Google, habla con mis clientes anteriores (te doy contactos reales), ve los casos de éxito en mi LinkedIn."
     },
     {
       question: "¿Realmente tendré el apoyo necesario o me dejarán solo después de pagar?",
