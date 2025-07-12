@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Award, Globe, TrendingUp, Users, Clock, Target, MessageSquare } from 'lucide-react';
 import SafeImage from './SafeImage';
@@ -75,7 +74,7 @@ const WhyChooseMe: React.FC = () => {
                 <h3 className="text-xl font-bold mb-3">Resultados Probados Durante 17 Años</h3>
                 <p className="text-consulting-gray text-lg leading-relaxed">
                   Mis clientes reducen <span className="font-bold text-brand-red">50% sus horas de trabajo</span> 
-                  y aumentan <span className="font-bold text-brand-red">40% su rentabilidad</span> en el primer año.
+                  y aumentan <span className="font-bold text-brand-red">25-40% su rentabilidad</span> en el primer año.
                 </p>
               </div>
             </div>

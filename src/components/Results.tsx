@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Clock, TrendingUp, Heart, CheckCircle, MessageSquare, ArrowRight } from 'lucide-react';
 
@@ -57,7 +56,7 @@ const Results: React.FC = () => {
           <ResultCard
             icon={<TrendingUp className="h-16 w-16 mx-auto" />}
             title="Incremento en Rentabilidad"
-            value="40%"
+            value="25-40%"
             description="De aumento en los ingresos en tan solo 6 meses de implementación"
           />
           

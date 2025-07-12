@@ -42,7 +42,7 @@ const Hero: React.FC = () => {
                     <span>menos horas</span>
                   </div>
                   <div className="flex items-center justify-center">
-                    <span className="text-brand-yellow font-bold mr-2">40%</span>
+                    <span className="text-brand-yellow font-bold mr-2">25-40%</span>
                     <span>más rentabilidad</span>
                   </div>
                   <div className="flex items-center justify-center">
