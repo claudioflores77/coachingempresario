@@ -11,20 +11,24 @@ const MethodSection: React.FC = () => {
       <div className="container">
         <div className="text-center max-w-4xl mx-auto mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            <span className="text-consulting-gold">El Método P.U.D.E.R.</span> - Tu Camino Hacia la Libertad Empresarial
+            <span className="text-consulting-gold">El Método P.U.D.E.R.</span><br />
+            Tu Camino Hacia la Libertad Empresarial
           </h2>
+          <p className="text-xl text-consulting-gray mb-4">
+            Sistema probado que transforma tu empresa para que trabaje para ti.
+          </p>
           <p className="text-lg text-consulting-gray mb-6">
-            Un sistema estructurado y probado que transforma tu empresa para que trabaje para ti, no al revés.
-            Con este método revolucionario, recuperarás el control total de tu negocio, optimizarás todos tus procesos 
-            y alcanzarás resultados tangibles y medibles que te permitirán disfrutar de una vida equilibrada.
+            • Recupera el control total de tu negocio<br />
+            • Optimiza procesos críticos<br />
+            • Logra resultados medibles en 90 días
           </p>
           
           <div className="bg-consulting-gray-light p-6 rounded-lg mb-6">
             <h3 className="text-xl font-bold mb-4 text-consulting-navy">
-              P.U.D.E.R.: <span className="text-consulting-blue">Plan, Único, Desarrollo Económico-Financiero-Organizacional, Estándar, Repetir</span>
+              P.U.D.E.R.: <span className="text-consulting-blue">Plan, Único, Desarrollo, Estándar, Repetir</span>
             </h3>
             <p className="text-lg text-consulting-gray mb-4">
-              El objetivo es vacunar a tu empresa, a ti como líder y a tu equipo contra las 5 principales causas de muerte empresarial:
+              Vacuna tu empresa contra las 5 principales causas de fracaso empresarial:
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
@@ -92,16 +96,15 @@ const MethodSection: React.FC = () => {
             <div className="p-4 bg-consulting-blue rounded-full inline-block mb-6">
               <Target className="h-8 w-8 text-white" />
             </div>
-            <h3 className="text-xl font-bold mb-4">Claridad y Enfoque Estratégico Empresarial</h3>
+            <h3 className="text-xl font-bold mb-4">Plan Estratégico Claro</h3>
             <p className="text-consulting-gray mb-4">
-              Despejamos completamente la confusión operativa y trazamos un plan estratégico claro y detallado 
-              para alcanzar tus metas empresariales más ambiciosas. Identificamos con precisión lo verdaderamente 
-              importante para tu negocio y establecemos prioridades estratégicas que generan un impacto inmediato y sostenible.
+              • Elimina la confusión operativa<br />
+              • Define objetivos específicos y medibles<br />
+              • Identifica oportunidades de crecimiento<br />
+              • Crea un roadmap personalizado
             </p>
             <p className="text-consulting-gray">
-              Este primer pilar del método incluye análisis profundo de mercado, definición de objetivos SMART, 
-              identificación de oportunidades de crecimiento y creación de un roadmap estratégico personalizado 
-              que se adapta perfectamente a tu industria y situación específica.
+              Incluye análisis de mercado, objetivos SMART e identificación de prioridades que generan impacto inmediato.
             </p>
           </div>
 
@@ -109,17 +112,15 @@ const MethodSection: React.FC = () => {
             <div className="p-4 bg-consulting-blue rounded-full inline-block mb-6">
               <BarChart4 className="h-8 w-8 text-white" />
             </div>
-            <h3 className="text-xl font-bold mb-4">Sistemas y Procesos Sostenibles</h3>
+            <h3 className="text-xl font-bold mb-4">Sistemas Automatizados</h3>
             <p className="text-consulting-gray mb-4">
-              Implementamos sistemas operativos robustos y procesos automatizados que permiten a tu empresa 
-              funcionar de forma eficiente y rentable sin depender únicamente de tu presencia física. 
-              Creamos estructuras organizacionales sólidas que liberan completamente tu tiempo y aseguran 
-              consistencia total en los resultados operativos y financieros.
+              • Procesos que funcionan sin tu presencia<br />
+              • Estructuras organizacionales sólidas<br />
+              • Liberación completa de tu tiempo<br />
+              • Consistencia en resultados
             </p>
             <p className="text-consulting-gray">
-              Incluye documentación completa de procesos, implementación de software de gestión, 
-              creación de manuales operativos, establecimiento de KPIs, sistemas de monitoreo 
-              automatizado y protocolos de calidad que garantizan la excelencia operativa.
+              Incluye documentación de procesos, software de gestión, KPIs y sistemas de monitoreo automatizado.
             </p>
           </div>
 
@@ -127,17 +128,15 @@ const MethodSection: React.FC = () => {
             <div className="p-4 bg-consulting-blue rounded-full inline-block mb-6">
               <Clock className="h-8 w-8 text-white" />
             </div>
-            <h3 className="text-xl font-bold mb-4">Cultura Organizacional y Liderazgo Transformador</h3>
+            <h3 className="text-xl font-bold mb-4">Liderazgo y Cultura</h3>
             <p className="text-consulting-gray mb-4">
-              Fortalecemos profundamente la cultura organizacional de tu empresa y potenciamos exponencialmente 
-              tu capacidad de liderazgo estratégico. Desarrollamos equipos altamente comprometidos y competentes 
-              que comparten completamente tu visión empresarial y trabajan de forma autónoma e innovadora 
-              hacia el logro de todos los objetivos organizacionales.
+              • Fortalece tu liderazgo estratégico<br />
+              • Desarrolla equipos comprometidos<br />
+              • Crea visión compartida<br />
+              • Establece autonomía operativa
             </p>
             <p className="text-consulting-gray">
-              Este componente incluye programas de capacitación en liderazgo, desarrollo de competencias 
-              del equipo, implementación de sistemas de comunicación efectiva, creación de programas 
-              de incentivos alineados y establecimiento de una cultura de alto rendimiento.
+              Incluye capacitación en liderazgo, comunicación efectiva e incentivos alineados con objetivos.
             </p>
           </div>
         </div>

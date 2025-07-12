@@ -12,32 +12,32 @@ const CallToAction: React.FC = () => {
               <span className="inline-block py-1 px-3 bg-brand-red text-white text-sm font-semibold rounded-full mb-4">
                 ¡ÚLTIMO PASO!
               </span>
-              <h2 className="text-3xl font-bold mb-4">¿Estás listo para recuperar tu vida y hacer crecer tu empresa?</h2>
+              <h2 className="text-3xl font-bold mb-4">¿Listo para Recuperar Tu Vida Personal?</h2>
               <p className="text-lg text-consulting-gray mb-6">
-                No tienes que elegir entre tu negocio o tu vida personal. Con el Método P.U.D.E.R. 
-                puedes tener ambos. Agenda ahora tu sesión estratégica <span className="font-bold text-brand-red">100% GRATUITA</span> y sin compromisos.
+                No elijas entre tu negocio y tu vida. Con el Método P.U.D.E.R. tienes ambos.<br />
+                <span className="font-bold text-brand-red">Sesión Estratégica 100% GRATUITA</span> - Sin compromisos.
               </p>
               
               <div className="mb-8 bg-gray-50 p-6 rounded-lg border-l-4 border-brand-red">
-                <h3 className="text-xl font-bold mb-4">En esta sesión gratuita de 45 minutos:</h3>
+                <h3 className="text-xl font-bold mb-4">Sesión Estratégica de 45 Minutos:</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <div className="flex-shrink-0 h-6 w-6 rounded-full bg-brand-red text-white flex items-center justify-center mr-3 mt-0.5">
                       <Clock className="h-3 w-3" />
                     </div>
-                    <p><span className="font-semibold">Analizaremos tu situación actual</span> para identificar los obstáculos que te mantienen atrapado</p>
+                    <p><span className="font-semibold">Análisis de tu situación actual</span> e identificación de obstáculos críticos</p>
                   </li>
                   <li className="flex items-start">
                     <div className="flex-shrink-0 h-6 w-6 rounded-full bg-brand-red text-white flex items-center justify-center mr-3 mt-0.5">
                       <Check className="h-3 w-3" />
                     </div>
-                    <p><span className="font-semibold">Crearemos un plan inicial personalizado</span> que podrás empezar a implementar inmediatamente</p>
+                    <p><span className="font-semibold">Plan inicial personalizado</span> para implementar inmediatamente</p>
                   </li>
                   <li className="flex items-start">
                     <div className="flex-shrink-0 h-6 w-6 rounded-full bg-brand-red text-white flex items-center justify-center mr-3 mt-0.5">
                       <ArrowRight className="h-3 w-3" />
                     </div>
-                    <p><span className="font-semibold">Te mostraremos los siguientes pasos</span> para transformar tu negocio en un sistema que funcione sin ti</p>
+                    <p><span className="font-semibold">Pasos siguientes</span> para crear un negocio que funcione sin ti</p>
                   </li>
                 </ul>
 

@@ -29,33 +29,32 @@ const Services: React.FC = () => {
             Nuestros <span className="text-brand-red">Servicios</span>
           </h2>
           <p className="text-lg text-consulting-gray">
-            Diseñados específicamente para ayudarte a recuperar el control de tu negocio
-            y transformar tu calidad de vida como empresario.
+            Recupera el control de tu negocio y transforma tu calidad de vida empresarial.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <ServiceCard
-            title="Consultoría Estratégica Empresarial"
-            description="Asesoría personalizada para el dueño de PYME. Identificamos las áreas críticas y establecemos sistemas y rutinas para liberar tu tiempo y energía."
+            title="Consultoría Estratégica"
+            description="Asesoría personalizada para PYMES. Identificamos áreas críticas y establecemos sistemas para liberar tu tiempo."
             icon={<TrendingUp className="h-10 w-10" />}
           />
 
           <ServiceCard
             title="Coaching de Líderes"
-            description="Sesiones enfocadas en transformar tu liderazgo, clarificar tu visión y desarrollar estrategias que te permitan delegar y dirigir con eficacia."
+            description="Transforma tu liderazgo, clarifica tu visión y desarrolla estrategias para delegar con eficacia."
             icon={<Users className="h-10 w-10" />}
           />
 
           <ServiceCard
-            title="Mentoring para Empresarios"
-            description="Acompañamiento personalizado para implementar cambios efectivos en tu negocio, basados en experiencias probadas y resultados comprobables."
+            title="Mentoring Empresarial"
+            description="Acompañamiento personalizado para implementar cambios efectivos basados en experiencias probadas."
             icon={<Brain className="h-10 w-10" />}
           />
           
           <ServiceCard
-            title="Desarrollo de Equipos de Trabajo"
-            description="Creación e integración de equipos coherentes, implementación de reglas claras y capacitación para desarrollar habilidades y potenciar resultados."
+            title="Desarrollo de Equipos"
+            description="Crea equipos coherentes con reglas claras y capacitación para potenciar resultados."
             icon={<Layers className="h-10 w-10" />}
           />
         </div>
