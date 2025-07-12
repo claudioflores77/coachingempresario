@@ -56,98 +56,130 @@ const Testimonials: React.FC = () => {
   return (
     <section id="testimonios" className="section bg-white">
       <div className="container">
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="inline-block py-1 px-3 bg-brand-red text-white text-sm font-semibold rounded-full mb-4">
+        <div className="text-center max-w-4xl mx-auto mb-16">
+          <span className="inline-block py-2 px-4 bg-brand-red text-white text-sm font-semibold rounded-full mb-6">
             HISTORIAS DE ÉXITO
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Empresarios Que Han <span className="text-brand-red">Recuperado Sus Vidas</span>
           </h2>
-          <p className="text-lg text-consulting-gray">
+          <p className="text-xl text-consulting-gray leading-relaxed">
             Estos son emprendedores que, como tú, estaban atrapados en sus negocios
             y ahora disfrutan de libertad y prosperidad.
           </p>
         </div>
 
-        <div className="relative max-w-4xl mx-auto">
-          <div className="bg-consulting-gray-light p-8 md:p-12 rounded-lg shadow-lg">
-            <div className="flex flex-col md:flex-row gap-8 items-center">
-              <div className="md:w-1/3">
-                <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-brand-red">
-                  <img 
-                    src={testimonials[activeIndex].image} 
-                    alt={testimonials[activeIndex].name}
-                    className="w-full h-full object-cover" 
-                  />
+        <div className="relative max-w-5xl mx-auto mb-12">
+          <div className="bg-consulting-gray-light p-8 md:p-12 rounded-2xl shadow-xl">
+            <div className="flex flex-col lg:flex-row gap-8 items-center">
+              {/* Image */}
+              <div className="lg:w-1/3">
+                <div className="relative">
+                  <div className="w-40 h-40 mx-auto rounded-2xl overflow-hidden border-4 border-brand-red shadow-lg">
+                    <img 
+                      src={testimonials[activeIndex].image} 
+                      alt={testimonials[activeIndex].name}
+                      className="w-full h-full object-cover" 
+                    />
+                  </div>
+                  <div className="absolute -top-2 -right-2 bg-brand-red text-white p-2 rounded-full">
+                    <Star className="h-5 w-5 fill-current" />
+                  </div>
                 </div>
               </div>
-              <div className="md:w-2/3">
-                <div className="flex mb-4">
+              
+              {/* Content */}
+              <div className="lg:w-2/3">
+                <div className="flex mb-4 justify-center lg:justify-start">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-brand-yellow fill-brand-yellow" />
+                    <Star key={i} className="h-6 w-6 text-brand-yellow fill-brand-yellow" />
                   ))}
                 </div>
-                <p className="text-lg italic mb-3">{testimonials[activeIndex].content}</p>
-                <p className="text-lg font-bold text-brand-red mb-6">"{testimonials[activeIndex].results}"</p>
-                <div>
-                  <p className="font-bold text-lg">{testimonials[activeIndex].name}</p>
-                  <p className="text-consulting-gray">
+                
+                <blockquote className="text-lg md:text-xl italic mb-6 text-consulting-gray leading-relaxed">
+                  "{testimonials[activeIndex].content}"
+                </blockquote>
+                
+                <div className="bg-brand-red/10 p-4 rounded-xl mb-6">
+                  <p className="text-lg font-bold text-brand-red">
+                    📈 {testimonials[activeIndex].results}
+                  </p>
+                </div>
+                
+                <div className="text-center lg:text-left">
+                  <p className="font-bold text-xl text-brand-black">{testimonials[activeIndex].name}</p>
+                  <p className="text-consulting-gray text-lg">
                     {testimonials[activeIndex].role}, {testimonials[activeIndex].company}
                   </p>
                 </div>
               </div>
             </div>
-
-            <div className="mt-6 text-center">
-              <a 
-                href="https://estrategiaempresaria.systeme.io/sesionestrategica1a1" 
-                className="btn-primary inline-flex items-center mt-4"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                ¡QUIERO RESULTADOS SIMILARES! - Agendar Sesión
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </a>
-            </div>
           </div>
 
+          {/* Navigation buttons */}
           <button 
             onClick={prevTestimonial}
-            className="absolute left-0 md:-left-5 top-1/2 transform -translate-y-1/2 bg-white w-10 h-10 rounded-full shadow-lg flex items-center justify-center hover:bg-brand-red hover:text-white transition-all"
+            className="absolute left-0 lg:-left-6 top-1/2 transform -translate-y-1/2 bg-white w-12 h-12 rounded-full shadow-xl flex items-center justify-center hover:bg-brand-red hover:text-white transition-all border-2 border-gray-100 hover:border-brand-red"
             aria-label="Previous testimonial"
           >
             <ChevronLeft className="h-6 w-6" />
           </button>
           <button 
             onClick={nextTestimonial}
-            className="absolute right-0 md:-right-5 top-1/2 transform -translate-y-1/2 bg-white w-10 h-10 rounded-full shadow-lg flex items-center justify-center hover:bg-brand-red hover:text-white transition-all"
+            className="absolute right-0 lg:-right-6 top-1/2 transform -translate-y-1/2 bg-white w-12 h-12 rounded-full shadow-xl flex items-center justify-center hover:bg-brand-red hover:text-white transition-all border-2 border-gray-100 hover:border-brand-red"
             aria-label="Next testimonial"
           >
             <ChevronRight className="h-6 w-6" />
           </button>
+
+          {/* Dots indicator */}
+          <div className="flex justify-center mt-8 space-x-2">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setActiveIndex(index)}
+                className={`w-3 h-3 rounded-full transition-all ${
+                  index === activeIndex ? 'bg-brand-red' : 'bg-gray-300'
+                }`}
+                aria-label={`Go to testimonial ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
 
-        <div className="text-center mt-12">
-          <a 
-            href="https://www.google.com/search?q=Claudio+Flores+%7C+Coaching+y+Estrategia+Empresarial+%7C+Mentor+de+Empresarios+%7C+L%C3%ADderazgo&stick=H4sIAAAAAAAA_-NgU1I1qLA0MTE1SDEwtkg2SjJOM0yyMqgwNUgzMDa0TDY3Mk5JTUq1XMQa7pyTWJqSma_glpNflFqsUKPgnJ-YnJGZl65QqeBaXFKUWJKanpmo4JpbAJROLMpMzAGq8U3NK8kvUkhJRYjng_T6HF6bklqUWJWeDwBAeyO3gwAAAA&hl=en-GB&mat=CV1k0EzVfvQRElYBYJahab2Xi7KGBYlz7DUFsSUns4j4MH9RAtRlS5coiWv6IkF-qjDNx3s-9uyJwgrnopT2PPTvbZR5IckEa1vGwtEhb-FXyCyv1ghBdmPFZeQtFS8t0g&authuser=0#" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-brand-green hover:text-brand-red underline"
-          >
-            Ver más testimonios en Google Business Profile
-          </a>
+        {/* CTA Section - Cleaner design */}
+        <div className="text-center bg-gradient-to-r from-brand-red to-red-600 text-white p-8 rounded-2xl shadow-xl">
+          <h3 className="text-2xl font-bold mb-6">¿Quieres Resultados Similares?</h3>
           
-          <div className="mt-8">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-2xl mx-auto mb-8">
+            <a 
+              href="https://estrategiaempresaria.systeme.io/sesionestrategica1a1" 
+              className="flex-1 w-full sm:w-auto bg-white text-brand-red hover:bg-gray-100 font-bold text-lg py-4 px-8 rounded-xl transition-all shadow-lg hover:shadow-xl"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Agendar Sesión Estratégica
+            </a>
+            
             <a 
               href="https://api.whatsapp.com/send/?phone=5493624236611&text=Hola%2C+quiero+hacer+una+pregunta+&type=phone_number&app_absent=0"
-              className="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-all"
+              className="flex-1 w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white font-semibold text-lg py-4 px-8 rounded-xl transition-all flex items-center justify-center shadow-lg hover:shadow-xl"
               target="_blank"
               rel="noopener noreferrer"
             >
               <MessageSquare className="mr-2 h-5 w-5" />
-              Pregúntanos ahora
+              WhatsApp
             </a>
           </div>
+
+          <a 
+            href="https://www.google.com/search?q=Claudio+Flores+%7C+Coaching+y+Estrategia+Empresarial+%7C+Mentor+de+Empresarios+%7C+L%C3%ADderazgo&stick=H4sIAAAAAAAA_-NgU1I1qLA0MTE1SDEwtkg2SjJOM0yyMqgwNUgzMDa0TDY3Mk5JTUq1XMQa7pyTWJqSma_glpNflFqsUKPgnJ-YnJGZl65QqeBaXFKUWJKanpmo4JpbAJROLMpMzAGq8U3NK8kvUkhJRYjng_T6HF6bklqUWJWeDwBAeyO3gwAAAA&hl=en-GB&mat=CV1k0EzVfvQRElYBYJahab2Xi7KGBYlz7DUFsSUns4j4MH9RAtRlS5coiWv6IkF-qjDNx3s-9uyJwgrnopT2PPTvbZR5IckEa1vGwtEhb-FXyCyv1ghBdmPFZeQtFS8t0g&authuser=0#" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-block text-white/80 hover:text-white underline text-lg"
+          >
+            Ver más testimonios en Google Business Profile
+          </a>
         </div>
       </div>
     </section>
