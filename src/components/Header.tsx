@@ -38,7 +38,7 @@ const Header: React.FC = () => {
                 Claudio Flores
               </h1>
               <div className="text-sm text-brand-red flex flex-col text-center">
-                <span className="font-medium">Consultor Empresarial</span>
+                <span className="font-medium">Consultoria Estrategica</span>
                 <span className="font-normal">Empresarial
 
               </span>
