@@ -36,15 +36,11 @@ const HelpSection: React.FC = () => {
     <section id="ayuda" className="section bg-consulting-gray-light">
       <div className="container">
         <div className="text-center max-w-4xl mx-auto mb-12">
-          <div className="flex items-center justify-center mb-4">
-            <HelpCircle className="h-8 w-8 text-consulting-blue mr-3" />
-            <h2 className="text-3xl md:text-4xl font-bold">
-              Centro de Ayuda y Preguntas Frecuentes
-            </h2>
-          </div>
-          <p className="text-lg text-consulting-gray">
-            Encuentra respuestas a las preguntas más comunes sobre nuestro proceso de consultoría 
-            empresarial y el Método P.U.D.E.R.
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            Centro de Ayuda
+          </h1>
+          <p className="text-xl text-consulting-gray">
+            Respuestas sobre consultoría empresarial y el Método P.U.D.E.R.
           </p>
         </div>
 
@@ -85,20 +81,20 @@ const HelpSection: React.FC = () => {
           </div>
 
           <div className="mt-12 text-center bg-white rounded-lg p-8 shadow-md">
-            <h3 className="text-xl font-bold mb-4 text-consulting-navy">
-              ¿No encontraste la respuesta que buscabas?
-            </h3>
-            <p className="text-consulting-gray mb-6">
-              Nuestro equipo está disponible para resolver todas tus dudas sobre consultoría empresarial.
+            <h2 className="text-2xl font-bold mb-4 text-consulting-navy">
+              ¿Tienes Otras Preguntas?
+            </h2>
+            <p className="text-lg text-consulting-gray mb-6">
+              Hablemos directamente sobre tu situación específica
             </p>
             <a 
               href="https://api.whatsapp.com/send/?phone=5493624236611&text=Hola%2C+tengo+una+pregunta+sobre+consultoría+empresarial+que+no+encontré+en+las+FAQ&type=phone_number&app_absent=0"
-              className="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-all shadow-md hover:shadow-lg"
+              className="inline-flex items-center px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-all shadow-md hover:shadow-lg text-lg"
               target="_blank"
               rel="noopener noreferrer"
             >
               <MessageSquare className="mr-2 h-5 w-5" />
-              Hacer una pregunta por WhatsApp
+              Contactar por WhatsApp
             </a>
           </div>
         </div>

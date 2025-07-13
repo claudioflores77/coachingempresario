@@ -44,18 +44,11 @@ const FAQ: React.FC = () => {
     <section id="faq" className="section bg-consulting-gray-light">
       <div className="container">
         <div className="text-center max-w-4xl mx-auto mb-12">
-          <span className="inline-block py-1 px-3 bg-brand-red text-white text-sm font-semibold rounded-full mb-4">
-            RESUELVE TUS DUDAS
-          </span>
-          <div className="flex items-center justify-center mb-4">
-            <HelpCircle className="h-8 w-8 text-consulting-blue mr-3" />
-            <h2 className="text-3xl md:text-4xl font-bold">
-              Preguntas Frecuentes Que Todo Empresario Se Hace
-            </h2>
-          </div>
-          <p className="text-lg text-consulting-gray">
-            He respondido estas mismas preguntas cientos de veces. Aquí tienes las respuestas 
-            honestas y directas que necesitas escuchar.
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            Las 7 Preguntas Que Todo Empresario Se Hace
+          </h1>
+          <p className="text-xl text-consulting-gray">
+            Respuestas directas basadas en 17 años transformando empresas
           </p>
         </div>
 
@@ -98,30 +91,28 @@ const FAQ: React.FC = () => {
           </div>
 
           <div className="bg-brand-red text-white rounded-lg p-8 text-center">
-            <h3 className="text-2xl font-bold mb-4">
-              ¿Sigues Teniendo Dudas?
-            </h3>
-            <p className="text-lg mb-6">
-              Entiendo que tomar esta decisión no es fácil. Por eso ofrezco una sesión estratégica 
-              <span className="font-bold"> COMPLETAMENTE GRATUITA</span> donde podrás:
+            <h2 className="text-3xl font-bold mb-4">
+              Hablemos Directamente
+            </h2>
+            <p className="text-xl mb-6">
+              Sesión estratégica <span className="font-bold">GRATUITA</span> (Valor: $250 USD)
             </p>
-            <ul className="text-left max-w-2xl mx-auto mb-8 space-y-2">
-              <li>✓ Hacer todas las preguntas que necesites</li>
-              <li>✓ Ver resultados inmediatos que puedes implementar ese mismo día</li>
-              <li>✓ Conocer exactamente cómo sería trabajar conmigo</li>
-              <li>✓ Obtener un diagnóstico personalizado de tu situación</li>
+            <ul className="text-left max-w-md mx-auto mb-8 space-y-3 text-lg">
+              <li>✓ Diagnóstico personalizado</li>
+              <li>✓ Plan de acción inmediato</li>
+              <li>✓ Resultados garantizados del primer día</li>
             </ul>
             <a 
               href="https://estrategiaempresaria.systeme.io/sesionestrategica1a1"
-              className="btn-primary bg-white text-brand-red hover:bg-gray-100 mb-4 inline-flex items-center"
+              className="btn-primary bg-white text-brand-red hover:bg-gray-100 mb-4 inline-flex items-center text-lg px-8 py-4"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Agendar Mi Sesión Estratégica GRATIS
-              <ArrowRight className="ml-2 h-4 w-4" />
+              Reservar Mi Sesión GRATIS Ahora
+              <ArrowRight className="ml-2 h-5 w-5" />
             </a>
             <p className="text-sm opacity-90">
-              Sin costo, sin compromiso - Valorada en U$D250
+              Disponible hoy • Sin compromiso
             </p>
           </div>
 

@@ -10,16 +10,14 @@ const AboutMethod: React.FC = () => {
     <section id="sobre-metodo" className="section bg-white">
       <div className="container">
         <div className="text-center max-w-4xl mx-auto mb-12">
-          <span className="inline-block py-1 px-3 bg-consulting-blue text-white text-sm font-semibold rounded-full mb-4">
-            EL VEHÍCULO DE TU TRANSFORMACIÓN
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            <span className="text-consulting-gold">El Método P.U.D.E.R.</span> - Tu Camino Hacia la Libertad Empresarial
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            El Método <span className="text-consulting-gold">P.U.D.E.R.</span>
+          </h1>
+          <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-consulting-navy">
+            El Sistema Que Libera a 500+ Empresarios
           </h2>
-          <p className="text-lg text-consulting-gray mb-6">
-            Un sistema estructurado y probado que transforma tu empresa para que trabaje para ti, no al revés.
-            Con este método revolucionario, recuperarás el control total de tu negocio, optimizarás todos tus procesos 
-            y alcanzarás resultados tangibles y medibles que te permitirán disfrutar de una vida equilibrada.
+          <p className="text-xl text-consulting-gray mb-6">
+            Transforma tu empresa para que trabaje para ti. 25-40% más rentabilidad, 50% menos horas.
           </p>
           
           <div className="bg-consulting-gray-light p-6 rounded-lg mb-6">
@@ -159,29 +157,30 @@ const AboutMethod: React.FC = () => {
         </div>
 
         <div className="text-center">
-          <h3 className="text-2xl font-bold mb-4">¿Estás Listo Para Implementar El Método P.U.D.E.R.?</h3>
-          <p className="text-lg text-consulting-gray mb-6">
-            La diferencia entre donde estás ahora y donde quieres estar es el sistema correcto 
-            implementado de la manera correcta.
+          <h2 className="text-3xl font-bold mb-4">
+            Aplica P.U.D.E.R. en Tu Empresa
+          </h2>
+          <p className="text-xl text-consulting-gray mb-8">
+            El mismo sistema que transformó 500+ empresas está esperándote
           </p>
           <a 
             href="https://estrategiaempresaria.systeme.io/sesionestrategica1a1"
-            className="btn-primary mb-4"
+            className="btn-primary mb-6 text-lg px-8 py-4"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Quiero Aplicar El Método P.U.D.E.R. En Mi Empresa
+            Implementar P.U.D.E.R. Ahora
           </a>
           
           <div className="mt-6">
             <a 
               href="https://api.whatsapp.com/send/?phone=5493624236611&text=Hola%2C+quiero+conocer+más+sobre+el+Método+P.U.D.E.R.+y+cómo+puede+transformar+mi+empresa&type=phone_number&app_absent=0"
-              className="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-all"
+              className="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-all text-lg"
               target="_blank"
               rel="noopener noreferrer"
             >
               <MessageSquare className="mr-2 h-5 w-5" />
-              Consulta sobre el Método P.U.D.E.R.
+              Preguntar por WhatsApp
             </a>
           </div>
         </div>
