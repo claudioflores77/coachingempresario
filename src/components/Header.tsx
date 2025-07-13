@@ -39,7 +39,9 @@ const Header: React.FC = () => {
               </h1>
               <div className="text-sm text-brand-red flex flex-col text-center">
                 <span className="font-medium">Consultor Empresarial</span>
-                <span className="font-normal">Método P.U.D.E.R.</span>
+                <span className="font-normal">Empresarial
+
+              </span>
               </div>
             </div>
           </a>
