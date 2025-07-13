@@ -34,12 +34,12 @@ const Header: React.FC = () => {
             {/* Logo Image */}
             <img src="/lovable-uploads/135f3f99-d5f9-4f4d-8213-675e650f3f18.png" alt="Claudio Flores Logo" className="h-10 mr-3" />
             <div>
-              <h1 className="text-center text-base font-bold text-slate-100">
+              <h1 className={`text-base font-bold ${isScrolled ? 'text-consulting-navy' : 'text-white'}`}>
                 Claudio Flores
               </h1>
-              <div className={`text-sm ${isScrolled ? 'text-brand-red' : 'text-brand-red'} flex flex-col text-center`}>
-                <span className="font-medium text-center">Consultora Estratégica</span>
-                <span className="text-center font-normal">Empresarial</span>
+              <div className="text-sm text-brand-red flex flex-col text-center">
+                <span className="font-medium">Consultor Empresarial</span>
+                <span className="font-normal">Método P.U.D.E.R.</span>
               </div>
             </div>
           </a>
@@ -50,27 +50,27 @@ const Header: React.FC = () => {
           <ul className="flex space-x-8">
             <li>
               <a href="#por-que-conmigo" className={`font-medium hover:text-brand-red transition-all ${isScrolled ? 'text-brand-black' : 'text-white'}`} onClick={e => handleSmoothScroll(e, 'por-que-conmigo')}>
-                ¿Por Qué Conmigo?
+                Ventajas
               </a>
             </li>
             <li>
               <a href="#sobre-metodo" className={`font-medium hover:text-brand-red transition-all ${isScrolled ? 'text-brand-black' : 'text-white'}`} onClick={e => handleSmoothScroll(e, 'sobre-metodo')}>
-                El Método
+                P.U.D.E.R.
               </a>
             </li>
             <li>
               <a href="#testimonios" className={`font-medium hover:text-brand-red transition-all ${isScrolled ? 'text-brand-black' : 'text-white'}`} onClick={e => handleSmoothScroll(e, 'testimonios')}>
-                Testimonios
+                Resultados
               </a>
             </li>
             <li>
               <a href="#faq" className={`font-medium hover:text-brand-red transition-all ${isScrolled ? 'text-brand-black' : 'text-white'}`} onClick={e => handleSmoothScroll(e, 'faq')}>
-                FAQ
+                Preguntas
               </a>
             </li>
           </ul>
           <a href="https://estrategiaempresaria.systeme.io/sesionestrategica1a1" target="_blank" rel="noopener noreferrer" className={`btn-primary ${!isScrolled && 'bg-white text-brand-black hover:bg-brand-red hover:text-white'}`}>
-            Sesión Gratis
+            Sesión GRATIS
           </a>
         </nav>
 
@@ -85,27 +85,27 @@ const Header: React.FC = () => {
           <ul className="container py-4 space-y-4">
             <li>
               <a href="#por-que-conmigo" className="block font-medium text-brand-black hover:text-brand-red" onClick={e => handleSmoothScroll(e, 'por-que-conmigo')}>
-                ¿Por Qué Conmigo?
+                Ventajas
               </a>
             </li>
             <li>
               <a href="#sobre-metodo" className="block font-medium text-brand-black hover:text-brand-red" onClick={e => handleSmoothScroll(e, 'sobre-metodo')}>
-                El Método
+                P.U.D.E.R.
               </a>
             </li>
             <li>
               <a href="#testimonios" className="block font-medium text-brand-black hover:text-brand-red" onClick={e => handleSmoothScroll(e, 'testimonios')}>
-                Testimonios
+                Resultados
               </a>
             </li>
             <li>
               <a href="#faq" className="block font-medium text-brand-black hover:text-brand-red" onClick={e => handleSmoothScroll(e, 'faq')}>
-                FAQ
+                Preguntas
               </a>
             </li>
             <li>
               <a href="https://estrategiaempresaria.systeme.io/sesionestrategica1a1" className="btn-primary block text-center" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)}>
-                Sesión Gratis
+                Sesión GRATIS
               </a>
             </li>
           </ul>

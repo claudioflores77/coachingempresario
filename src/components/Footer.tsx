@@ -21,9 +21,9 @@ const Footer: React.FC = () => {
                 />
               </div>
               <h3 className="text-xl font-bold">Claudio Flores</h3>
-              <span className="ml-2 text-sm text-consulting-gold">Consultora Estratégica Empresarial</span>
+              <span className="ml-2 text-sm text-consulting-gold">Consultor Empresarial • Método P.U.D.E.R.</span>
             </div>
-            <p className="text-sm mt-2">Transformando empresas y vidas desde hace más de 17 años</p>
+            <p className="text-sm mt-2">500+ empresarios libres en 22 países • 17 años transformando vidas</p>
           </div>
           
           <div>
