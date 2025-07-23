@@ -45,14 +45,14 @@ const Hero: React.FC = () => {
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-lg text-white/95">
                   <div className="space-y-2">
-                    <div>¿Podrías haber perdido los primeros pasos de tus hijos? ¿o sus primeras palabras?</div>
-                    <div>¿Tu matrimonio estaría en crisis?</div>
-                    <div>¿Tu salud estaría quebrada por años de estrés?</div>
+                    <div>--> ¿Podrías haber perdido los primeros pasos de tus hijos? ¿o sus primeras palabras?</div>
+                    <div>--> ¿Tu matrimonio estaría en crisis?</div>
+                    <div>--> ¿Tu salud estaría quebrada por años de estrés?</div>
                   </div>
                   <div className="space-y-2">
-                    <div>¿Seguirías siendo prisionero de tu propio negocio?</div>
-                    <div>¿La competencia te habría dejado atrás?</div>
-                    <div>¿Te estarías arrepintiendo de no haber actuado cuando tuviste la oportunidad?</div>
+                    <div>--> ¿Seguirías siendo prisionero de tu propio negocio?</div>
+                    <div>--> ¿La competencia te habría dejado atrás?</div>
+                    <div>--> ¿Te estarías arrepintiendo de no haber actuado cuando tuviste la oportunidad?</div>
                   </div>
                 </div>
               </div>
