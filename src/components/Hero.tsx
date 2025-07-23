@@ -43,18 +43,18 @@ const Hero: React.FC = () => {
               
               <div className="bg-gradient-to-r from-brand-red/90 to-red-600/90 backdrop-blur-sm border-2 border-brand-red rounded-xl p-6 md:p-8 mb-8">
                 <p className="text-2xl md:text-3xl font-bold text-white mb-4">
-                  🚨 Si No Cambias Esto AHORA, En 5 Años Más:
+                  ¿Qué pasaría en 5 años, si todo sigue evolucionando igual, y no actúas AHORA?
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-lg text-white/95">
                   <div className="space-y-2">
-                    <div>❌ Habrás perdido los primeros pasos de tus hijos</div>
-                    <div>❌ Tu matrimonio estará en crisis</div>
-                    <div>❌ Tu salud estará quebrada</div>
+                    <div>¿Podrías haber perdido los primeros pasos de tus hijos? ¿o sus primeras palabras?</div>
+                    <div>¿Tu matrimonio estaría en crisis?</div>
+                    <div>¿Tu salud estaría quebrada por años de estrés?</div>
                   </div>
                   <div className="space-y-2">
-                    <div>❌ Seguirás siendo esclavo de tu negocio</div>
-                    <div>❌ La competencia te habrá superado</div>
-                    <div>❌ Te arrepentirás de no haber actuado HOY</div>
+                    <div>¿Seguirías siendo prisionero de tu propio negocio?</div>
+                    <div>¿La competencia te habría dejado atrás?</div>
+                    <div>¿Te estarías arrepintiendo de no haber actuado cuando tuviste la oportunidad?</div>
                   </div>
                 </div>
               </div>
@@ -95,7 +95,7 @@ const Hero: React.FC = () => {
                     pero ya estamos en julio y trabajas MÁS horas que el año pasado."
                   </p>
                   <p className="text-brand-yellow font-semibold">
-                    👆 ¿Te suena familiar? No estás solo...
+                    ¿Te resulta familiar esta situación?
                   </p>
                 </div>
                 
@@ -143,7 +143,7 @@ const Hero: React.FC = () => {
                 {/* Urgency Section */}
                 <div className="bg-gradient-to-r from-brand-red/30 to-orange-600/30 rounded-lg p-6 mb-8">
                   <h3 className="text-xl font-bold text-brand-yellow mb-4">
-                    ⏰ CADA DÍA QUE PASA ASÍ:
+                    ¿Sabes qué está pasando mientras sigues posponiendo el cambio?
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                     <div className="text-center">

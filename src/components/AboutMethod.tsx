@@ -14,7 +14,7 @@ const AboutMethod: React.FC = () => {
             El Método <span className="text-consulting-gold">P.U.D.E.R.</span>
           </h1>
           <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-consulting-navy">
-            El Sistema Que Libera a 500+ Empresarios
+            El Sistema Que YA Liberó a 500+ Empresarios
           </h2>
           <p className="text-xl text-consulting-gray mb-6">
             Transforma tu empresa para que trabaje para ti. 25-40% más rentabilidad, 50% menos horas.
