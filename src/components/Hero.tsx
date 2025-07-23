@@ -1,9 +1,7 @@
-
 import React from 'react';
 import { ArrowRight, MessageSquare, Clock, TrendingUp, Users } from 'lucide-react';
 import SafeImage from './SafeImage';
 import SafeIframe from './SafeIframe';
-
 const Hero: React.FC = () => {
   console.log('Hero component rendering');
   return <>
@@ -26,9 +24,9 @@ const Hero: React.FC = () => {
                 <p className="text-lg md:text-xl text-brand-yellow font-semibold mb-2">
                   ⚠️ CADA DÍA QUE PASA SIN ACTUAR...
                 </p>
-                <p className="text-white/90 text-base">
-                  Tu salud se deteriora más • Tu familia se aleja • Tu competencia avanza
-                </p>
+                <p className="text-white/90 text-base">¿Tu salud se deteriora? •
+¿Tu familia se aleja más? •
+¿Tus competidores avanzan?</p>
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
@@ -81,7 +79,9 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Problem Section - Enhanced with storytelling and urgency */}
-            <div className="mb-12 animate-slide-up" style={{ animationDelay: '0.1s' }}>
+            <div className="mb-12 animate-slide-up" style={{
+            animationDelay: '0.1s'
+          }}>
               <div className="bg-black/40 backdrop-blur-sm rounded-xl p-6 md:p-8 border border-brand-red/30">
                 <h2 className="text-xl md:text-2xl font-bold text-brand-red mb-6">
                   💔 ¿Es Esta Tu Realidad Cada Día?
@@ -174,7 +174,9 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Stats - Simplified and more visual */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 animate-slide-up" style={{ animationDelay: '0.2s' }}>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 animate-slide-up" style={{
+            animationDelay: '0.2s'
+          }}>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all">
                 <Clock className="h-12 w-12 text-brand-yellow mx-auto mb-3" />
                 <div className="text-3xl font-bold text-brand-yellow mb-1">17</div>
@@ -195,7 +197,9 @@ const Hero: React.FC = () => {
             </div>
             
             {/* CTAs - Enhanced with urgency */}
-            <div className="space-y-6 animate-slide-up" style={{ animationDelay: '0.3s' }}>
+            <div className="space-y-6 animate-slide-up" style={{
+            animationDelay: '0.3s'
+          }}>
               <div className="bg-brand-red/10 backdrop-blur-sm border border-brand-red/50 rounded-xl p-4 mb-4">
                 <p className="text-brand-yellow font-bold text-lg mb-2">
                   🔥 ÚLTIMAS 48 HORAS DE JULIO - NO ESPERES MÁS
@@ -239,7 +243,9 @@ const Hero: React.FC = () => {
             </div>
             
             {/* Credibility line - Simplified */}
-            <div className="mt-12 animate-slide-up" style={{ animationDelay: '0.4s' }}>
+            <div className="mt-12 animate-slide-up" style={{
+            animationDelay: '0.4s'
+          }}>
               <div className="bg-brand-yellow/20 backdrop-blur-sm rounded-lg p-6 border border-brand-yellow/30">
                 <p className="text-xl font-bold text-brand-yellow mb-1">Claudio Flores</p>
                 <p className="text-lg text-white">Consultor Estratégico Empresarial | Método P.U.D.E.R.</p>
@@ -251,5 +257,4 @@ const Hero: React.FC = () => {
       </section>
     </>;
 };
-
 export default Hero;
