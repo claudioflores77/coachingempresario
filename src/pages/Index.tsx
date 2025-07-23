@@ -11,6 +11,9 @@ import Footer from '../components/Footer';
 import BackToTop from '../components/BackToTop';
 import BreadcrumbNav from '../components/BreadcrumbNav';
 import NotificationSystem from '../components/NotificationSystem';
+import PersonSchema from '../components/PersonSchema';
+import ContactSchema from '../components/ContactSchema';
+import SEOMonitoring from '../components/SEOMonitoring';
 
 interface Notification {
   id: string;
@@ -90,6 +93,9 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <PersonSchema />
+      <ContactSchema />
+      <SEOMonitoring />
       <Header />
       {currentSection !== 'hero' && <BreadcrumbNav items={breadcrumbItems} />}
       

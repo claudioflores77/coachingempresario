@@ -1,3 +1,6 @@
+User-agent: *
+Allow: /
+
 User-agent: Googlebot
 Allow: /
 
@@ -10,5 +13,20 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: *
+User-agent: ChatGPT-User
 Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Sitemap location
+Sitemap: https://claudioflores.lovable.app/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1

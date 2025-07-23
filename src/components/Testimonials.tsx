@@ -1,6 +1,7 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Star, MessageSquare, ArrowRight } from 'lucide-react';
+import StructuredData from './StructuredData';
 
 interface Testimonial {
   id: number;
@@ -49,12 +50,45 @@ const Testimonials: React.FC = () => {
     setActiveIndex((prev) => (prev + 1) % testimonials.length);
   };
 
+  const testimonialsSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Claudio Flores Consultoría Empresarial",
+    "review": testimonials.map(testimonial => ({
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": testimonial.name,
+        "jobTitle": testimonial.role,
+        "worksFor": {
+          "@type": "Organization",
+          "name": testimonial.company
+        }
+      },
+      "reviewBody": testimonial.content + " " + testimonial.results,
+      "datePublished": "2024-01-01"
+    })),
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": testimonials.length,
+      "bestRating": "5"
+    }
+  };
+
   const prevTestimonial = () => {
     setActiveIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
   return (
-    <section id="testimonios" className="section bg-white">
+    <>
+      <StructuredData data={testimonialsSchema} id="testimonials-schema" />
+      <section id="testimonios" className="section bg-white">
       <div className="container">
         <div className="text-center max-w-4xl mx-auto mb-16">
           <span className="inline-block py-2 px-4 bg-brand-red text-white text-sm font-semibold rounded-full mb-6">
@@ -183,6 +217,7 @@ const Testimonials: React.FC = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

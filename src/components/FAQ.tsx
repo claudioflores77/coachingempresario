@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { HelpCircle, ChevronDown, ChevronUp, MessageSquare, ArrowRight } from 'lucide-react';
 
 const FAQ: React.FC = () => {
@@ -39,6 +39,42 @@ const FAQ: React.FC = () => {
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index);
   };
+
+  // Add FAQ schema to the page
+  useEffect(() => {
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      }))
+    };
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(faqSchema);
+    script.id = 'faq-schema';
+    
+    // Remove existing schema if present
+    const existingSchema = document.getElementById('faq-schema');
+    if (existingSchema) {
+      existingSchema.remove();
+    }
+    
+    document.head.appendChild(script);
+
+    return () => {
+      const schemaElement = document.getElementById('faq-schema');
+      if (schemaElement) {
+        schemaElement.remove();
+      }
+    };
+  }, [faqs]);
 
   return (
     <section id="faq" className="section bg-consulting-gray-light">

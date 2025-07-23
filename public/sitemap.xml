@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://claudioflores.lovable.app/</loc>
+    <lastmod>2025-01-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://claudioflores.lovable.app/lovable-uploads/135f3f99-d5f9-4f4d-8213-675e650f3f18.png</image:loc>
+      <image:title>Claudio Flores - Consultor Empresarial</image:title>
+      <image:caption>Método P.U.D.E.R. para transformación empresarial</image:caption>
+    </image:image>
+  </url>
+</urlset>

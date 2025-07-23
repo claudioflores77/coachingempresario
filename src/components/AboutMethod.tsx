@@ -2,11 +2,100 @@
 import React from 'react';
 import { Clock, Target, BarChart4, MessageSquare, Linkedin, Shield, AlertTriangle } from 'lucide-react';
 import SafeImage from './SafeImage';
+import StructuredData from './StructuredData';
 
 const AboutMethod: React.FC = () => {
   console.log('AboutMethod component rendering');
 
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Método P.U.D.E.R. - Transformación Empresarial",
+    "description": "Sistema integral para reducir 50% las horas de trabajo y aumentar 25-40% la rentabilidad empresarial",
+    "totalTime": "PT12W",
+    "estimatedCost": {
+      "@type": "MonetaryAmount",
+      "currency": "USD",
+      "value": "15000"
+    },
+    "supply": [
+      "Diagnóstico empresarial",
+      "Plan estratégico personalizado", 
+      "Sistemas automatizados",
+      "Equipo capacitado"
+    ],
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Claridad y Enfoque Estratégico",
+        "text": "Identifica exactamente qué actividades generan el 80% de tus resultados y elimina todo lo que te distrae del crecimiento real.",
+        "image": "https://claudioflores.lovable.app/lovable-uploads/135f3f99-d5f9-4f4d-8213-675e650f3f18.png"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Sistemas y Procesos Automatizados", 
+        "text": "Implementa sistemas que funcionen sin tu presencia constante, desde ventas hasta operaciones.",
+        "image": "https://claudioflores.lovable.app/lovable-uploads/0b84250d-4c53-48c5-9471-1227bf9ff0fb.png"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Desarrollo de Liderazgo y Equipo",
+        "text": "Construye un equipo que tome decisiones inteligentes sin depender de ti para cada detalle.",
+        "image": "https://claudioflores.lovable.app/lovable-uploads/dfb8fb00-5dee-4b16-9bac-410b330236fb.png"
+      }
+    ],
+    "result": {
+      "@type": "Thing",
+      "name": "Empresa automatizada y rentable",
+      "description": "Reducción del 50% en horas de trabajo con aumento del 25-40% en rentabilidad"
+    }
+  };
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Método P.U.D.E.R.",
+    "description": "Consultoría estratégica empresarial para transformación y optimización de empresas",
+    "provider": {
+      "@type": "Organization",
+      "name": "Claudio Flores Consultoría Empresarial"
+    },
+    "areaServed": {
+      "@type": "Place", 
+      "name": "Internacional"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servicios de Consultoría",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Sesión Estratégica Gratuita",
+            "description": "Diagnóstico personalizado y plan de acción inmediato"
+          },
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer", 
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Implementación Método P.U.D.E.R.",
+            "description": "Sistema completo de transformación empresarial"
+          },
+          "price": "15000",
+          "priceCurrency": "USD"
+        }
+      ]
+    }
+  };
+
   return (
+    <>
+      <StructuredData data={howToSchema} id="method-schema" />
+      <StructuredData data={serviceSchema} id="service-schema" />
     <section id="sobre-metodo" className="section bg-white">
       <div className="container">
         <div className="text-center max-w-4xl mx-auto mb-12">
@@ -186,6 +275,7 @@ const AboutMethod: React.FC = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 
