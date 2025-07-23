@@ -20,26 +20,53 @@ const Hero: React.FC = () => {
         <div className="container relative z-10 my-8">
           <div id="hero-content" className="max-w-5xl mx-auto text-center">
             
-            {/* Main Headline - Moved to top with better hierarchy */}
+            {/* Main Headline - Enhanced with dramatic consequences */}
             <div className="mb-12 animate-slide-up">
+              <div className="bg-brand-red/10 backdrop-blur-sm border border-brand-red/30 rounded-xl p-6 mb-8">
+                <p className="text-lg md:text-xl text-brand-yellow font-semibold mb-2">
+                  ⚠️ CADA DÍA QUE PASA SIN ACTUAR...
+                </p>
+                <p className="text-white/90 text-base">
+                  Tu salud se deteriora más • Tu familia se aleja • Tu competencia avanza
+                </p>
+              </div>
+              
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
-                Deja de Trabajar
-                <span className="block text-brand-red text-5xl md:text-6xl lg:text-7xl font-black mt-3 mb-3">
-                  60+ HORAS
+                ¿Cuándo Fue la Última Vez que
+                <span className="block text-brand-red text-4xl md:text-5xl lg:text-6xl font-black mt-3 mb-3">
+                  CENASTE CON TU FAMILIA
                 </span>
                 <span className="block text-3xl md:text-4xl lg:text-5xl">
-                  Sin Ver a Tu Familia
+                  Sin Pensar en el Trabajo?
                 </span>
               </h1>
               
-              <div className="bg-brand-red/20 backdrop-blur-sm border-2 border-brand-red rounded-xl p-6 md:p-8 mb-8">
-                <p className="text-2xl md:text-3xl font-bold text-brand-yellow mb-3">
-                  ¡TRANSFORMA TU EMPRESA EN 90 DÍAS!
+              <div className="bg-gradient-to-r from-brand-red/90 to-red-600/90 backdrop-blur-sm border-2 border-brand-red rounded-xl p-6 md:p-8 mb-8">
+                <p className="text-2xl md:text-3xl font-bold text-white mb-4">
+                  🚨 Si No Cambias Esto AHORA, En 5 Años Más:
                 </p>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-lg">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-lg text-white/95">
+                  <div className="space-y-2">
+                    <div>❌ Habrás perdido los primeros pasos de tus hijos</div>
+                    <div>❌ Tu matrimonio estará en crisis</div>
+                    <div>❌ Tu salud estará quebrada</div>
+                  </div>
+                  <div className="space-y-2">
+                    <div>❌ Seguirás siendo esclavo de tu negocio</div>
+                    <div>❌ La competencia te habrá superado</div>
+                    <div>❌ Te arrepentirás de no haber actuado HOY</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-brand-yellow/20 backdrop-blur-sm border-2 border-brand-yellow rounded-xl p-6 md:p-8 mb-8">
+                <p className="text-2xl md:text-3xl font-bold text-brand-yellow mb-3">
+                  ✅ PERO SI ACTÚAS HOY, EN 90 DÍAS:
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-lg text-white">
                   <div className="flex items-center justify-center">
                     <span className="text-brand-yellow font-bold mr-2">50%</span>
-                    <span>menos horas</span>
+                    <span>menos horas trabajando</span>
                   </div>
                   <div className="flex items-center justify-center">
                     <span className="text-brand-yellow font-bold mr-2">25-40%</span>
@@ -47,46 +74,89 @@ const Hero: React.FC = () => {
                   </div>
                   <div className="flex items-center justify-center">
                     <span className="text-brand-yellow font-bold mr-2">100%</span>
-                    <span>tu vida personal</span>
+                    <span>tu vida personal recuperada</span>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Problem Section - Better organized */}
+            {/* Problem Section - Enhanced with storytelling and urgency */}
             <div className="mb-12 animate-slide-up" style={{ animationDelay: '0.1s' }}>
               <div className="bg-black/40 backdrop-blur-sm rounded-xl p-6 md:p-8 border border-brand-red/30">
                 <h2 className="text-xl md:text-2xl font-bold text-brand-red mb-6">
-                  ¿Te Sientes Atrapado en Tu Negocio?
+                  💔 ¿Es Esta Tu Realidad Cada Día?
                 </h2>
                 
+                {/* Story Section */}
+                <div className="bg-brand-red/20 rounded-lg p-6 mb-8 border-l-4 border-brand-red">
+                  <p className="text-lg italic text-white/95 mb-4">
+                    "Son las 11 PM y sigues contestando emails. Tu familia ya se acostó... otra vez. 
+                    Mañana será igual: tu empresa te necesita para TODO. Te prometiste que este año sería diferente, 
+                    pero ya estamos en julio y trabajas MÁS horas que el año pasado."
+                  </p>
+                  <p className="text-brand-yellow font-semibold">
+                    👆 ¿Te suena familiar? No estás solo...
+                  </p>
+                </div>
+                
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                  <div className="space-y-3">
-                    <div className="flex items-center text-left">
-                      <span className="text-brand-red text-2xl mr-3 flex-shrink-0">✗</span>
-                      <span className="text-base">Trabajas más de 60 horas sin descanso</span>
+                  <div className="space-y-4">
+                    <h3 className="text-lg font-bold text-brand-yellow mb-3">💼 En Tu Negocio:</h3>
+                    <div className="flex items-start text-left">
+                      <span className="text-brand-red text-xl mr-3 flex-shrink-0 mt-1">💀</span>
+                      <span className="text-base">Trabajas 60+ horas y los resultados no mejoran</span>
                     </div>
-                    <div className="flex items-center text-left">
-                      <span className="text-brand-red text-2xl mr-3 flex-shrink-0">✗</span>
-                      <span className="text-base">Tu negocio no puede funcionar sin ti</span>
+                    <div className="flex items-start text-left">
+                      <span className="text-brand-red text-xl mr-3 flex-shrink-0 mt-1">⛓️</span>
+                      <span className="text-base">Tu negocio NO puede funcionar ni 1 día sin ti</span>
                     </div>
-                    <div className="flex items-center text-left">
-                      <span className="text-brand-red text-2xl mr-3 flex-shrink-0">✗</span>
-                      <span className="text-base">El estrés está afectando tu salud</span>
+                    <div className="flex items-start text-left">
+                      <span className="text-brand-red text-xl mr-3 flex-shrink-0 mt-1">📉</span>
+                      <span className="text-base">La rentabilidad es ridícula vs. el tiempo invertido</span>
+                    </div>
+                    <div className="flex items-start text-left">
+                      <span className="text-brand-red text-xl mr-3 flex-shrink-0 mt-1">🔥</span>
+                      <span className="text-base">Vives apagando incendios, no construyendo</span>
                     </div>
                   </div>
-                  <div className="space-y-3">
-                    <div className="flex items-center text-left">
-                      <span className="text-brand-red text-2xl mr-3 flex-shrink-0">✗</span>
-                      <span className="text-base">No tienes tiempo para tu familia</span>
+                  <div className="space-y-4">
+                    <h3 className="text-lg font-bold text-brand-yellow mb-3">💔 En Tu Vida Personal:</h3>
+                    <div className="flex items-start text-left">
+                      <span className="text-brand-red text-xl mr-3 flex-shrink-0 mt-1">👨‍👩‍👧‍👦</span>
+                      <span className="text-base">Tus hijos crecen y tú te lo estás perdiendo</span>
                     </div>
-                    <div className="flex items-center text-left">
-                      <span className="text-brand-red text-2xl mr-3 flex-shrink-0">✗</span>
-                      <span className="text-base">La rentabilidad no justifica el esfuerzo</span>
+                    <div className="flex items-start text-left">
+                      <span className="text-brand-red text-xl mr-3 flex-shrink-0 mt-1">💊</span>
+                      <span className="text-base">Tu salud se deteriora: estrés, insomnio, ansiedad</span>
                     </div>
-                    <div className="flex items-center text-left">
-                      <span className="text-brand-red text-2xl mr-3 flex-shrink-0">✗</span>
-                      <span className="text-base">No puedes tomar vacaciones</span>
+                    <div className="flex items-start text-left">
+                      <span className="text-brand-red text-xl mr-3 flex-shrink-0 mt-1">✈️</span>
+                      <span className="text-base">No puedes tomar vacaciones reales NUNCA</span>
+                    </div>
+                    <div className="flex items-start text-left">
+                      <span className="text-brand-red text-xl mr-3 flex-shrink-0 mt-1">😔</span>
+                      <span className="text-base">Te sientes culpable cuando NO estás trabajando</span>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Urgency Section */}
+                <div className="bg-gradient-to-r from-brand-red/30 to-orange-600/30 rounded-lg p-6 mb-8">
+                  <h3 className="text-xl font-bold text-brand-yellow mb-4">
+                    ⏰ CADA DÍA QUE PASA ASÍ:
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                    <div className="text-center">
+                      <div className="text-2xl mb-2">😰</div>
+                      <p>Tu competencia avanza mientras tú sigues "ocupado"</p>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl mb-2">👶</div>
+                      <p>Tus hijos crecen sin que estés presente</p>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl mb-2">⚡</div>
+                      <p>Tu energía se agota más y rindes menos</p>
                     </div>
                   </div>
                 </div>
@@ -124,12 +194,24 @@ const Hero: React.FC = () => {
               </div>
             </div>
             
-            {/* CTAs - Simplified and more prominent */}
+            {/* CTAs - Enhanced with urgency */}
             <div className="space-y-6 animate-slide-up" style={{ animationDelay: '0.3s' }}>
-              <a href="https://estrategiaempresaria.systeme.io/sesionestrategica1a1" className="block w-full max-w-2xl mx-auto bg-gradient-to-r from-brand-red to-red-600 text-white font-bold text-xl md:text-2xl py-6 px-8 rounded-xl shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-300 border-4 border-white" target="_blank" rel="noopener noreferrer" aria-label="Agendar sesión estratégica gratuita">
+              <div className="bg-brand-red/10 backdrop-blur-sm border border-brand-red/50 rounded-xl p-4 mb-4">
+                <p className="text-brand-yellow font-bold text-lg mb-2">
+                  🔥 ÚLTIMAS 48 HORAS DE JULIO - NO ESPERES MÁS
+                </p>
+                <p className="text-white/90">
+                  Cada día que pospones esto, es un día más que tu familia espera por ti...
+                </p>
+              </div>
+              
+              <a href="https://estrategiaempresaria.systeme.io/sesionestrategica1a1" className="block w-full max-w-2xl mx-auto bg-gradient-to-r from-brand-red to-red-600 text-white font-bold text-xl md:text-2xl py-6 px-8 rounded-xl shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-300 border-4 border-brand-yellow" target="_blank" rel="noopener noreferrer" aria-label="Agendar sesión estratégica gratuita">
                 <div className="text-2xl md:text-3xl mb-2">🚀 SESIÓN ESTRATÉGICA GRATUITA</div>
-                <div className="text-lg font-normal opacity-90">
+                <div className="text-lg font-normal opacity-90 mb-2">
                   Recupera tu vida en 90 días
+                </div>
+                <div className="text-sm bg-white/20 rounded-lg py-2 px-4 inline-block">
+                  ⏰ Agenda HOY - Cambia tu vida MAÑANA
                 </div>
               </a>
               

@@ -121,16 +121,20 @@ const WhyChooseMe: React.FC = () => {
           </div>
         </div>
 
-        {/* CTA Section - Simplified design */}
+        {/* CTA Section - Enhanced emotional appeal */}
         <div className="text-center bg-gradient-to-r from-brand-red to-red-600 text-white p-8 rounded-2xl shadow-xl">
           <h3 className="text-2xl font-bold mb-4">
-            ¿Sigues Trabajando Más de 60 Horas Semanales?
+            ¿Cuántos Años Más Vas a Sacrificar?
           </h3>
-          <p className="text-xl mb-6 opacity-90">
+          <p className="text-xl mb-4 opacity-90">
+            💔 Tu familia te espera. Tus hijos no van a ser pequeños para siempre.
+          </p>
+          <p className="text-lg mb-6 opacity-90">
             La diferencia entre nosotros es que yo ya pasé por donde tú estás ahora.
+            <span className="block font-semibold mt-2">Perdí momentos preciosos que NO puedo recuperar.</span>
           </p>
           <p className="text-xl font-semibold mb-8">
-            Conozco el camino hacia la libertad empresarial.
+            🎯 Pero TÚ aún puedes cambiar tu historia. HOY.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-2xl mx-auto">
