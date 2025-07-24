@@ -56,9 +56,7 @@ const Hero: React.FC = () => {
               </div>
               
               <div className="bg-brand-yellow/20 backdrop-blur-sm border-2 border-brand-yellow rounded-xl p-6 md:p-8 mb-8">
-                <p className="text-2xl md:text-3xl font-bold text-brand-yellow mb-3">
-                  ✅ PERO SI ACTÚAS HOY, EN 90 DÍAS:
-                </p>
+                <p className="text-2xl md:text-3xl font-bold text-brand-yellow mb-3">✅¿Y SI ACTÚAS AHORA?, EN 90 DÍAS TENDRÍAS:</p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-lg text-white">
                   <div className="flex items-center justify-center">
                     <span className="text-brand-yellow font-bold mr-2">50%</span>
