@@ -32,7 +32,7 @@ const PersonSchema: React.FC = () => {
     ],
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+54-9-362-423-6611",
+      "telephone": "+5493624236611",
       "contactType": "customer service",
       "availableLanguage": ["Spanish", "English"]
     },
