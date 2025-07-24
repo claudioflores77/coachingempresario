@@ -21,9 +21,7 @@ const Hero: React.FC = () => {
             {/* Main Headline - Enhanced with dramatic consequences */}
             <div className="mb-12 animate-slide-up">
               <div className="bg-brand-red/10 backdrop-blur-sm border border-brand-red/30 rounded-xl p-6 mb-8">
-                <p className="text-lg md:text-xl text-brand-yellow font-semibold mb-2">
-                  ⚠️ CADA DÍA QUE PASA SIN ACTUAR...
-                </p>
+                <p className="text-lg md:text-xl text-brand-yellow font-semibold mb-2">⚠️ CADA DÍA QUE PASAS SIN TOMAR ACCIÓN...</p>
                 <p className="text-white/90 text-base">¿Tu salud se deteriora? •
 ¿Tu familia se aleja más? •
 ¿Tus competidores avanzan?</p>
