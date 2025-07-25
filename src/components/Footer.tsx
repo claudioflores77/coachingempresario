@@ -33,6 +33,34 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
+      
+      {/* Metricool tracking script */}
+      <div dangerouslySetInnerHTML={{
+        __html: `
+          <script>
+            function loadScript(a){
+              try {
+                var b=document.getElementsByTagName("head")[0],c=document.createElement("script");
+                c.type="text/javascript";
+                c.src="https://tracker.metricool.com/resources/be.js";
+                c.onreadystatechange=a;
+                c.onload=a;
+                c.onerror=function(){console.log("Metricool script failed to load")};
+                b.appendChild(c)
+              } catch(error) {
+                console.log("Error loading Metricool script:", error);
+              }
+            }
+            loadScript(function(){
+              try {
+                beTracker.t({hash:"7e2b91ef6ba3fdf4953784cfc66502e2"})
+              } catch(error) {
+                console.log("Error initializing Metricool tracker:", error);
+              }
+            });
+          </script>
+        `
+      }} />
     </footer>
   );
 };
