@@ -1,11 +1,52 @@
 
-import React from 'react';
+import React, { memo, useEffect } from 'react';
 import SafeImage from './SafeImage';
 
-const Footer: React.FC = () => {
+// Extend global window interface for Metricool
+declare global {
+  interface Window {
+    beTracker?: {
+      t: (config: { hash: string }) => void;
+    };
+  }
+}
+
+const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
   
-  console.log('Footer component rendering');
+  // Load Metricool script asynchronously after component mount
+  useEffect(() => {
+    const loadMetricool = () => {
+      try {
+        if (window.beTracker) return; // Already loaded
+        
+        const script = document.createElement('script');
+        script.src = 'https://tracker.metricool.com/resources/be.js';
+        script.async = true;
+        script.defer = true;
+        script.onload = () => {
+          try {
+            if (window.beTracker) {
+              window.beTracker.t({hash: '7e2b91ef6ba3fdf4953784cfc66502e2'});
+            }
+          } catch (error) {
+            console.log('Error initializing Metricool tracker:', error);
+          }
+        };
+        script.onerror = () => {
+          console.log('Metricool script failed to load');
+        };
+        
+        document.head.appendChild(script);
+      } catch (error) {
+        console.log('Error loading Metricool script:', error);
+      }
+    };
+
+    // Load after a short delay to not block initial rendering
+    const timeoutId = setTimeout(loadMetricool, 1000);
+    return () => clearTimeout(timeoutId);
+  }, []);
   
   return (
     <footer className="bg-consulting-navy text-white py-8">
@@ -33,36 +74,8 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-      
-      {/* Metricool tracking script */}
-      <div dangerouslySetInnerHTML={{
-        __html: `
-          <script>
-            function loadScript(a){
-              try {
-                var b=document.getElementsByTagName("head")[0],c=document.createElement("script");
-                c.type="text/javascript";
-                c.src="https://tracker.metricool.com/resources/be.js";
-                c.onreadystatechange=a;
-                c.onload=a;
-                c.onerror=function(){console.log("Metricool script failed to load")};
-                b.appendChild(c)
-              } catch(error) {
-                console.log("Error loading Metricool script:", error);
-              }
-            }
-            loadScript(function(){
-              try {
-                beTracker.t({hash:"7e2b91ef6ba3fdf4953784cfc66502e2"})
-              } catch(error) {
-                console.log("Error initializing Metricool tracker:", error);
-              }
-            });
-          </script>
-        `
-      }} />
     </footer>
   );
-};
+});
 
 export default Footer;

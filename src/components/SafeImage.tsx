@@ -1,18 +1,22 @@
 
-import React, { useState } from 'react';
+import React, { useState, memo } from 'react';
 
 interface SafeImageProps {
   src: string;
   alt: string;
   className?: string;
   fallbackSrc?: string;
+  loading?: 'lazy' | 'eager';
+  priority?: boolean;
 }
 
-const SafeImage: React.FC<SafeImageProps> = ({ 
+const SafeImage: React.FC<SafeImageProps> = memo(({ 
   src, 
   alt, 
   className = '', 
-  fallbackSrc = '/placeholder.svg' 
+  fallbackSrc = '/placeholder.svg',
+  loading = 'lazy',
+  priority = false
 }) => {
   const [imageError, setImageError] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -50,11 +54,13 @@ const SafeImage: React.FC<SafeImageProps> = ({
         src={src}
         alt={alt}
         className={`${className} ${isLoading ? 'hidden' : ''}`}
+        loading={priority ? 'eager' : loading}
         onError={handleImageError}
         onLoad={handleImageLoad}
+        decoding="async"
       />
     </>
   );
-};
+});
 
 export default SafeImage;

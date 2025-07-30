@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { ArrowRight, MessageSquare, Clock, TrendingUp, Users } from 'lucide-react';
 import SafeImage from './SafeImage';
 import SafeIframe from './SafeIframe';
-const Hero: React.FC = () => {
-  console.log('Hero component rendering');
+
+const Hero: React.FC = memo(() => {
   return <>
       {/* Skip link for accessibility */}
       <a href="#hero-content" className="skip-link focus:translate-y-0" tabIndex={0}>
@@ -252,5 +252,6 @@ const Hero: React.FC = () => {
         </div>
       </section>
     </>;
-};
+});
+
 export default Hero;

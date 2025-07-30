@@ -38,9 +38,21 @@
     <meta name="twitter:image" content="https://claudioflores.lovable.app/lovable-uploads/135f3f99-d5f9-4f4d-8213-675e650f3f18.png" />
     <meta name="twitter:image:alt" content="Claudio Flores - Consultor Empresarial especialista en Método P.U.D.E.R." />
 
-    <!-- Preload critical resources -->
-    <link rel="preload" href="/lovable-uploads/135f3f99-d5f9-4f4d-8213-675e650f3f18.png" as="image" />
+    <!-- Critical resource hints -->
+    <link rel="preload" href="/lovable-uploads/135f3f99-d5f9-4f4d-8213-675e650f3f18.png" as="image" fetchpriority="high" />
     <link rel="preload" href="/lovable-uploads/0b84250d-4c53-48c5-9471-1227bf9ff0fb.png" as="image" />
+    
+    <!-- DNS prefetch for external resources -->
+    <link rel="dns-prefetch" href="//tracker.metricool.com" />
+    <link rel="dns-prefetch" href="//api.whatsapp.com" />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    
+    <!-- Preconnect to critical external domains -->
+    <link rel="preconnect" href="https://tracker.metricool.com" crossorigin />
+    
+    <!-- Font optimization -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;600;700&display=swap" /></noscript>
     
     <!-- Schema.org structured data -->
     <script type="application/ld+json">

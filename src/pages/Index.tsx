@@ -1,19 +1,22 @@
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, lazy, Suspense } from 'react';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import WhyChooseMe from '../components/WhyChooseMe';
 import AboutMethod from '../components/AboutMethod';
 import CallToAction from '../components/CallToAction';
-import Testimonials from '../components/Testimonials';
-import FAQ from '../components/FAQ';
 import Footer from '../components/Footer';
-import BackToTop from '../components/BackToTop';
 import BreadcrumbNav from '../components/BreadcrumbNav';
-import NotificationSystem from '../components/NotificationSystem';
-import PersonSchema from '../components/PersonSchema';
-import ContactSchema from '../components/ContactSchema';
-import SEOMonitoring from '../components/SEOMonitoring';
+import LoadingSpinner from '../components/LoadingSpinner';
+
+// Lazy load non-critical components
+const Testimonials = lazy(() => import('../components/Testimonials'));
+const FAQ = lazy(() => import('../components/FAQ'));
+const BackToTop = lazy(() => import('../components/BackToTop'));
+const NotificationSystem = lazy(() => import('../components/NotificationSystem'));
+const PersonSchema = lazy(() => import('../components/PersonSchema'));
+const ContactSchema = lazy(() => import('../components/ContactSchema'));
+const SEOMonitoring = lazy(() => import('../components/SEOMonitoring'));
 
 interface Notification {
   id: string;
@@ -93,9 +96,11 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
-      <PersonSchema />
-      <ContactSchema />
-      <SEOMonitoring />
+      <Suspense fallback={null}>
+        <PersonSchema />
+        <ContactSchema />
+        <SEOMonitoring />
+      </Suspense>
       <Header />
       {currentSection !== 'hero' && <BreadcrumbNav items={breadcrumbItems} />}
       
@@ -118,21 +123,27 @@ const Index = () => {
         
         {/* 5. Reseñas/Testimonios/Validación Social */}
         <section id="testimonios">
-          <Testimonials />
+          <Suspense fallback={<LoadingSpinner />}>
+            <Testimonials />
+          </Suspense>
         </section>
         
         {/* 6. Preguntas Frecuentes (7 objeciones) */}
         <section id="faq">
-          <FAQ />
+          <Suspense fallback={<LoadingSpinner />}>
+            <FAQ />
+          </Suspense>
         </section>
       </main>
       
       <Footer />
-      <BackToTop />
-      <NotificationSystem 
-        notifications={notifications} 
-        onRemove={removeNotification} 
-      />
+      <Suspense fallback={null}>
+        <BackToTop />
+        <NotificationSystem 
+          notifications={notifications} 
+          onRemove={removeNotification} 
+        />
+      </Suspense>
     </div>
   );
 };
