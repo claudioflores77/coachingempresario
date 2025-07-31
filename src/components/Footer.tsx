@@ -6,7 +6,7 @@ import SafeImage from './SafeImage';
 declare global {
   interface Window {
     beTracker?: {
-      t: (config: { hash: string }) => void;
+      t: (config: { hash: string; [key: string]: any }) => void;
     };
   }
 }
@@ -27,7 +27,21 @@ const Footer: React.FC = memo(() => {
         script.onload = () => {
           try {
             if (window.beTracker) {
-              window.beTracker.t({hash: '7e2b91ef6ba3fdf4953784cfc66502e2'});
+              // Get current URL and force domain update
+              const currentUrl = window.location.href;
+              const currentDomain = window.location.hostname;
+              
+              console.log('Metricool tracking URL:', currentUrl);
+              console.log('Metricool tracking domain:', currentDomain);
+              
+              // Initialize tracker with additional parameters to force domain recognition
+              window.beTracker.t({
+                hash: '7e2b91ef6ba3fdf4953784cfc66502e2',
+                url: currentUrl,
+                domain: currentDomain,
+                referrer: document.referrer || '',
+                title: document.title
+              });
             }
           } catch (error) {
             console.log('Error initializing Metricool tracker:', error);
