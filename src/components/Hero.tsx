@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { ArrowRight, MessageSquare, Clock, TrendingUp, Users } from 'lucide-react';
+import { ArrowRight, MessageSquare, Clock, TrendingUp, Users, Globe, Star } from 'lucide-react';
 import SafeImage from './SafeImage';
 import SafeIframe from './SafeIframe';
 
@@ -18,235 +18,150 @@ const Hero: React.FC = memo(() => {
         <div className="container relative z-10 my-8">
           <div id="hero-content" className="max-w-5xl mx-auto text-center">
             
-            {/* Main Headline - Enhanced with dramatic consequences */}
+            {/* ========================================
+                FASE 1 - QUICK WINS IMPLEMENTADOS
+                ======================================== */}
+            
+            {/* 1.1. NUEVO TÍTULO - Fórmula 1: Valor + Método único */}
             <div className="mb-12 animate-slide-up">
-              <div className="bg-brand-red/10 backdrop-blur-sm border border-brand-red/30 rounded-xl p-6 mb-8">
-                <p className="text-lg md:text-xl text-brand-yellow font-semibold mb-2">⚠️ CADA DÍA QUE PASAS SIN TOMAR ACCIÓN...</p>
-                <p className="text-white/90 text-base">¿Tu salud se deteriora? •
-¿Tu familia se aleja más? •
-¿Tus competidores avanzan?</p>
-              </div>
-              
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
-                ¿Cuándo Fue la Última Vez que
-                <span className="block text-brand-red text-4xl md:text-5xl lg:text-6xl font-black mt-3 mb-3">
-                  CENASTE CON TU FAMILIA
+                Recupera 30 Horas Semanales y Duplica Tu Rentabilidad
+                <span className="block text-brand-yellow text-4xl md:text-5xl lg:text-6xl font-black mt-3 mb-3">
+                  Con el Método P.U.D.E.R.
                 </span>
-                <span className="block text-3xl md:text-4xl lg:text-5xl">
-                  Sin Pensar en el Trabajo?
+                <span className="block text-3xl md:text-4xl lg:text-5xl text-white/90">
+                  Sin Trabajar Más Duro, Sin Contratar Más Personal
                 </span>
               </h1>
               
-              <div className="bg-gradient-to-r from-brand-red/90 to-red-600/90 backdrop-blur-sm border-2 border-brand-red rounded-xl p-6 md:p-8 mb-8">
-                <p className="text-2xl md:text-3xl font-bold text-white mb-4">
-                  ¿Qué pasaría en 5 años, si todo sigue evolucionando igual, y no actúas AHORA?
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-lg text-white/95">
-                  <div className="space-y-2">
-                    <div>&rarr; ¿Podrías haber perdido los primeros pasos de tus hijos? ¿o sus primeras palabras?</div>
-                    <div>&rarr; ¿Tu matrimonio estaría en crisis?</div>
-                    <div>&rarr; ¿Tu salud estaría quebrada por años de estrés?</div>
-                  </div>
-                  <div className="space-y-2">
-                    <div>&rarr; ¿Seguirías siendo prisionero de tu propio negocio?</div>
-                    <div>&rarr; ¿La competencia te habría dejado atrás?</div>
-                    <div>&rarr; ¿Te estarías arrepintiendo de no haber actuado cuando tuviste la oportunidad?</div>
-                  </div>
-                </div>
-              </div>
+              {/* 1.2. SUBTÍTULO EXPLICATIVO CLARO */}
+              <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-4xl mx-auto leading-relaxed">
+                El Método P.U.D.E.R. crea <span className="text-brand-yellow font-semibold">sistemas automatizados</span> y 
+                <span className="text-brand-yellow font-semibold"> equipos autónomos</span> que permiten a tu empresa 
+                funcionar sin tu presencia constante.
+                <span className="block mt-3 text-lg">
+                  En 90 días reduces 50% tus horas de trabajo y aumentas 25-40% tu rentabilidad.
+                </span>
+              </p>
               
-              <div className="bg-brand-yellow/20 backdrop-blur-sm border-2 border-brand-yellow rounded-xl p-6 md:p-8 mb-8">
-                <p className="text-2xl md:text-3xl font-bold text-brand-yellow mb-3">✅¿Y SI ACTÚAS AHORA?, EN 90 DÍAS TENDRÍAS:</p>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-lg text-white">
-                  <div className="flex items-center justify-center">
-                    <span className="text-brand-yellow font-bold mr-2">50%</span>
-                    <span>menos horas trabajando</span>
-                  </div>
-                  <div className="flex items-center justify-center">
-                    <span className="text-brand-yellow font-bold mr-2">25-40%</span>
-                    <span>más rentabilidad</span>
-                  </div>
-                  <div className="flex items-center justify-center">
-                    <span className="text-brand-yellow font-bold mr-2">100%</span>
-                    <span>tu vida personal recuperada</span>
-                  </div>
+              {/* 1.3. PRUEBA SOCIAL - MOVIDA ARRIBA (Posición 3) */}
+              <div className="flex flex-wrap justify-center items-center gap-6 mb-8">
+                <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
+                  <Clock className="h-5 w-5 text-brand-yellow" />
+                  <span className="font-semibold">17 años</span>
+                </div>
+                <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
+                  <Users className="h-5 w-5 text-brand-yellow" />
+                  <span className="font-semibold">500+ empresas</span>
+                </div>
+                <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
+                  <Globe className="h-5 w-5 text-brand-yellow" />
+                  <span className="font-semibold">22 países</span>
+                </div>
+                <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-4 w-4 text-brand-yellow fill-brand-yellow" />
+                  ))}
+                  <span className="text-sm ml-1">5.0</span>
                 </div>
               </div>
             </div>
 
-            {/* Problem Section - Enhanced with storytelling and urgency */}
-            <div className="mb-12 animate-slide-up" style={{
-            animationDelay: '0.1s'
-          }}>
-              <div className="bg-black/40 backdrop-blur-sm rounded-xl p-6 md:p-8 border border-brand-red/30">
-                <h2 className="text-xl md:text-2xl font-bold text-brand-red mb-6">
-                  💔 ¿Es Esta Tu Realidad Cada Día?
-                </h2>
-                
-                {/* Story Section */}
-                <div className="bg-brand-red/20 rounded-lg p-6 mb-8 border-l-4 border-brand-red">
-                  <p className="text-lg italic text-white/95 mb-4">
-                    "Son las 11 PM y sigues contestando emails. Tu familia ya se acostó... otra vez. 
-                    Mañana será igual: tu empresa te necesita para TODO. Te prometiste que este año sería diferente, 
-                    pero ya estamos en julio y trabajas MÁS horas que el año pasado."
-                  </p>
-                  <p className="text-brand-yellow font-semibold">
-                    ¿Te resulta familiar esta situación?
-                  </p>
+            {/* Video Section - Mantenido en posición original por ahora (se moverá en Fase 2) */}
+            <div className="mb-12 animate-slide-up" style={{animationDelay: '0.1s'}}>
+              <div className="max-w-3xl mx-auto">
+                <h3 className="text-xl md:text-2xl font-semibold mb-4 text-brand-yellow text-center">
+                  👇 Ve Cómo el Método P.U.D.E.R. Transforma Empresas
+                </h3>
+                <div className="relative rounded-lg overflow-hidden shadow-2xl border-2 border-brand-yellow/50">
+                  <SafeIframe 
+                    src="https://www.youtube.com/embed/HE4E1z77eOg" 
+                    title="¡5 Señales de que TU EMPRESA TE ESTÁ CONSUMIENDO!🥴" 
+                    className="w-full aspect-video" 
+                  />
                 </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                  <div className="space-y-4">
-                    <h3 className="text-lg font-bold text-brand-yellow mb-3">💼 En Tu Negocio:</h3>
-                    <div className="flex items-start text-left">
-                      <span className="text-brand-red text-xl mr-3 flex-shrink-0 mt-1">💀</span>
-                      <span className="text-base">Trabajas 60+ horas y los resultados no mejoran</span>
-                    </div>
-                    <div className="flex items-start text-left">
-                      <span className="text-brand-red text-xl mr-3 flex-shrink-0 mt-1">⛓️</span>
-                      <span className="text-base">Tu negocio NO puede funcionar ni 1 día sin ti</span>
-                    </div>
-                    <div className="flex items-start text-left">
-                      <span className="text-brand-red text-xl mr-3 flex-shrink-0 mt-1">📉</span>
-                      <span className="text-base">La rentabilidad es ridícula vs. el tiempo invertido</span>
-                    </div>
-                    <div className="flex items-start text-left">
-                      <span className="text-brand-red text-xl mr-3 flex-shrink-0 mt-1">🔥</span>
-                      <span className="text-base">Vives apagando incendios, no construyendo</span>
-                    </div>
-                  </div>
-                  <div className="space-y-4">
-                    <h3 className="text-lg font-bold text-brand-yellow mb-3">💔 En Tu Vida Personal:</h3>
-                    <div className="flex items-start text-left">
-                      <span className="text-brand-red text-xl mr-3 flex-shrink-0 mt-1">👨‍👩‍👧‍👦</span>
-                      <span className="text-base">Tus hijos crecen y tú te lo estás perdiendo</span>
-                    </div>
-                    <div className="flex items-start text-left">
-                      <span className="text-brand-red text-xl mr-3 flex-shrink-0 mt-1">💊</span>
-                      <span className="text-base">Tu salud se deteriora: estrés, insomnio, ansiedad</span>
-                    </div>
-                    <div className="flex items-start text-left">
-                      <span className="text-brand-red text-xl mr-3 flex-shrink-0 mt-1">✈️</span>
-                      <span className="text-base">No puedes tomar vacaciones reales NUNCA</span>
-                    </div>
-                    <div className="flex items-start text-left">
-                      <span className="text-brand-red text-xl mr-3 flex-shrink-0 mt-1">😔</span>
-                      <span className="text-base">Te sientes culpable cuando NO estás trabajando</span>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Urgency Section */}
-                <div className="bg-gradient-to-r from-brand-red/30 to-orange-600/30 rounded-lg p-6 mb-8">
-                  <h3 className="text-xl font-bold text-brand-yellow mb-4">
-                    ¿Sabes qué está pasando mientras sigues posponiendo el cambio?
-                  </h3>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-                    <div className="text-center">
-                      <div className="text-2xl mb-2">😰</div>
-                      <p>Tu competencia avanza mientras tú sigues "ocupado"</p>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-2xl mb-2">👶</div>
-                      <p>Tus hijos crecen sin que estés presente</p>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-2xl mb-2">⚡</div>
-                      <p>Tu energía se agota más y rindes menos</p>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Video Section - Better positioned */}
-                <div className="text-center">
-                  <h3 className="text-lg md:text-xl font-bold mb-4 text-brand-yellow">
-                    👇 Las 5 Señales de que Tu Empresa Te Está Consumiendo
-                  </h3>
-                  <div className="relative max-w-3xl mx-auto rounded-lg overflow-hidden shadow-2xl border-2 border-brand-red/50">
-                    <SafeIframe src="https://www.youtube.com/embed/HE4E1z77eOg" title="¡5 Señales de que TU EMPRESA TE ESTÁ CONSUMIENDO!🥴" className="w-full aspect-video" />
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Stats - Simplified and more visual */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 animate-slide-up" style={{
-            animationDelay: '0.2s'
-          }}>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all">
-                <Clock className="h-12 w-12 text-brand-yellow mx-auto mb-3" />
-                <div className="text-3xl font-bold text-brand-yellow mb-1">17</div>
-                <p className="text-sm font-medium">Años de Experiencia</p>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all">
-                <Users className="h-12 w-12 text-brand-yellow mx-auto mb-3" />
-                <div className="text-3xl font-bold text-brand-yellow mb-1">22</div>
-                <p className="text-sm font-medium">Países Transformados</p>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all">
-                <TrendingUp className="h-12 w-12 text-brand-yellow mx-auto mb-3" />
-                <div className="text-3xl font-bold text-brand-yellow mb-1">500+</div>
-                <p className="text-sm font-medium">Empresarios Exitosos</p>
               </div>
             </div>
             
-            {/* CTAs - Enhanced with urgency */}
-            <div className="space-y-6 animate-slide-up" style={{
-            animationDelay: '0.3s'
-          }}>
-              <div className="bg-brand-red/10 backdrop-blur-sm border border-brand-red/50 rounded-xl p-4 mb-4">
-                <p className="text-brand-yellow font-bold text-lg mb-2">
-                  🔥 ÚLTIMAS 48 HORAS DE JULIO - NO ESPERES MÁS
-                </p>
-                <p className="text-white/90">
-                  Cada día que pospones esto, es un día más que tu familia espera por ti...
-                </p>
-              </div>
-              
-              <a href="https://estrategiaempresaria.systeme.io/sesionestrategica1a1" className="block w-full max-w-2xl mx-auto bg-gradient-to-r from-brand-red to-red-600 text-white font-bold text-xl md:text-2xl py-6 px-8 rounded-xl shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-300 border-4 border-brand-yellow" target="_blank" rel="noopener noreferrer" aria-label="Agendar sesión estratégica gratuita">
-                <div className="text-2xl md:text-3xl mb-2">🚀 SESIÓN ESTRATÉGICA GRATUITA</div>
-                <div className="text-lg font-normal opacity-90 mb-2">
-                  Recupera tu vida en 90 días
+            {/* 1.4. CTA PRINCIPAL - UN SOLO CTA CLARO */}
+            <div className="space-y-4 animate-slide-up mb-8" style={{animationDelay: '0.2s'}}>
+              <a 
+                href="https://estrategiaempresaria.systeme.io/sesionestrategica1a1" 
+                className="block w-full max-w-2xl mx-auto bg-gradient-to-r from-brand-red to-red-600 text-white font-bold text-xl md:text-2xl py-6 px-8 rounded-xl shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-300 border-4 border-brand-yellow" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Agendar sesión estratégica gratuita"
+              >
+                <div className="text-2xl md:text-3xl mb-2">
+                  Descubre Cómo Reducir 30 Horas en 90 Días
                 </div>
-                <div className="text-sm bg-white/20 rounded-lg py-2 px-4 inline-block">
-                  ⏰ Agenda HOY - Cambia tu vida MAÑANA
+                <div className="text-lg font-normal opacity-90">
+                  Sesión Estratégica GRATIS (Valor: $250 USD)
                 </div>
               </a>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-2xl mx-auto">
-                <a href="#sobre-metodo" className="flex-1 w-full sm:w-auto bg-transparent border-2 border-brand-yellow text-brand-yellow font-semibold text-lg py-4 px-8 rounded-xl hover:bg-brand-yellow hover:text-black transition-all duration-300 text-center" onClick={e => {
-                e.preventDefault();
-                const element = document.getElementById('sobre-metodo');
-                if (element) {
-                  const headerHeight = 80;
-                  const targetPosition = element.offsetTop - headerHeight;
-                  window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                  });
-                }
-              }}>
+              {/* 1.5. ELIMINADOR DE OBJECIONES - Debajo del CTA */}
+              <div className="flex flex-wrap justify-center gap-4 text-sm text-white/90 bg-white/5 backdrop-blur-sm rounded-lg py-3 px-4 max-w-2xl mx-auto border border-white/10">
+                <span className="flex items-center gap-1">
+                  <span className="text-brand-yellow">✓</span> Sin tarjeta de crédito
+                </span>
+                <span className="flex items-center gap-1">
+                  <span className="text-brand-yellow">✓</span> Resultados desde el día 1
+                </span>
+                <span className="flex items-center gap-1">
+                  <span className="text-brand-yellow">✓</span> 100% personalizado
+                </span>
+                <span className="flex items-center gap-1">
+                  <span className="text-brand-yellow">✓</span> Sin compromiso
+                </span>
+              </div>
+              
+              {/* CTAs secundarios - MÁS PEQUEÑOS Y DISCRETOS */}
+              <div className="flex flex-col sm:flex-row gap-3 justify-center items-center max-w-xl mx-auto mt-6">
+                <a 
+                  href="#sobre-metodo" 
+                  className="text-brand-yellow hover:text-white underline text-base transition-colors flex items-center gap-1"
+                  onClick={e => {
+                    e.preventDefault();
+                    const element = document.getElementById('sobre-metodo');
+                    if (element) {
+                      const headerHeight = 80;
+                      const targetPosition = element.offsetTop - headerHeight;
+                      window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+                    }
+                  }}
+                >
                   Ver el Método P.U.D.E.R.
+                  <ArrowRight className="h-4 w-4" />
                 </a>
                 
-                <a href="https://api.whatsapp.com/send/?phone=5493624236611&text=Hola%2C+quiero+hacer+una+pregunta+sobre+consultoría+empresarial&type=phone_number&app_absent=0" className="flex-1 w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white font-semibold text-lg py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center" target="_blank" rel="noopener noreferrer">
-                  <MessageSquare className="mr-2 h-5 w-5" />
+                <span className="text-white/40 hidden sm:inline">|</span>
+                
+                <a 
+                  href="https://api.whatsapp.com/send/?phone=5493624236611&text=Hola%2C+quiero+hacer+una+pregunta+sobre+consultoría+empresarial&type=phone_number&app_absent=0" 
+                  className="flex items-center text-green-400 hover:text-green-300 text-base transition-colors"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <MessageSquare className="mr-2 h-4 w-4" />
                   WhatsApp
                 </a>
               </div>
             </div>
             
-            {/* Credibility line - Simplified */}
-            <div className="mt-12 animate-slide-up" style={{
-            animationDelay: '0.4s'
-          }}>
+            {/* Credibility line - Mejorada */}
+            <div className="mt-12 animate-slide-up" style={{animationDelay: '0.3s'}}>
               <div className="bg-brand-yellow/20 backdrop-blur-sm rounded-lg p-6 border border-brand-yellow/30">
                 <p className="text-xl font-bold text-brand-yellow mb-1">Claudio Flores</p>
-                <p className="text-lg text-white">Consultor Estratégico Empresarial | Método P.U.D.E.R.</p>
+                <p className="text-lg text-white">Consultor Estratégico Empresarial | Creador del Método P.U.D.E.R.</p>
+                <p className="text-sm text-white/70 mt-2">17 años transformando empresas • 500+ clientes exitosos • 22 países</p>
               </div>
             </div>
+
+            {/* ========================================
+                NOTA: CONTENIDO DE "DOLOR" SE MOVERÁ 
+                ABAJO DEL SCROLL EN FASE 2
+                ======================================== */}
 
           </div>
         </div>
