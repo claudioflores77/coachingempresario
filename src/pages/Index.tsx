@@ -1,7 +1,7 @@
-
 import React, { useEffect, useState, lazy, Suspense } from 'react';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
+import ProblemSection from '../components/ProblemSection';
 import WhyChooseMe from '../components/WhyChooseMe';
 import AboutMethod from '../components/AboutMethod';
 import CallToAction from '../components/CallToAction';
@@ -58,8 +58,8 @@ const Index = () => {
       });
     }, observerOptions);
 
-    // Observe all main sections
-    const sections = ['hero', 'por-que-conmigo', 'sobre-metodo', 'testimonios', 'faq'];
+    // Observe all main sections - UPDATED with new section
+    const sections = ['hero', 'problema', 'por-que-conmigo', 'sobre-metodo', 'testimonios', 'faq'];
     sections.forEach(sectionId => {
       const element = document.getElementById(sectionId);
       if (element) observer.observe(element);
@@ -84,6 +84,7 @@ const Index = () => {
   const breadcrumbItems = [
     { 
       label: currentSection === 'hero' ? 'Inicio' : 
+             currentSection === 'problema' ? 'El Problema' :
              currentSection === 'por-que-conmigo' ? '¿Por qué conmigo?' :
              currentSection === 'sobre-metodo' ? 'Sobre el Método' :
              currentSection === 'testimonios' ? 'Testimonios' :
@@ -105,30 +106,35 @@ const Index = () => {
       {currentSection !== 'hero' && <BreadcrumbNav items={breadcrumbItems} />}
       
       <main role="main">
-        {/* 1. Título atractivo enfocado en el resultado + CTA */}
+        {/* 1. Hero Section - Simplificado (solo 7 elementos) */}
         <Hero />
         
-        {/* 2. ¿Por qué estudiar/trabajar conmigo? */}
+        {/* 2. Problem Section - NUEVO: Todo el contenido de "dolor" movido aquí */}
+        <section id="problema">
+          <ProblemSection />
+        </section>
+        
+        {/* 3. ¿Por qué estudiar/trabajar conmigo? */}
         <section id="por-que-conmigo">
           <WhyChooseMe />
         </section>
         
-        {/* 3. Sobre el Método (descripción del vehículo) */}
+        {/* 4. Sobre el Método (descripción del vehículo) */}
         <section id="sobre-metodo">
           <AboutMethod />
         </section>
         
-        {/* 4. CTA reforzada */}
+        {/* 5. CTA reforzada */}
         <CallToAction />
         
-        {/* 5. Reseñas/Testimonios/Validación Social */}
+        {/* 6. Reseñas/Testimonios/Validación Social */}
         <section id="testimonios">
           <Suspense fallback={<LoadingSpinner />}>
             <Testimonials />
           </Suspense>
         </section>
         
-        {/* 6. Preguntas Frecuentes (7 objeciones) */}
+        {/* 7. Preguntas Frecuentes (7 objeciones) */}
         <section id="faq">
           <Suspense fallback={<LoadingSpinner />}>
             <FAQ />

@@ -1,66 +1,31 @@
-
-import React, { useState, memo } from 'react';
+import React, { useState } from 'react';
 
 interface SafeImageProps {
   src: string;
   alt: string;
   className?: string;
-  fallbackSrc?: string;
-  loading?: 'lazy' | 'eager';
-  priority?: boolean;
 }
 
-const SafeImage: React.FC<SafeImageProps> = memo(({ 
-  src, 
-  alt, 
-  className = '', 
-  fallbackSrc = '/placeholder.svg',
-  loading = 'lazy',
-  priority = false
-}) => {
-  const [imageError, setImageError] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
+const SafeImage: React.FC<SafeImageProps> = ({ src, alt, className }) => {
+  const [error, setError] = useState(false);
 
-  const handleImageError = () => {
-    console.log(`Error loading image: ${src}`);
-    setImageError(true);
-    setIsLoading(false);
-  };
-
-  const handleImageLoad = () => {
-    console.log(`Successfully loaded image: ${src}`);
-    setIsLoading(false);
-  };
-
-  if (imageError) {
+  if (error) {
     return (
-      <img 
-        src={fallbackSrc}
-        alt={alt}
-        className={className}
-        onError={() => console.log(`Fallback image also failed: ${fallbackSrc}`)}
-      />
+      <div className={`bg-gray-200 flex items-center justify-center ${className}`}>
+        <span className="text-gray-500 text-sm">Imagen no disponible</span>
+      </div>
     );
   }
 
   return (
-    <>
-      {isLoading && (
-        <div className={`${className} bg-gray-200 animate-pulse flex items-center justify-center`}>
-          <span className="text-gray-400 text-xs">Cargando...</span>
-        </div>
-      )}
-      <img 
-        src={src}
-        alt={alt}
-        className={`${className} ${isLoading ? 'hidden' : ''}`}
-        loading={priority ? 'eager' : loading}
-        onError={handleImageError}
-        onLoad={handleImageLoad}
-        decoding="async"
-      />
-    </>
+    <img 
+      src={src} 
+      alt={alt} 
+      className={className} 
+      loading="lazy"
+      onError={() => setError(true)}
+    />
   );
-});
+};
 
 export default SafeImage;
