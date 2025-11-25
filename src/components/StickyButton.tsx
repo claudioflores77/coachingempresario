@@ -9,7 +9,7 @@ interface StickyButtonProps {
 }
 
 const StickyButton: React.FC<StickyButtonProps> = memo(({ 
-  ctaUrl = "https://coachingempresario.lovable.app/",
+  ctaUrl = "https://claudioflores77.github.io/DiagnosticoEmpresarioLead/",
   ctaText = "Agendar Diagnóstico Gratis",
   showAfterScroll = 400
 }) => {
