@@ -1,6 +1,6 @@
 import React, { useEffect, useState, lazy, Suspense } from 'react';
 import Header from '../components/Header';
-import Hero from '../components/Hero';
+import Hero from '../components/Hero'; // Cambia a Hero-v2 cuando implementes
 import ProblemSection from '../components/ProblemSection';
 import WhyChooseMe from '../components/WhyChooseMe';
 import AboutMethod from '../components/AboutMethod';
@@ -8,6 +8,7 @@ import CallToAction from '../components/CallToAction';
 import Footer from '../components/Footer';
 import BreadcrumbNav from '../components/BreadcrumbNav';
 import LoadingSpinner from '../components/LoadingSpinner';
+import StickyButton from '../components/StickyButton'; // NUEVO
 
 // Lazy load non-critical components
 const Testimonials = lazy(() => import('../components/Testimonials'));
@@ -58,7 +59,7 @@ const Index = () => {
       });
     }, observerOptions);
 
-    // Observe all main sections - UPDATED with new section
+    // Observe all main sections
     const sections = ['hero', 'problema', 'por-que-conmigo', 'sobre-metodo', 'testimonios', 'faq'];
     sections.forEach(sectionId => {
       const element = document.getElementById(sectionId);
@@ -102,24 +103,26 @@ const Index = () => {
         <ContactSchema />
         <SEOMonitoring />
       </Suspense>
+      
       <Header />
+      
       {currentSection !== 'hero' && <BreadcrumbNav items={breadcrumbItems} />}
       
       <main role="main">
-        {/* 1. Hero Section - Simplificado (solo 7 elementos) */}
+        {/* 1. Hero Section V2.0 Mobile-First */}
         <Hero />
         
-        {/* 2. Problem Section - NUEVO: Todo el contenido de "dolor" movido aquí */}
+        {/* 2. Problem Section */}
         <section id="problema">
           <ProblemSection />
         </section>
         
-        {/* 3. ¿Por qué estudiar/trabajar conmigo? */}
+        {/* 3. ¿Por qué trabajar conmigo? */}
         <section id="por-que-conmigo">
           <WhyChooseMe />
         </section>
         
-        {/* 4. Sobre el Método (descripción del vehículo) */}
+        {/* 4. Sobre el Método */}
         <section id="sobre-metodo">
           <AboutMethod />
         </section>
@@ -127,14 +130,14 @@ const Index = () => {
         {/* 5. CTA reforzada */}
         <CallToAction />
         
-        {/* 6. Reseñas/Testimonios/Validación Social */}
+        {/* 6. Testimonios */}
         <section id="testimonios">
           <Suspense fallback={<LoadingSpinner />}>
             <Testimonials />
           </Suspense>
         </section>
         
-        {/* 7. Preguntas Frecuentes (7 objeciones) */}
+        {/* 7. FAQ */}
         <section id="faq">
           <Suspense fallback={<LoadingSpinner />}>
             <FAQ />
@@ -143,6 +146,14 @@ const Index = () => {
       </main>
       
       <Footer />
+      
+      {/* NUEVO: Sticky Button Mobile */}
+      <StickyButton 
+        ctaUrl="https://coachingempresario.lovable.app/"
+        ctaText="Diagnóstico Gratis"
+        showAfterScroll={400}
+      />
+      
       <Suspense fallback={null}>
         <BackToTop />
         <NotificationSystem 
