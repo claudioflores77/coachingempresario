@@ -58,7 +58,7 @@ const CallToAction: React.FC = () => {
               </a>
 
               <p className="text-sm text-center mt-3 text-gray-500">
-                Sin costo y sin compromiso - Valorada en U$D250
+                Sin costo y sin compromiso - (Valuada en U$D250)
               </p>
             </div>
             
