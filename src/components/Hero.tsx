@@ -151,7 +151,7 @@ const Hero: React.FC = memo(() => {
                   </p>
                   <div className="mt-3 pt-3 border-t border-white/10">
                     <p className="text-sm md:text-base lg:text-lg text-brand-yellow font-semibold">
-                      ⏱️ En 90 días: 50% menos horas + 25-40% más rentabilidad
+                      ⏱️ En 90 días: hasta 50% menos horas + hasta 40% más rentabilidad
                     </p>
                   </div>
                 </div>
