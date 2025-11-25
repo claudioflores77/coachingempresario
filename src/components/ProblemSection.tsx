@@ -127,11 +127,11 @@ const ProblemSection: React.FC = memo(() => {
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
               <div className="bg-white/5 rounded-lg p-4">
-                <div className="text-3xl md:text-4xl font-black text-brand-yellow mb-2">50%</div>
+                <div className="text-3xl md:text-4xl font-black text-brand-yellow mb-2"> hasta 50%</div>
                 <p className="text-base md:text-lg">Menos horas trabajando</p>
               </div>
               <div className="bg-white/5 rounded-lg p-4">
-                <div className="text-3xl md:text-4xl font-black text-brand-yellow mb-2">25-40%</div>
+                <div className="text-3xl md:text-4xl font-black text-brand-yellow mb-2">hasta 40%</div>
                 <p className="text-base md:text-lg">Más rentabilidad</p>
               </div>
               <div className="bg-white/5 rounded-lg p-4">
