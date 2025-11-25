@@ -11,7 +11,7 @@ const AboutMethod: React.FC = () => {
     "@context": "https://schema.org",
     "@type": "HowTo",
     "name": "Método P.U.D.E.R. - Transformación Empresarial",
-    "description": "Sistema integral para reducir 50% las horas de trabajo y aumentar 25-40% la rentabilidad empresarial",
+    "description": "Sistema integral para reducir hasta 50% las horas de trabajo y aumentar hasta 40% la rentabilidad empresarial",
     "totalTime": "PT12W",
     "estimatedCost": {
       "@type": "MonetaryAmount",
@@ -47,7 +47,7 @@ const AboutMethod: React.FC = () => {
     "result": {
       "@type": "Thing",
       "name": "Empresa automatizada y rentable",
-      "description": "Reducción del 50% en horas de trabajo con aumento del 25-40% en rentabilidad"
+      "description": "Reducción de hasta 50% en horas de trabajo con aumento de hasta 40% en rentabilidad"
     }
   };
 
@@ -106,7 +106,7 @@ const AboutMethod: React.FC = () => {
             El Sistema Que YA Liberó a 500+ Empresarios
           </h2>
           <p className="text-xl text-consulting-gray mb-6">
-            Transforma tu empresa para que trabaje para ti. 25-40% más rentabilidad, 50% menos horas.
+            Transforma tu empresa para que trabaje para ti. Hasta 40% más rentabilidad, 50% menos horas.
           </p>
           
           <div className="bg-consulting-gray-light p-6 rounded-lg mb-6">
@@ -230,11 +230,11 @@ const AboutMethod: React.FC = () => {
             <h3 className="text-2xl font-bold mb-6">¿Cómo Sabes Que El Método P.U.D.E.R. Funciona?</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div>
-                <div className="text-3xl font-bold text-consulting-gold mb-2">50%</div>
+                <div className="text-3xl font-bold text-consulting-gold mb-2">hasta 50%</div>
                 <p>Reducción promedio en horas de trabajo semanales</p>
               </div>
               <div>
-                <div className="text-3xl font-bold text-consulting-gold mb-2">25-40%</div>
+                <div className="text-3xl font-bold text-consulting-gold mb-2">hasta 40%</div>
                 <p>Incremento en rentabilidad en el primer año</p>
               </div>
               <div>
