@@ -179,7 +179,7 @@ const Hero: React.FC = memo(() => {
                 {/* 5. CTA PRIMARIO - Full width en mobile */}
                 <div className="animate-slide-up" style={{animationDelay: '0.2s'}}>
                   <a 
-                    href="https://coachingempresario.lovable.app/"
+                    href="https://claudioflores77.github.io/DiagnosticoEmpresarioLead/"
                     className="flex items-center justify-center gap-2 md:gap-3 bg-brand-yellow hover:bg-yellow-500 text-brand-black px-6 md:px-8 py-4 md:py-5 rounded-xl text-base md:text-xl font-bold shadow-2xl hover:shadow-3xl transition-all hover:scale-105 group w-full"
                     target="_blank"
                     rel="noopener noreferrer"
