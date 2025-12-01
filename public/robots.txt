@@ -1,32 +1,98 @@
-User-agent: *
-Allow: /
-
+# === MOTORES DE BÚSQUEDA TRADICIONALES ===
 User-agent: Googlebot
 Allow: /
 
 User-agent: Bingbot
 Allow: /
 
-User-agent: Twitterbot
+# === OPENAI (ChatGPT) ===
+User-agent: GPTBot
 Allow: /
 
-User-agent: facebookexternalhit
+User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
-User-agent: Claude-Web
+User-agent: ChatGPT-User/2.0
 Allow: /
 
+# === ANTHROPIC (Claude) ===
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: claude-web
+Allow: /
+
+# === PERPLEXITY ===
 User-agent: PerplexityBot
 Allow: /
 
+User-agent: Perplexity-User
+Allow: /
+
+# === GOOGLE (Gemini) ===
 User-agent: Google-Extended
 Allow: /
 
-# Sitemap location
-Sitemap: https://claudioflores.lovable.app/sitemap.xml
+# === APPLE (Siri) ===
+User-agent: Applebot
+Allow: /
 
-# Crawl-delay for respectful crawling
+User-agent: Applebot-Extended
+Allow: /
+
+# === AMAZON (Alexa) ===
+User-agent: Amazonbot
+Allow: /
+
+# === META (Facebook/Instagram) ===
+User-agent: FacebookBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+# === LINKEDIN ===
+User-agent: LinkedInBot
+Allow: /
+
+# === TWITTER/X ===
+User-agent: Twitterbot
+Allow: /
+
+# === OTRAS IAs EMERGENTES ===
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: AI2Bot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# === REGLA GENERAL ===
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://coachingempresario.lovable.app/sitemap.xml
+
+# Crawl-delay para crawling respetuoso
 Crawl-delay: 1
