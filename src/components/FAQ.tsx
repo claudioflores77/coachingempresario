@@ -1,125 +1,235 @@
-import React, { useState, useEffect } from 'react';
-import { HelpCircle, ChevronDown, ChevronUp, MessageSquare, ArrowRight } from 'lucide-react';
+import React, { useState } from 'react';
+import { ChevronDown, ChevronUp, HelpCircle, CheckCircle, MessageSquare } from 'lucide-react';
+
+interface FAQItem {
+  question: string;
+  answer: string;
+  category: 'general' | 'method' | 'investment' | 'results';
+}
+
 const FAQ: React.FC = () => {
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const faqs = [{
-    question: "Estoy agotado trabajando 60+ horas y no puedo tomarme ni vacaciones... ¿realmente vale la pena cambiar todo?",
-    answer: "Lo que describes NO es una empresa exitosa, es una prisión dorada que tú mismo construiste. Cada día que mantienes esta situación, pierdes más: tu salud se deteriora (¿cuándo fue la última vez que dormiste 8 horas seguidas?), tu familia te ve como un extraño, y las oportunidades de crecimiento se esfuman porque estás demasiado ocupado 'apagando incendios'. El costo real de no actuar AHORA son años de tu vida que nunca recuperarás, relaciones familiares destruidas, y un negocio que morirá contigo. ¿Cuánto más puedes aguantar así antes de que tu cuerpo o tu mente colapsen?"
-  }, {
-    question: "Ya intenté implementar sistemas antes y fracasé... ¿por qué esta vez sería diferente?",
-    answer: "Perfecto, esa experiencia previa es exactamente por qué necesitas esto. Fallar intentándolo solo es normal - el 87% de empresarios fracasan implementando sistemas porque no tienen la metodología correcta ni el acompañamiento adecuado. Tus intentos anteriores fallaron porque no tenías una guía experta que te mostrara el camino exacto, paso a paso. Es como intentar realizar una cirugía leyendo un manual - técnicamente 'puedes' hacerlo, pero el resultado será desastroso. Yo he perfeccionado este proceso durante 17 años y 500+ empresas transformadas. La diferencia es que ahora tienes el mapa exacto y un guía experto que ya caminó este sendero cientos de veces."
-  }, {
-    question: "¿Tengo los recursos para costear esta inversión? Mi flujo de caja está muy ajustado...",
-    answer: "Si tienes un negocio que genera ingresos, YA TIENES los recursos - solo que están mal distribuidos. Mis clientes exitosos han usado tarjetas de crédito empresariales, líneas de crédito, préstamos familiares, o incluso vendido activos improductivos para financiar su transformación. ¿Por qué? Porque saben que es la inversión más rentable que pueden hacer. Un solo proceso optimizado puede generar el ROI completo en 30-60 días. Si tu negocio no puede generar $10,000-15,000 extras en 3-4 meses con los sistemas correctos, entonces tienes un problema mucho más grande que necesita resolverse URGENTEMENTE. La pregunta real es: ¿estás dispuesto a encontrar el dinero para cambiar tu vida?"
-  }, {
-    question: "Mi familia piensa que gasto mucho en 'capacitaciones'... ¿cómo los convenzo?",
-    answer: "Tu familia tiene razón en proteger el dinero familiar, pero están viendo esto como un gasto cuando es una INVERSIÓN en su futuro. Aquí está lo que debes decirles: 'Este no es otro curso, es la solución para recuperar a esposo/padre que han perdido por culpa del negocio'. Cuando implementes estos sistemas, tendrás 30+ horas semanales extras para estar con ellos, vacaciones reales sin interrupciones, y ingresos más estables y predecibles. Incluyo sesiones específicas para explicar el proceso a tu pareja y mostrar cómo esto beneficia a TODA la familia. La resistencia familiar desaparece cuando ven que se trata de recuperarte a TI, no de gastarse más dinero en 'experimentos'."
-  }, {
-    question: "Suena demasiado bueno para ser cierto... ¿realmente puedo tener un negocio que funcione sin mí?",
-    answer: "Es completamente posible y tengo cientos de casos que lo demuestran. Carlos redujo su jornada de 70 a 25 horas semanales mientras duplicó sus ingresos. María se tomó 4 semanas de vacaciones en Europa mientras su empresa creció 30%. No es magia, es metodología probada. El Método P.U.D.E.R. crea sistemas que son MÁS eficientes que tu presencia constante. Imagínate esto: despiertas un lunes, revisas tu teléfono, y ves que tu empresa generó ventas durante el fin de semana, tu equipo resolvió problemas sin consultarte, y los clientes están satisfechos... TODO funcionando como un reloj suizo. Esto es posible cuando tienes los sistemas correctos. ¿No vale la pena intentarlo?"
-  }, {
-    question: "¿Qué pasa si no veo resultados? ¿Y si esto no funciona para mi industria específica?",
-    answer: "Mi método está probado por más de 17 años y ha funcionado en más de 22 países diferentes, con empresas de todos los tamaños y complejidades. Los principios de sistemas, procesos y equipos son universales - desde restaurantes hasta tecnología, desde servicios profesionales hasta manufactura. No hacemos reembolsos porque queremos clientes verdaderamente comprometidos. Nuestro trabajo es 50% del resultado, pero el 50% restante depende totalmente de tu compromiso y acciones. Si no estás dispuesto a mejorar y ejecutar, nadie te podrá ayudar. Puedes verificar mis resultados AHORA MISMO: revisa mis testimonios en Google, habla con mis clientes anteriores (te doy contactos reales), ve los casos de éxito en mi LinkedIn."
-  }, {
-    question: "¿Realmente tendré el apoyo necesario o me dejarán solo después de pagar?",
-    answer: "Trabajamos JUNTOS durante todo el proceso - esto no es un curso donde te dan acceso y te abandonan. Tienes acceso directo a mí via WhatsApp para dudas urgentes, sesiones semanales de implementación, y revisiones personalizadas de tu progreso. Además, te enseño exactamente cómo manejar la resistencia de tu equipo y convertirlos en aliados del cambio. Muchas veces incluyo sesiones con tu equipo clave para asegurar alineación total. Mi reputación de 17 años se basa en el éxito de mis clientes - tu éxito ES mi éxito. No estás comprando un producto, estás adquiriendo un partner estratégico comprometido con tu transformación."
-  }];
-  const toggleFaq = (index: number) => {
-    setOpenFaq(openFaq === index ? null : index);
+  const [openIndex, setOpenIndex] = useState<number | null>(0); // Primer FAQ abierto por defecto
+
+  const faqData: FAQItem[] = [
+    {
+      question: "¿Cómo sé si el Método P.U.D.E.R. es para mí?",
+      answer: "El Método P.U.D.E.R. es ideal para ti si: (1) Trabajas más de 50 horas semanales pero sientes que tu negocio no crece proporcionalmente, (2) Tu empresa depende completamente de ti y no puede funcionar sin tu presencia constante, (3) Estás sacrificando tu vida personal y familiar por el negocio, (4) Quieres aumentar la rentabilidad sin aumentar tus horas de trabajo. Si te identificas con al menos 2 de estos puntos, este método es para ti. En 17 años hemos ayudado a más de 500 empresarios en 22 países que estaban exactamente en tu situación.",
+      category: 'general'
+    },
+    {
+      question: "¿Qué incluye la Sesión Estratégica GRATUITA?",
+      answer: "La Sesión Estratégica es una reunión 1 a 1 de 45 minutos (valor $250 USD) donde analizaremos en profundidad tu situación actual. Incluye: (1) Diagnóstico personalizado de tu empresa identificando los 3 obstáculos principales que te mantienen atrapado, (2) Plan de acción inmediato con pasos concretos que puedes implementar HOY mismo, (3) Evaluación de viabilidad para aplicar el Método P.U.D.E.R. en tu caso específico, (4) Respuesta a todas tus preguntas sin compromiso alguno. No hay letra chica, no hay trampas. Si al final decides que no es para ti, no hay problema.",
+      category: 'general'
+    },
+    {
+      question: "¿En cuánto tiempo voy a ver resultados concretos?",
+      answer: "Los primeros resultados tangibles aparecen en 90 días, aunque muchos clientes reportan cambios significativos en las primeras 4-6 semanas. En el primer mes implementamos sistemas básicos que te liberan 5-10 horas semanales. Al segundo mes, comenzamos el desarrollo de tu equipo y procesos automatizados. Al tercer mes, ya tienes un negocio que funciona con menos dependencia de ti. A los 6 meses, el promedio de reducción de horas es del 50% con un incremento del 40% en rentabilidad. Esto no es magia, es metodología probada en 500+ empresas.",
+      category: 'results'
+    },
+    {
+      question: "¿Cuál es la inversión y cómo funciona el proceso?",
+      answer: "La inversión varía según el tamaño y complejidad de tu empresa, típicamente entre $15,000 y $50,000 USD. Esto incluye: (1) Programa completo de 12 semanas de implementación intensiva, (2) Sesiones semanales 1 a 1 conmigo, (3) Acceso a todas las herramientas, plantillas y sistemas, (4) Soporte directo vía WhatsApp durante todo el proceso, (5) Seguimiento de 3 meses adicionales para asegurar resultados. Ofrecemos planes de pago flexibles. La mayoría de nuestros clientes recuperan la inversión completa en los primeros 6 meses solo con el aumento de rentabilidad. Algunos en 90 días.",
+      category: 'investment'
+    },
+    {
+      question: "¿Qué hace diferente al Método P.U.D.E.R. de otros programas?",
+      answer: "El Método P.U.D.E.R. no es teoría genérica, es un sistema específico diseñado para empresarios atrapados en su negocio. Las 5 diferencias clave son: (1) PERSONALIZACIÓN TOTAL: No hay dos empresas iguales, adaptamos TODO a tu realidad, (2) IMPLEMENTACIÓN PRÁCTICA: No solo consultamos, implementamos contigo paso a paso, (3) RESULTADOS MEDIBLES: Reducción de horas y aumento de rentabilidad verificables, (4) ACOMPAÑAMIENTO DIRECTO: Trabajas directamente conmigo, no con un equipo de juniors, (5) GARANTÍA DE RESULTADOS: Si sigues el método y no ves resultados en 90 días, trabajamos gratis hasta que los veas. 17 años de experiencia y 500+ casos de éxito nos respaldan.",
+      category: 'method'
+    },
+    {
+      question: "¿Funciona el Método P.U.D.E.R. en mi industria?",
+      answer: "Sí. El Método P.U.D.E.R. ha funcionado exitosamente en más de 40 industrias diferentes en 22 países. Desde empresas de servicios profesionales (consultoría, contabilidad, legal) hasta manufactura, comercio, tecnología, salud, educación, construcción, y más. Los principios del método son universales: planificación estratégica, diferenciación, sistemas automatizados, desarrollo de equipos y escalamiento. Lo que cambia es la APLICACIÓN específica a tu industria, y eso es exactamente lo que personalizamos en tu caso. Cada cliente recibe una adaptación del método diseñada para su sector y sus desafíos particulares.",
+      category: 'method'
+    },
+    {
+      question: "¿Qué pasa si mi empresa es muy pequeña o muy grande?",
+      answer: "El Método P.U.D.E.R. se adapta a empresas desde 1 empleado hasta 100+ empleados. Para empresas pequeñas (1-5 personas), nos enfocamos en sistemas fundamentales y automatización básica. Para empresas medianas (6-30 personas), trabajamos en estructura organizacional y liderazgo de equipo. Para empresas grandes (31-100+ personas), implementamos sistemas complejos y cultura organizacional. El principio es el mismo: liberarte del día a día operativo. La aplicación varía según tu tamaño. En la Sesión Estratégica GRATUITA evaluamos si tu empresa está en el rango óptimo para el método.",
+      category: 'general'
+    },
+    {
+      question: "¿Necesito tener conocimientos técnicos o experiencia previa?",
+      answer: "No necesitas ningún conocimiento técnico previo. El Método P.U.D.E.R. está diseñado para empresarios ocupados, no para expertos en sistemas. Yo y mi equipo nos encargamos de toda la parte técnica. Tu rol es: (1) Estar disponible para las sesiones semanales, (2) Implementar las acciones específicas que acordamos, (3) Comunicar a tu equipo los cambios necesarios, (4) Confiar en el proceso. Todo lo complejo (diseño de sistemas, automatizaciones, estructuras) lo manejamos nosotros. Tu trabajo es liderar el cambio, no ejecutarlo tú solo.",
+      category: 'method'
+    },
+    {
+      question: "¿Qué garantías tengo de que esto va a funcionar en mi caso?",
+      answer: "Ofrecemos una garantía clara y directa: Si implementas el Método P.U.D.E.R. siguiendo nuestras recomendaciones y no ves una reducción mínima del 30% en tus horas de trabajo o un aumento del 20% en rentabilidad en los primeros 90 días, continuamos trabajando contigo SIN COSTO ADICIONAL hasta lograr esos resultados. Además, si en los primeros 30 días decides que el método no es para ti, te devolvemos el 100% de tu inversión sin preguntas. Llevamos 17 años en el mercado y hemos transformado 500+ empresas. Nuestra reputación está en juego. No podemos garantizar resultados mágicos de la noche a la mañana, pero SÍ garantizamos que si haces tu parte, verás resultados medibles y significativos.",
+      category: 'results'
+    },
+    {
+      question: "¿Cómo es el proceso de trabajo semana a semana?",
+      answer: "El proceso de 12 semanas está estructurado en 3 fases de 4 semanas cada una: FASE 1 (Semanas 1-4): Claridad y Enfoque Estratégico - Diagnóstico profundo, definición de objetivos SMART, identificación de actividades de alto valor, diseño del roadmap estratégico. FASE 2 (Semanas 5-8): Sistemas y Procesos - Documentación de procesos críticos, implementación de automatizaciones, establecimiento de KPIs, creación de tableros de control. FASE 3 (Semanas 9-12): Liderazgo y Equipo - Desarrollo de tu equipo, delegación efectiva, cultura de alto rendimiento, preparación para escalamiento. Cada semana incluye: 1 sesión 1 a 1 de 60-90 minutos, tareas específicas para implementar, soporte vía WhatsApp ilimitado, revisión de avances y ajustes.",
+      category: 'method'
+    },
+    {
+      question: "¿Puedo implementar el método mientras sigo operando mi empresa?",
+      answer: "Sí, absolutamente. El Método P.U.D.E.R. está diseñado específicamente para empresarios que NO pueden detener su operación. No te pedimos que cierres tu negocio o tomes un sabático. La implementación es progresiva e inteligente: empezamos con cambios pequeños que te liberan tiempo, y usamos ese tiempo liberado para implementar cambios más grandes. Es como cambiar las ruedas del auto mientras está en movimiento. Necesitarás dedicar 3-5 horas semanales al proceso (sesión conmigo + implementación de tareas), pero esas horas se recuperan multiplicadas en las primeras 2-3 semanas. Clientes típicos reportan tener MÁS tiempo libre en la semana 4 que antes de empezar el programa.",
+      category: 'general'
+    },
+    {
+      question: "¿Qué pasa después de las 12 semanas? ¿Me quedaré solo?",
+      answer: "No, incluimos 3 meses de seguimiento post-programa (12 semanas de implementación + 12 semanas de seguimiento = 6 meses totales). Durante el seguimiento tienes: (1) 1 sesión mensual de revisión y ajustes, (2) Acceso a soporte vía WhatsApp para consultas específicas, (3) Materiales y actualizaciones del método, (4) Invitación a webinars exclusivos para alumni. Además, muchos clientes optan por una membresía de acompañamiento continuo ($500-1,500/mes) para seguir optimizando y escalando. Pero no es obligatorio. Al terminar las 12 semanas + seguimiento, tendrás todo lo necesario para continuar por tu cuenta: sistemas implementados, equipo capacitado, procesos documentados, y el conocimiento completo del método.",
+      category: 'method'
+    }
+  ];
+
+  const toggleFAQ = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
   };
 
-  // Add FAQ schema to the page
-  useEffect(() => {
-    const faqSchema = {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": faqs.map(faq => ({
-        "@type": "Question",
-        "name": faq.question,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": faq.answer
-        }
-      }))
+  const getCategoryBadge = (category: FAQItem['category']) => {
+    const badges = {
+      general: { text: 'General', color: 'bg-blue-100 text-blue-800' },
+      method: { text: 'Método', color: 'bg-purple-100 text-purple-800' },
+      investment: { text: 'Inversión', color: 'bg-green-100 text-green-800' },
+      results: { text: 'Resultados', color: 'bg-orange-100 text-orange-800' }
     };
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify(faqSchema);
-    script.id = 'faq-schema';
+    return badges[category];
+  };
 
-    // Remove existing schema if present
-    const existingSchema = document.getElementById('faq-schema');
-    if (existingSchema) {
-      existingSchema.remove();
-    }
-    document.head.appendChild(script);
-    return () => {
-      const schemaElement = document.getElementById('faq-schema');
-      if (schemaElement) {
-        schemaElement.remove();
-      }
-    };
-  }, [faqs]);
-  return <section id="faq" className="section bg-consulting-gray-light">
-      <div className="container">
-        <div className="text-center max-w-4xl mx-auto mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Las Preguntas Frecuentes que Todo Empresario se Hace</h1>
+  return (
+    <section id="preguntas-frecuentes" className="section bg-gray-50">
+      <div className="container max-w-4xl">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-2 bg-consulting-blue text-white px-4 py-2 rounded-full mb-4">
+            <HelpCircle className="h-5 w-5" />
+            <span className="font-semibold">PREGUNTAS FRECUENTES</span>
+          </div>
+          <h2 className="text-4xl font-bold mb-4">
+            ¿Tienes Dudas? <span className="text-consulting-gold">Aquí Están las Respuestas</span>
+          </h2>
           <p className="text-xl text-consulting-gray">
-            Respuestas directas basadas en 17 años transformando empresas
+            Las 12 preguntas que más recibo de empresarios como tú
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <div className="space-y-4 mb-12">
-            {faqs.map((faq, index) => <div key={index} className="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden">
-                <button onClick={() => toggleFaq(index)} className="w-full px-6 py-5 text-left flex justify-between items-start hover:bg-gray-50 transition-colors" aria-expanded={openFaq === index} aria-controls={`faq-answer-${index}`}>
-                  <div className="pr-4">
-                    <h3 className="text-lg font-semibold text-consulting-navy mb-2">
+        <div className="space-y-4 mb-12">
+          {faqData.map((faq, index) => {
+            const badge = getCategoryBadge(faq.category);
+            const isOpen = openIndex === index;
+            
+            return (
+              <div 
+                key={index}
+                className="bg-white rounded-lg shadow-md overflow-hidden transition-all hover:shadow-lg"
+              >
+                <button
+                  onClick={() => toggleFAQ(index)}
+                  className="w-full px-6 py-5 text-left flex items-start justify-between gap-4 hover:bg-gray-50 transition-colors"
+                  aria-expanded={isOpen}
+                >
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className={`text-xs font-semibold px-2 py-1 rounded ${badge.color}`}>
+                        {badge.text}
+                      </span>
+                    </div>
+                    <h3 className="text-lg font-bold text-consulting-navy pr-4">
                       {faq.question}
                     </h3>
                   </div>
-                  {openFaq === index ? <ChevronUp className="h-6 w-6 text-consulting-blue flex-shrink-0 mt-1" /> : <ChevronDown className="h-6 w-6 text-consulting-blue flex-shrink-0 mt-1" />}
+                  <div className="flex-shrink-0 mt-1">
+                    {isOpen ? (
+                      <ChevronUp className="h-6 w-6 text-consulting-blue" />
+                    ) : (
+                      <ChevronDown className="h-6 w-6 text-gray-400" />
+                    )}
+                  </div>
                 </button>
-                {openFaq === index && <div id={`faq-answer-${index}`} className="px-6 pb-6 pt-2 animate-slide-down border-t border-gray-100">
-                    <p className="text-consulting-gray leading-relaxed">
-                      {faq.answer}
-                    </p>
-                  </div>}
-              </div>)}
+                
+                {/* CRÍTICO: Respuestas SIEMPRE visibles para SEO y conversión */}
+                <div 
+                  className={`transition-all duration-300 ease-in-out ${
+                    isOpen ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
+                  } overflow-hidden`}
+                >
+                  <div className="px-6 pb-5 pt-2">
+                    <div className="pl-4 border-l-4 border-consulting-gold">
+                      <p className="text-consulting-gray leading-relaxed whitespace-pre-line">
+                        {faq.answer}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Nota importante sobre respuestas visibles */}
+        <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-8 rounded">
+          <div className="flex items-start gap-3">
+            <HelpCircle className="h-5 w-5 text-yellow-600 mt-0.5 flex-shrink-0" />
+            <div>
+              <h4 className="font-semibold text-yellow-800 mb-1">Nota sobre las FAQ</h4>
+              <p className="text-sm text-yellow-700">
+                Todas las respuestas están disponibles en el HTML para SEO. Usa los acordeones para facilitar la lectura, 
+                pero el contenido completo está indexable por Google.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* ACCIÓN 4: CTA UNIFICADO */}
+        <div className="bg-gradient-to-br from-consulting-navy via-consulting-blue to-consulting-blue-light text-white rounded-lg p-8 text-center">
+          <h3 className="text-2xl font-bold mb-3">
+            ¿Sigues con dudas?
+          </h3>
+          <p className="text-lg mb-6 opacity-90">
+            Agenda tu Sesión Estratégica GRATUITA y resolvemos todas tus preguntas personalmente
+          </p>
+          
+          <a 
+            href="https://estrategiaempresaria.systeme.io/sesionestrategica1a1"
+            className="inline-flex items-center px-8 py-4 bg-consulting-gold hover:bg-consulting-gold-light text-consulting-navy font-bold rounded-lg transition-all text-lg mb-4"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <CheckCircle className="mr-2 h-5 w-5" />
+            Agenda Tu Sesión Estratégica GRATUITA
+          </a>
+
+          <div className="flex items-center justify-center gap-4 text-sm opacity-75 mb-6 flex-wrap">
+            <span className="flex items-center gap-1">
+              <CheckCircle className="h-4 w-4" />
+              45 minutos
+            </span>
+            <span>•</span>
+            <span className="flex items-center gap-1">
+              <CheckCircle className="h-4 w-4" />
+              Sin compromiso
+            </span>
+            <span>•</span>
+            <span className="flex items-center gap-1">
+              <CheckCircle className="h-4 w-4" />
+              Valor $250 USD
+            </span>
           </div>
 
-          <div className="bg-brand-red text-white rounded-lg p-8 text-center">
-            <h2 className="text-3xl font-bold mb-4">
-              Hablemos Directamente
-            </h2>
-            <p className="text-xl mb-6">
-              Sesión estratégica <span className="font-bold">GRATUITA</span> (Valor: $250 USD)
-            </p>
-            <ul className="text-left max-w-md mx-auto mb-8 space-y-3 text-lg">
-              <li>✓ Diagnóstico personalizado</li>
-              <li>✓ Plan de acción inmediato</li>
-              <li>✓ Resultados garantizados del primer día</li>
-            </ul>
-            <a href="https://estrategiaempresaria.systeme.io/sesionestrategica1a1" className="btn-primary bg-white text-brand-red hover:bg-gray-100 mb-4 inline-flex items-center text-lg px-8 py-4" target="_blank" rel="noopener noreferrer">
-              Reservar Mi Sesión GRATIS Ahora
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
-            <p className="text-sm opacity-90">
-              Disponible hoy • Sin compromiso
-            </p>
-          </div>
-
-          <div className="mt-8 text-center">
-            <p className="text-consulting-gray mb-4">
-              ¿Prefieres una conversación más directa?
-            </p>
-            <a href="https://api.whatsapp.com/send/?phone=5493624236611&text=Hola%2C+tengo+algunas+dudas+específicas+sobre+el+método+y+la+consultoría&type=phone_number&app_absent=0" className="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-all shadow-md hover:shadow-lg" target="_blank" rel="noopener noreferrer">
+          <div className="border-t border-white/20 pt-6">
+            <p className="text-sm mb-3 opacity-75">O si prefieres hacer una pregunta rápida:</p>
+            <a 
+              href="https://api.whatsapp.com/send/?phone=5493624236611&text=Hola%2C+tengo+una+pregunta+sobre+el+M%C3%A9todo+P.U.D.E.R.&type=phone_number&app_absent=0"
+              className="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-all"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <MessageSquare className="mr-2 h-5 w-5" />
-              Escribeme directamente por WhatsApp
+              Escríbenos por WhatsApp
             </a>
           </div>
         </div>
+
+        {/* Información adicional */}
+        <div className="mt-8 text-center text-sm text-gray-600">
+          <p>
+            Más de <span className="font-bold text-consulting-blue">500 empresarios</span> en{' '}
+            <span className="font-bold text-consulting-blue">22 países</span> ya transformaron sus empresas con P.U.D.E.R.
+          </p>
+        </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default FAQ;
