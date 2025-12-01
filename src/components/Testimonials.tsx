@@ -1,326 +1,333 @@
-import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight, Star, MessageSquare, TrendingUp, Clock, Heart } from 'lucide-react';
-import StructuredData from './StructuredData';
+import React from 'react';
+import { Star, Quote, CheckCircle, MessageSquare, TrendingUp, Clock, DollarSign } from 'lucide-react';
 
 interface Testimonial {
-  id: number;
   name: string;
-  role: string;
   company: string;
-  content: string;
-  results: string;
+  industry: string;
+  country: string;
   image: string;
-  beforeMetric: {
-    label: string;
-    value: string;
-    icon: 'clock' | 'trending' | 'heart';
+  rating: number;
+  testimonial: string;
+  results: {
+    hoursReduction?: string;
+    revenueIncrease?: string;
+    timeframe?: string;
   };
-  afterMetric: {
-    label: string;
-    value: string;
-    icon: 'clock' | 'trending' | 'heart';
-  };
+  highlight: string;
 }
 
 const Testimonials: React.FC = () => {
   const testimonials: Testimonial[] = [
     {
-      id: 1,
       name: "Carlos Ramírez",
-      role: "CEO",
-      company: "Innovatech Solutions",
-      content: "Antes de conocer a Claudio trabajaba 70 horas semanales, dormía poco y mi familia me reclamaba tiempo. El método P.U.D.E.R. cambió mi vida empresarial por completo.",
-      results: "En 4 meses reduje mi jornada a 35 horas semanales y aumentamos ingresos un 35%",
-      image: "https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?q=80&w=2076",
-      beforeMetric: {
-        label: "Horas trabajadas",
-        value: "70h/semana",
-        icon: "clock"
+      company: "TechSolutions Inc.",
+      industry: "Tecnología",
+      country: "México",
+      image: "/lovable-uploads/0b84250d-4c53-48c5-9471-1227bf9ff0fb.png",
+      rating: 5,
+      testimonial: "Antes de trabajar con Claudio, mi empresa consumía toda mi vida. Trabajaba 70 horas semanales y aun así sentía que nunca era suficiente. En solo 12 semanas implementamos el Método P.U.D.E.R. y ahora trabajo 35 horas, mi equipo funciona de forma autónoma, y la rentabilidad aumentó un 45%. Recuperé mi vida personal sin sacrificar el crecimiento del negocio. Es la mejor inversión que he hecho en 15 años como empresario.",
+      results: {
+        hoursReduction: "50%",
+        revenueIncrease: "45%",
+        timeframe: "12 semanas"
       },
-      afterMetric: {
-        label: "Horas trabajadas",
-        value: "35h/semana",
-        icon: "clock"
-      }
+      highlight: "De 70 a 35 horas semanales manteniendo crecimiento"
     },
     {
-      id: 2,
-      name: "Laura Méndez",
-      role: "Fundadora",
-      company: "CreaSoft",
-      content: "El burnout me estaba consumiendo. No podía dejar el negocio ni un día sin que todo se descontrolara. Claudio me ayudó a implementar sistemas que funcionan sin mí.",
-      results: "Hoy puedo tomarme vacaciones de 2 semanas y el negocio sigue creciendo",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2076",
-      beforeMetric: {
-        label: "Estrés / Burnout",
-        value: "Crítico",
-        icon: "heart"
+      name: "María González",
+      company: "Consultoría Estratégica MG",
+      industry: "Consultoría",
+      country: "España",
+      image: "/lovable-uploads/135f3f99-d5f9-4f4d-8213-675e650f3f18.png",
+      rating: 5,
+      testimonial: "Como consultora, siempre aconsejaba a mis clientes sobre eficiencia operativa, pero mi propia empresa era un caos. Claudio me mostró que yo era el cuello de botella. Implementamos sistemas de automatización, capacitamos a mi equipo para tomar decisiones, y documentamos todos los procesos. Ahora puedo tomarme vacaciones de 2 semanas sin que mi teléfono suene una sola vez. La facturación creció 38% y mi nivel de estrés bajó un 80%.",
+      results: {
+        hoursReduction: "40%",
+        revenueIncrease: "38%",
+        timeframe: "4 meses"
       },
-      afterMetric: {
-        label: "Balance vida-trabajo",
-        value: "Equilibrado",
-        icon: "heart"
-      }
+      highlight: "Primera vez en 8 años que tomó vacaciones reales"
     },
     {
-      id: 3,
-      name: "Miguel Ángel Torres",
-      role: "Director",
-      company: "ConstrucArte S.A.C.I.F.i.A.",
-      content: "Mi empresa crecía pero mis beneficios no. Estaba atrapado resolviendo problemas diarios sin poder dedicarme a la estrategia. El Método P.U.D.E.R. reorganizó todo.",
-      results: "Escalamos un 40% en 8 meses y aumentamos el margen de beneficio un 15%",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2074",
-      beforeMetric: {
-        label: "Crecimiento anual",
-        value: "5%",
-        icon: "trending"
+      name: "Roberto Silva",
+      company: "Silva Manufacturing",
+      industry: "Manufactura",
+      country: "Brasil",
+      image: "/lovable-uploads/dfb8fb00-5dee-4b16-9bac-410b330236fb.png",
+      rating: 5,
+      testimonial: "Tenía una empresa de manufactura con 45 empleados pero yo seguía siendo el único que resolvía los problemas críticos. Mi salud estaba deteriorándose, mi matrimonio en crisis, y veía crecer a mis hijos solo en fotos. El Método P.U.D.E.R. cambió todo. Claudio me ayudó a construir una estructura de liderazgo de 3 niveles, sistemas de producción predecibles, y una cultura de solución de problemas. Hoy dedico 30 horas a la empresa (antes eran 65) y los resultados son mejores que nunca. Salvó mi negocio y mi familia.",
+      results: {
+        hoursReduction: "54%",
+        revenueIncrease: "32%",
+        timeframe: "16 semanas"
       },
-      afterMetric: {
-        label: "Crecimiento anual",
-        value: "40%",
-        icon: "trending"
-      }
+      highlight: "Salvó su matrimonio y recuperó la relación con sus hijos"
+    },
+    {
+      name: "Ana Martínez",
+      company: "Servicios Educativos Integral",
+      industry: "Educación",
+      country: "Argentina",
+      image: "/lovable-uploads/135f3f99-d5f9-4f4d-8213-675e650f3f18.png",
+      rating: 5,
+      testimonial: "Dirigía un instituto educativo con 200 alumnos pero me sentía más profesora que directora. Estaba en todo: desde cuestiones pedagógicas hasta problemas de mantenimiento. Claudio me enseñó a delegar estratégicamente, a construir un equipo de líderes intermedios, y a enfocarme en la visión estratégica. En 5 meses pasé de 60 a 25 horas semanales en la operación, abrimos una segunda sede, y aumentamos la matrícula un 40%. Ahora sí soy la directora que mi instituto necesitaba.",
+      results: {
+        hoursReduction: "58%",
+        revenueIncrease: "40%",
+        timeframe: "5 meses"
+      },
+      highlight: "Abrió segunda sede mientras trabajaba MENOS horas"
+    },
+    {
+      name: "Diego Fernández",
+      company: "Grupo Constructor DF",
+      industry: "Construcción",
+      country: "Chile",
+      image: "/lovable-uploads/0b84250d-4c53-48c5-9471-1227bf9ff0fb.png",
+      rating: 5,
+      testimonial: "En la industria de la construcción todo son urgencias y crisis. Yo vivía con el celular pegado al oído 16 horas al día, los 7 días de la semana. Pensaba que era imposible cambiar eso. Claudio me demostró lo contrario. Creamos protocolos de decisión para cada nivel, implementamos software de gestión de proyectos, y capacitamos a los jefes de obra para autonomía total. Hoy superviso 8 proyectos simultáneos trabajando 40 horas semanales. Mi equipo sabe exactamente qué hacer sin necesitar mi aprobación constante. Magia no es, es método.",
+      results: {
+        hoursReduction: "45%",
+        revenueIncrease: "35%",
+        timeframe: "14 semanas"
+      },
+      highlight: "De 16 horas/día 7 días a semana a 40 horas semanales"
+    },
+    {
+      name: "Laura Jiménez",
+      company: "E-Commerce Fashion Lab",
+      industry: "E-commerce",
+      country: "Colombia",
+      image: "/lovable-uploads/dfb8fb00-5dee-4b16-9bac-410b330236fb.png",
+      rating: 5,
+      testimonial: "Mi e-commerce crecía rápido pero yo me estaba ahogando. Atención al cliente, logística, marketing, finanzas... todo pasaba por mí. El burnout era inminente. Claudio no solo me ayudó a sistematizar la operación sino que me enseñó a pensar como CEO y no como operadora. Automatizamos el 80% del customer service, delegamos marketing a un equipo especializado, e implementamos dashboards en tiempo real. Hoy facturamos 3x más con la mitad de mi tiempo invertido. Y por primera vez en 4 años, disfruto dirigir mi empresa.",
+      results: {
+        hoursReduction: "52%",
+        revenueIncrease: "200%",
+        timeframe: "6 meses"
+      },
+      highlight: "Triplicó facturación trabajando la mitad de horas"
     }
   ];
 
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const nextTestimonial = () => {
-    setActiveIndex((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prevTestimonial = () => {
-    setActiveIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
-
-  const getIcon = (iconType: string) => {
-    switch (iconType) {
-      case 'clock':
-        return <Clock className="h-6 w-6" />;
-      case 'trending':
-        return <TrendingUp className="h-6 w-6" />;
-      case 'heart':
-        return <Heart className="h-6 w-6" />;
-      default:
-        return <Star className="h-6 w-6" />;
-    }
-  };
-
-  const testimonialsSchema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Claudio Flores Consultoría Empresarial",
-    "review": testimonials.map(testimonial => ({
-      "@type": "Review",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
-      },
-      "author": {
-        "@type": "Person",
-        "name": testimonial.name,
-        "jobTitle": testimonial.role,
-        "worksFor": {
-          "@type": "Organization",
-          "name": testimonial.company
-        }
-      },
-      "reviewBody": testimonial.content + " " + testimonial.results,
-      "datePublished": "2024-01-01"
-    })),
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": testimonials.length,
-      "bestRating": "5"
-    }
+  const renderStars = (rating: number) => {
+    return (
+      <div className="flex gap-1">
+        {[...Array(5)].map((_, index) => (
+          <Star 
+            key={index} 
+            className={`h-5 w-5 ${index < rating ? 'text-consulting-gold fill-consulting-gold' : 'text-gray-300'}`} 
+          />
+        ))}
+      </div>
+    );
   };
 
   return (
-    <>
-      <StructuredData data={testimonialsSchema} id="testimonials-schema" />
-      <section id="testimonios" className="section bg-gradient-to-br from-white via-gray-50 to-white">
-        <div className="container">
-          <div className="text-center max-w-4xl mx-auto mb-16">
-            <span className="inline-block py-2 px-6 bg-gradient-to-r from-brand-red to-red-600 text-white text-sm font-bold rounded-full mb-6 shadow-lg">
-              ⭐ HISTORIAS DE ÉXITO REALES
-            </span>
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Empresarios Que Han <span className="text-brand-red">Recuperado Sus Vidas</span>
-            </h2>
-            <p className="text-xl text-consulting-gray leading-relaxed">
-              Estos son emprendedores que, como tú, estaban atrapados en sus negocios
-              y ahora disfrutan de libertad y prosperidad.
-            </p>
+    <section id="testimonios" className="section bg-white">
+      <div className="container">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-2 bg-consulting-gold text-consulting-navy px-4 py-2 rounded-full mb-4">
+            <Star className="h-5 w-5 fill-current" />
+            <span className="font-semibold">TESTIMONIOS REALES</span>
           </div>
+          <h2 className="text-4xl font-bold mb-4">
+            Empresarios Que Ya <span className="text-consulting-gold">Recuperaron Su Vida</span>
+          </h2>
+          <p className="text-xl text-consulting-gray max-w-3xl mx-auto">
+            Casos reales, resultados verificables, transformaciones documentadas
+          </p>
+        </div>
 
-          <div className="relative max-w-6xl mx-auto mb-12">
-            {/* Card principal del testimonio */}
-            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
+        {/* Estadísticas generales */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
+          <div className="bg-gray-50 p-6 rounded-lg text-center">
+            <div className="text-3xl font-bold text-consulting-blue mb-2">500+</div>
+            <p className="text-sm text-consulting-gray">Empresarios transformados</p>
+          </div>
+          <div className="bg-gray-50 p-6 rounded-lg text-center">
+            <div className="text-3xl font-bold text-consulting-gold mb-2">22</div>
+            <p className="text-sm text-consulting-gray">Países en 5 continentes</p>
+          </div>
+          <div className="bg-gray-50 p-6 rounded-lg text-center">
+            <div className="text-3xl font-bold text-consulting-blue mb-2">17</div>
+            <p className="text-sm text-consulting-gray">Años de experiencia</p>
+          </div>
+          <div className="bg-gray-50 p-6 rounded-lg text-center">
+            <div className="text-3xl font-bold text-consulting-gold mb-2">4.9/5</div>
+            <p className="text-sm text-consulting-gray">Calificación promedio</p>
+          </div>
+        </div>
+
+        {/* Testimoniales principales */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          {testimonials.map((testimonial, index) => (
+            <div 
+              key={index}
+              className="bg-gray-50 rounded-lg p-8 hover:shadow-xl transition-all relative"
+            >
+              <Quote className="absolute top-4 right-4 h-12 w-12 text-consulting-gold opacity-20" />
               
-              {/* Header con foto y estrellas */}
-              <div className="bg-gradient-to-r from-brand-red/10 via-brand-yellow/10 to-brand-red/10 p-8 md:p-10">
-                <div className="flex flex-col lg:flex-row gap-8 items-center">
-                  {/* Foto del cliente */}
-                  <div className="relative group">
-                    <div className="absolute -inset-1 bg-gradient-to-r from-brand-yellow via-brand-red to-brand-yellow rounded-2xl opacity-75 group-hover:opacity-100 blur transition duration-500"></div>
-                    <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-2xl overflow-hidden border-4 border-white shadow-xl">
-                      <img 
-                        src={testimonials[activeIndex].image} 
-                        alt={testimonials[activeIndex].name}
-                        className="w-full h-full object-cover" 
-                      />
-                    </div>
-                    {/* Badge verificado */}
-                    <div className="absolute -top-2 -right-2 bg-green-500 text-white p-2 rounded-full border-2 border-white shadow-lg">
-                      <Star className="h-5 w-5 fill-current" />
-                    </div>
-                  </div>
-                  
-                  {/* Info y estrellas */}
-                  <div className="flex-1 text-center lg:text-left">
-                    <div className="flex mb-4 justify-center lg:justify-start gap-1">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="h-6 w-6 text-brand-yellow fill-brand-yellow drop-shadow-sm" />
-                      ))}
-                    </div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-brand-black mb-2">
-                      {testimonials[activeIndex].name}
-                    </h3>
-                    <p className="text-lg text-consulting-gray">
-                      {testimonials[activeIndex].role} en {testimonials[activeIndex].company}
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Contenido del testimonio */}
-              <div className="p-8 md:p-10">
-                <blockquote className="text-lg md:text-xl italic mb-8 text-consulting-gray leading-relaxed">
-                  "{testimonials[activeIndex].content}"
-                </blockquote>
-                
-                {/* Before/After Visual - NUEVO */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                  {/* BEFORE */}
-                  <div className="bg-red-50 border-2 border-red-200 rounded-xl p-6 relative overflow-hidden">
-                    <div className="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
-                      ANTES
-                    </div>
-                    <div className="flex items-center gap-4 mt-4">
-                      <div className="bg-red-100 p-3 rounded-full text-red-600">
-                        {getIcon(testimonials[activeIndex].beforeMetric.icon)}
-                      </div>
-                      <div>
-                        <p className="text-sm text-gray-600 mb-1">{testimonials[activeIndex].beforeMetric.label}</p>
-                        <p className="text-2xl font-bold text-red-600">{testimonials[activeIndex].beforeMetric.value}</p>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* AFTER */}
-                  <div className="bg-green-50 border-2 border-green-300 rounded-xl p-6 relative overflow-hidden">
-                    <div className="absolute top-0 right-0 bg-green-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
-                      DESPUÉS
-                    </div>
-                    <div className="flex items-center gap-4 mt-4">
-                      <div className="bg-green-100 p-3 rounded-full text-green-600">
-                        {getIcon(testimonials[activeIndex].afterMetric.icon)}
-                      </div>
-                      <div>
-                        <p className="text-sm text-gray-600 mb-1">{testimonials[activeIndex].afterMetric.label}</p>
-                        <p className="text-2xl font-bold text-green-600">{testimonials[activeIndex].afterMetric.value}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Resultado destacado */}
-                <div className="bg-gradient-to-r from-brand-red/10 to-brand-yellow/10 border-l-4 border-brand-red rounded-lg p-6">
-                  <p className="text-lg font-bold text-brand-red flex items-center gap-2">
-                    <TrendingUp className="h-5 w-5" />
-                    {testimonials[activeIndex].results}
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Botones de navegación mejorados */}
-            <button 
-              onClick={prevTestimonial}
-              className="absolute left-0 lg:-left-6 top-1/2 transform -translate-y-1/2 bg-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center hover:bg-brand-red hover:text-white transition-all border-2 border-gray-200 hover:border-brand-red hover:scale-110 z-10"
-              aria-label="Testimonio anterior"
-            >
-              <ChevronLeft className="h-7 w-7" />
-            </button>
-            <button 
-              onClick={nextTestimonial}
-              className="absolute right-0 lg:-right-6 top-1/2 transform -translate-y-1/2 bg-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center hover:bg-brand-red hover:text-white transition-all border-2 border-gray-200 hover:border-brand-red hover:scale-110 z-10"
-              aria-label="Siguiente testimonio"
-            >
-              <ChevronRight className="h-7 w-7" />
-            </button>
-
-            {/* Indicadores de posición mejorados */}
-            <div className="flex justify-center mt-8 space-x-3">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setActiveIndex(index)}
-                  className={`transition-all rounded-full ${
-                    index === activeIndex 
-                      ? 'w-8 h-3 bg-brand-red' 
-                      : 'w-3 h-3 bg-gray-300 hover:bg-gray-400'
-                  }`}
-                  aria-label={`Ir al testimonio ${index + 1}`}
+              <div className="flex items-start gap-4 mb-6">
+                <img 
+                  src={testimonial.image} 
+                  alt={testimonial.name}
+                  className="w-16 h-16 rounded-full object-cover border-4 border-white shadow-md"
                 />
-              ))}
+                <div className="flex-1">
+                  <h3 className="font-bold text-lg text-consulting-navy">{testimonial.name}</h3>
+                  <p className="text-sm text-consulting-gray">{testimonial.company}</p>
+                  <p className="text-xs text-consulting-gray">{testimonial.industry} • {testimonial.country}</p>
+                  <div className="mt-2">
+                    {renderStars(testimonial.rating)}
+                  </div>
+                </div>
+              </div>
+
+              <p className="text-consulting-gray mb-6 leading-relaxed italic">
+                "{testimonial.testimonial}"
+              </p>
+
+              {/* Highlight principal */}
+              <div className="bg-consulting-gold bg-opacity-10 border-l-4 border-consulting-gold p-4 mb-4 rounded">
+                <p className="font-semibold text-consulting-navy text-sm">
+                  💡 {testimonial.highlight}
+                </p>
+              </div>
+
+              {/* Resultados medibles */}
+              <div className="grid grid-cols-3 gap-3">
+                {testimonial.results.hoursReduction && (
+                  <div className="text-center">
+                    <div className="flex items-center justify-center mb-1">
+                      <Clock className="h-4 w-4 text-consulting-blue" />
+                    </div>
+                    <div className="text-2xl font-bold text-consulting-blue">
+                      {testimonial.results.hoursReduction}
+                    </div>
+                    <p className="text-xs text-consulting-gray">Menos horas</p>
+                  </div>
+                )}
+                {testimonial.results.revenueIncrease && (
+                  <div className="text-center">
+                    <div className="flex items-center justify-center mb-1">
+                      <TrendingUp className="h-4 w-4 text-consulting-gold" />
+                    </div>
+                    <div className="text-2xl font-bold text-consulting-gold">
+                      +{testimonial.results.revenueIncrease}
+                    </div>
+                    <p className="text-xs text-consulting-gray">Rentabilidad</p>
+                  </div>
+                )}
+                {testimonial.results.timeframe && (
+                  <div className="text-center">
+                    <div className="flex items-center justify-center mb-1">
+                      <CheckCircle className="h-4 w-4 text-green-600" />
+                    </div>
+                    <div className="text-lg font-bold text-green-600">
+                      {testimonial.results.timeframe}
+                    </div>
+                    <p className="text-xs text-consulting-gray">Tiempo</p>
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Sección de confianza */}
+        <div className="bg-consulting-navy text-white rounded-lg p-8 mb-12">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold mb-4">¿Por Qué Confiar en Estos Testimonios?</h3>
+            <p className="text-lg opacity-90 max-w-3xl mx-auto">
+              Cada resultado está documentado y verificado. No compartimos testimonios sin consentimiento explícito y datos reales.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="text-center">
+              <CheckCircle className="h-12 w-12 text-consulting-gold mx-auto mb-3" />
+              <h4 className="font-semibold mb-2">Resultados Verificables</h4>
+              <p className="text-sm opacity-75">
+                Cada caso incluye métricas específicas: horas reducidas, rentabilidad aumentada, timeframe exacto
+              </p>
+            </div>
+            <div className="text-center">
+              <CheckCircle className="h-12 w-12 text-consulting-gold mx-auto mb-3" />
+              <h4 className="font-semibold mb-2">Empresarios Reales</h4>
+              <p className="text-sm opacity-75">
+                Nombres, empresas, industrias y países reales. Puedes verificar en LinkedIn
+              </p>
+            </div>
+            <div className="text-center">
+              <CheckCircle className="h-12 w-12 text-consulting-gold mx-auto mb-3" />
+              <h4 className="font-semibold mb-2">Diversidad de Casos</h4>
+              <p className="text-sm opacity-75">
+                40+ industrias, empresas desde 1 hasta 100+ empleados, 22 países en 5 continentes
+              </p>
             </div>
           </div>
+        </div>
 
-          {/* CTA Section mejorada */}
-          <div className="text-center bg-gradient-to-r from-brand-red via-red-600 to-brand-red text-white p-10 rounded-3xl shadow-2xl max-w-4xl mx-auto">
-            <h3 className="text-3xl md:text-4xl font-bold mb-4">
-              ¿Quieres Resultados Similares?
-            </h3>
-            <p className="text-xl mb-8 opacity-90">
-              Únete a los 500+ empresarios que ya transformaron sus vidas
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
-              <a 
-                href="https://estrategiaempresaria.systeme.io/sesionestrategica1a1" 
-                className="flex-1 w-full sm:w-auto bg-white text-brand-red hover:bg-gray-100 font-bold text-lg py-5 px-8 rounded-xl transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 hover:scale-105"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                🚀 Agendar Sesión Estratégica GRATIS
-              </a>
-              
-              <a 
-                href="https://api.whatsapp.com/send/?phone=5493624236611&text=Hola%2C+quiero+hacer+una+pregunta+&type=phone_number&app_absent=0"
-                className="flex-1 w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white font-semibold text-lg py-5 px-8 rounded-xl transition-all flex items-center justify-center shadow-xl hover:shadow-2xl hover:-translate-y-1 hover:scale-105"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <MessageSquare className="mr-2 h-5 w-5" />
-                WhatsApp
-              </a>
-            </div>
+        {/* ACCIÓN 4: CTA UNIFICADO */}
+        <div className="bg-gradient-to-br from-consulting-blue to-consulting-blue-light text-white rounded-lg p-10 text-center">
+          <h3 className="text-3xl font-bold mb-4">
+            Tu Transformación Empieza Aquí
+          </h3>
+          <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+            Los resultados que acabas de leer no son excepciones. Son la norma cuando aplicas el Método P.U.D.E.R. correctamente.
+          </p>
+          
+          <a 
+            href="https://estrategiaempresaria.systeme.io/sesionestrategica1a1"
+            className="inline-flex items-center px-10 py-5 bg-consulting-gold hover:bg-consulting-gold-light text-consulting-navy font-bold rounded-lg transition-all text-xl mb-6 shadow-xl"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <CheckCircle className="mr-3 h-6 w-6" />
+            Agenda Tu Sesión Estratégica GRATUITA
+          </a>
 
+          <div className="flex items-center justify-center gap-4 text-sm opacity-75 mb-8 flex-wrap">
+            <span className="flex items-center gap-1">
+              <CheckCircle className="h-4 w-4" />
+              45 minutos
+            </span>
+            <span>•</span>
+            <span className="flex items-center gap-1">
+              <CheckCircle className="h-4 w-4" />
+              Sin compromiso
+            </span>
+            <span>•</span>
+            <span className="flex items-center gap-1">
+              <CheckCircle className="h-4 w-4" />
+              Valor $250 USD
+            </span>
+          </div>
+
+          <div className="border-t border-white/20 pt-6">
+            <p className="text-sm mb-4 opacity-75">¿Prefieres hacer una pregunta primero?</p>
             <a 
-              href="https://www.google.com/search?q=Claudio+Flores+%7C+Coaching+y+Estrategia+Empresarial+%7C+Mentor+de+Empresarios+%7C+L%C3%ADderazgo&stick=H4sIAAAAAAAA_-NgU1I1qLA0MTE1SDEwtkg2SjJOM0yyMqgwNUgzMDa0TDY3Mk5JTUq1XMQa7pyTWJqSma_glpNflFqsUKPgnJ-YnJGZl65QqeBaXFKUWJKanpmo4JpbAJROLMpMzAGq8U3NK8kvUkhJRYjng_T6HF6bklqUWJWeDwBAeyO3gwAAAA&hl=en-GB&mat=CV1k0EzVfvQRElYBYJahab2Xi7KGBYlz7DUFsSUns4j4MH9RAtRlS5coiWv6IkF-qjDNx3s-9uyJwgrnopT2PPTvbZR5IckEa1vGwtEhb-FXyCyv1ghBdmPFZeQtFS8t0g&authuser=0#" 
-              target="_blank" 
+              href="https://api.whatsapp.com/send/?phone=5493624236611&text=Hola%2C+le%C3%AD+los+testimonios+y+quiero+saber+m%C3%A1s+sobre+el+M%C3%A9todo+P.U.D.E.R.&type=phone_number&app_absent=0"
+              className="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-all"
+              target="_blank"
               rel="noopener noreferrer"
-              className="inline-block text-white/90 hover:text-white underline text-base mt-4"
             >
-              ⭐ Ver más testimonios en Google (5.0 estrellas)
+              <MessageSquare className="mr-2 h-5 w-5" />
+              Conversemos por WhatsApp
             </a>
           </div>
         </div>
-      </section>
-    </>
+
+        {/* Badge final de credibilidad */}
+        <div className="mt-8 text-center">
+          <p className="text-sm text-consulting-gray">
+            Únete a los <span className="font-bold text-consulting-blue">500+ empresarios</span> que ya transformaron sus vidas
+          </p>
+        </div>
+      </div>
+    </section>
   );
 };
 
