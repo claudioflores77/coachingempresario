@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Calendar, ArrowRight, Clock, Check, MessageSquare } from 'lucide-react';
+import { Calendar, ArrowRight, Clock, Check, MessageSquare, CheckCircle } from 'lucide-react';
 
 const CallToAction: React.FC = () => {
   return (
@@ -42,24 +41,41 @@ const CallToAction: React.FC = () => {
                 </ul>
 
                 <div className="mt-6 text-center p-3 bg-yellow-50 rounded-lg border border-yellow-200">
-                  <p className="font-semibold text-sm">⚠️ Disponibilidad limitada: Solo 5 sesiones gratuitas esta semana</p>
+                  <p className="font-semibold text-sm flex items-center justify-center gap-2">
+                    <AlertTriangle className="h-4 w-4 text-yellow-600" />
+                    Disponibilidad limitada: Solo 5 sesiones gratuitas esta semana
+                  </p>
                 </div>
               </div>
               
+              {/* ACCIÓN 4: CTA UNIFICADO */}
               <a 
                 href="https://estrategiaempresaria.systeme.io/sesionestrategica1a1" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary flex items-center justify-center animate-pulse"
+                className="btn-primary flex items-center justify-center animate-pulse w-full"
               >
-                <Calendar className="mr-2 h-5 w-5" />
-                RESERVAR MI SESIÓN ESTRATÉGICA GRATIS
+                <CheckCircle className="mr-2 h-5 w-5" />
+                Agenda Tu Sesión Estratégica GRATUITA
                 <ArrowRight className="ml-2 h-4 w-4" />
               </a>
 
-              <p className="text-sm text-center mt-3 text-gray-500">
-                Sin costo y sin compromiso - (Valuada en U$D250)
-              </p>
+              <div className="flex items-center justify-center gap-4 text-sm text-gray-500 mt-3 flex-wrap">
+                <span className="flex items-center gap-1">
+                  <CheckCircle className="h-4 w-4 text-consulting-blue" />
+                  45 minutos
+                </span>
+                <span>•</span>
+                <span className="flex items-center gap-1">
+                  <CheckCircle className="h-4 w-4 text-consulting-blue" />
+                  Sin compromiso
+                </span>
+                <span>•</span>
+                <span className="flex items-center gap-1">
+                  <CheckCircle className="h-4 w-4 text-consulting-blue" />
+                  Valor $250 USD
+                </span>
+              </div>
             </div>
             
             <div className="md:w-1/2 bg-consulting-blue-light p-8 md:p-12 text-white">
