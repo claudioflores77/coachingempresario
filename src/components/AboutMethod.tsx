@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Clock, Target, BarChart4, MessageSquare, Linkedin, Shield, AlertTriangle } from 'lucide-react';
+import { Clock, Target, BarChart4, MessageSquare, Linkedin, Shield, AlertTriangle, CheckCircle } from 'lucide-react';
 import SafeImage from './SafeImage';
 import StructuredData from './StructuredData';
 
@@ -183,10 +182,22 @@ const AboutMethod: React.FC = () => {
               importante para tu negocio.
             </p>
             <ul className="text-sm text-consulting-gray space-y-2">
-              <li>• Análisis profundo de tu situación actual</li>
-              <li>• Definición de objetivos SMART</li>
-              <li>• Identificación de oportunidades</li>
-              <li>• Roadmap estratégico personalizado</li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="h-4 w-4 text-consulting-blue mt-0.5 flex-shrink-0" />
+                <span>Análisis profundo de tu situación actual</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="h-4 w-4 text-consulting-blue mt-0.5 flex-shrink-0" />
+                <span>Definición de objetivos SMART</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="h-4 w-4 text-consulting-blue mt-0.5 flex-shrink-0" />
+                <span>Identificación de oportunidades</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="h-4 w-4 text-consulting-blue mt-0.5 flex-shrink-0" />
+                <span>Roadmap estratégico personalizado</span>
+              </li>
             </ul>
           </div>
 
@@ -200,10 +211,22 @@ const AboutMethod: React.FC = () => {
               funcionar de forma eficiente sin depender únicamente de tu presencia física.
             </p>
             <ul className="text-sm text-consulting-gray space-y-2">
-              <li>• Documentación completa de procesos</li>
-              <li>• Implementación de software de gestión</li>
-              <li>• Establecimiento de KPIs</li>
-              <li>• Sistemas de monitoreo automatizado</li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="h-4 w-4 text-consulting-blue mt-0.5 flex-shrink-0" />
+                <span>Documentación completa de procesos</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="h-4 w-4 text-consulting-blue mt-0.5 flex-shrink-0" />
+                <span>Implementación de software de gestión</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="h-4 w-4 text-consulting-blue mt-0.5 flex-shrink-0" />
+                <span>Establecimiento de KPIs</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="h-4 w-4 text-consulting-blue mt-0.5 flex-shrink-0" />
+                <span>Sistemas de monitoreo automatizado</span>
+              </li>
             </ul>
           </div>
 
@@ -217,10 +240,22 @@ const AboutMethod: React.FC = () => {
               Desarrollamos equipos comprometidos que trabajan de forma autónoma hacia los objetivos.
             </p>
             <ul className="text-sm text-consulting-gray space-y-2">
-              <li>• Programas de capacitación en liderazgo</li>
-              <li>• Desarrollo de competencias del equipo</li>
-              <li>• Sistemas de comunicación efectiva</li>
-              <li>• Cultura de alto rendimiento</li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="h-4 w-4 text-consulting-blue mt-0.5 flex-shrink-0" />
+                <span>Programas de capacitación en liderazgo</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="h-4 w-4 text-consulting-blue mt-0.5 flex-shrink-0" />
+                <span>Desarrollo de competencias del equipo</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="h-4 w-4 text-consulting-blue mt-0.5 flex-shrink-0" />
+                <span>Sistemas de comunicación efectiva</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="h-4 w-4 text-consulting-blue mt-0.5 flex-shrink-0" />
+                <span>Cultura de alto rendimiento</span>
+              </li>
             </ul>
           </div>
         </div>
@@ -245,6 +280,7 @@ const AboutMethod: React.FC = () => {
           </div>
         </div>
 
+        {/* ACCIÓN 4: CTA UNIFICADO */}
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-4">
             Aplica P.U.D.E.R. en Tu Empresa
@@ -254,12 +290,30 @@ const AboutMethod: React.FC = () => {
           </p>
           <a 
             href="https://estrategiaempresaria.systeme.io/sesionestrategica1a1"
-            className="btn-primary mb-6 text-lg px-8 py-4"
+            className="btn-primary mb-6 text-lg px-8 py-4 inline-flex items-center gap-2"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Implementar P.U.D.E.R. Ahora
+            <CheckCircle className="h-5 w-5" />
+            Agenda Tu Sesión Estratégica GRATUITA
           </a>
+          
+          <div className="flex items-center justify-center gap-4 text-sm text-consulting-gray mb-6">
+            <span className="flex items-center gap-1">
+              <CheckCircle className="h-4 w-4 text-consulting-blue" />
+              45 minutos
+            </span>
+            <span>•</span>
+            <span className="flex items-center gap-1">
+              <CheckCircle className="h-4 w-4 text-consulting-blue" />
+              Sin compromiso
+            </span>
+            <span>•</span>
+            <span className="flex items-center gap-1">
+              <CheckCircle className="h-4 w-4 text-consulting-blue" />
+              Valor $250 USD
+            </span>
+          </div>
           
           <div className="mt-6">
             <a 
