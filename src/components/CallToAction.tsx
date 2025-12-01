@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, ArrowRight, Clock, Check, MessageSquare, CheckCircle } from 'lucide-react';
+import { Calendar, ArrowRight, Clock, Check, MessageSquare, CheckCircle, AlertTriangle } from 'lucide-react';
 
 const CallToAction: React.FC = () => {
   return (
