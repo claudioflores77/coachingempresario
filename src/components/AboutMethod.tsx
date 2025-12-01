@@ -107,69 +107,11 @@ const AboutMethod: React.FC = () => {
           <p className="text-xl text-consulting-gray mb-6">
             Transforma tu empresa para que trabaje para ti. Hasta 40% más rentabilidad, 50% menos horas.
           </p>
-          
-          <div className="bg-consulting-gray-light p-6 rounded-lg mb-6">
-            <h3 className="text-xl font-bold mb-4 text-consulting-navy">
-              P.U.D.E.R.: <span className="text-consulting-blue">Plan, Único, Desarrollo Económico-Financiero-Organizacional, Estándar, Repetir</span>
-            </h3>
-            <p className="text-lg text-consulting-gray mb-4">
-              El objetivo es vacunar a tu empresa, a ti como líder y a tu equipo contra las 5 principales causas de muerte empresarial:
-            </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
-              <div className="flex items-start space-x-3">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 flex items-center justify-center">
-                  <span className="text-brand-red font-bold text-sm">1</span>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-brand-red">El problema de la Coyuntura</h4>
-                  <p className="text-sm text-consulting-gray">La Falta de Planificación a Largo Plazo</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-3">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 flex items-center justify-center">
-                  <span className="text-brand-red font-bold text-sm">2</span>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-brand-red">El problema de los mercados tradicionales</h4>
-                  <p className="text-sm text-consulting-gray">La Falta de diferenciación</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-3">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 flex items-center justify-center">
-                  <span className="text-brand-red font-bold text-sm">3</span>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-brand-red">El problema del Emprendedor/Empresario</h4>
-                  <p className="text-sm text-consulting-gray">La lentitud para la adaptación al cambio de roles que demanda la organización</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-3">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 flex items-center justify-center">
-                  <span className="text-brand-red font-bold text-sm">4</span>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-brand-red">El problema de la falta de financiamiento</h4>
-                  <p className="text-sm text-consulting-gray">La falta de preparación para buscar y obtener financiamientos</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-3 md:col-span-2 justify-center">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 flex items-center justify-center">
-                  <span className="text-brand-red font-bold text-sm">5</span>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-brand-red">El problema de la Innovación</h4>
-                  <p className="text-sm text-consulting-gray">La lentitud para actuar frente al contexto VICA (Volátil, Incierto, Cambiante y Ambiguo)</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
+    
+          <p className="text-xl text-consulting-gray mb-6">
+  El sistema probado que liberó a 500+ empresarios en 22 países.
+</p> 
+         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           <div className="bg-consulting-gray-light p-8 rounded-lg hover:shadow-xl transition-all">
             <div className="p-4 bg-consulting-blue rounded-full inline-block mb-6">
