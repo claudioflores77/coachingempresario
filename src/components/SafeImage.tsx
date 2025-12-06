@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface SafeImageProps {
   src: string;
@@ -8,6 +8,11 @@ interface SafeImageProps {
 
 const SafeImage: React.FC<SafeImageProps> = ({ src, alt, className }) => {
   const [error, setError] = useState(false);
+
+  // Reset error state when src changes
+  useEffect(() => {
+    setError(false);
+  }, [src]);
 
   if (error) {
     return (
@@ -23,7 +28,10 @@ const SafeImage: React.FC<SafeImageProps> = ({ src, alt, className }) => {
       alt={alt} 
       className={className} 
       loading="lazy"
-      onError={() => setError(true)}
+      onError={() => {
+        console.error(`Failed to load image: ${src}`);
+        setError(true);
+      }}
     />
   );
 };

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Star, Quote, CheckCircle, MessageSquare, TrendingUp, Clock, DollarSign } from 'lucide-react';
+import SafeImage from './SafeImage';
 
 interface Testimonial {
   name: string;
@@ -24,7 +25,7 @@ const Testimonials: React.FC = () => {
       company: "TechSolutions Inc.",
       industry: "Tecnología",
       country: "México",
-      image: "/lovable-uploads/0b84250d-4c53-48c5-9471-1227bf9ff0fb.png",
+      image: "/assets/testimonials/carlos_ramirez_profile.png",
       rating: 5,
       testimonial: "Antes de trabajar con Claudio, mi empresa consumía toda mi vida. Trabajaba 70 horas semanales y aun así sentía que nunca era suficiente. En solo 12 semanas implementamos el Método P.U.D.E.R. y ahora trabajo 35 horas, mi equipo funciona de forma autónoma, y la rentabilidad aumentó un 45%. Recuperé mi vida personal sin sacrificar el crecimiento del negocio. Es la mejor inversión que he hecho en 15 años como empresario.",
       results: {
@@ -39,7 +40,7 @@ const Testimonials: React.FC = () => {
       company: "Consultoría Estratégica MG",
       industry: "Consultoría",
       country: "España",
-      image: "/lovable-uploads/135f3f99-d5f9-4f4d-8213-675e650f3f18.png",
+      image: "/assets/testimonials/maria_gonzalez_profile.png",
       rating: 5,
       testimonial: "Como consultora, siempre aconsejaba a mis clientes sobre eficiencia operativa, pero mi propia empresa era un caos. Claudio me mostró que yo era el cuello de botella. Implementamos sistemas de automatización, capacitamos a mi equipo para tomar decisiones, y documentamos todos los procesos. Ahora puedo tomarme vacaciones de 2 semanas sin que mi teléfono suene una sola vez. La facturación creció 38% y mi nivel de estrés bajó un 80%.",
       results: {
@@ -54,7 +55,7 @@ const Testimonials: React.FC = () => {
       company: "Silva Manufacturing",
       industry: "Manufactura",
       country: "Brasil",
-      image: "/lovable-uploads/dfb8fb00-5dee-4b16-9bac-410b330236fb.png",
+      image: "/assets/testimonials/roberto_silva_profile.png",
       rating: 5,
       testimonial: "Tenía una empresa de manufactura con 45 empleados pero yo seguía siendo el único que resolvía los problemas críticos. Mi salud estaba deteriorándose, mi matrimonio en crisis, y veía crecer a mis hijos solo en fotos. El Método P.U.D.E.R. cambió todo. Claudio me ayudó a construir una estructura de liderazgo de 3 niveles, sistemas de producción predecibles, y una cultura de solución de problemas. Hoy dedico 30 horas a la empresa (antes eran 65) y los resultados son mejores que nunca. Salvó mi negocio y mi familia.",
       results: {
@@ -69,7 +70,7 @@ const Testimonials: React.FC = () => {
       company: "Servicios Educativos Integral",
       industry: "Educación",
       country: "Argentina",
-      image: "/lovable-uploads/135f3f99-d5f9-4f4d-8213-675e650f3f18.png",
+      image: "/assets/testimonials/ana_martinez_profile.png",
       rating: 5,
       testimonial: "Dirigía un instituto educativo con 200 alumnos pero me sentía más profesora que directora. Estaba en todo: desde cuestiones pedagógicas hasta problemas de mantenimiento. Claudio me enseñó a delegar estratégicamente, a construir un equipo de líderes intermedios, y a enfocarme en la visión estratégica. En 5 meses pasé de 60 a 25 horas semanales en la operación, abrimos una segunda sede, y aumentamos la matrícula un 40%. Ahora sí soy la directora que mi instituto necesitaba.",
       results: {
@@ -84,11 +85,11 @@ const Testimonials: React.FC = () => {
       company: "Grupo Constructor DF",
       industry: "Construcción",
       country: "Chile",
-      image: "/lovable-uploads/0b84250d-4c53-48c5-9471-1227bf9ff0fb.png",
+      image: "/assets/testimonials/diego_fernandez_profile.png",
       rating: 5,
       testimonial: "En la industria de la construcción todo son urgencias y crisis. Yo vivía con el celular pegado al oído 16 horas al día, los 7 días de la semana. Pensaba que era imposible cambiar eso. Claudio me demostró lo contrario. Creamos protocolos de decisión para cada nivel, implementamos software de gestión de proyectos, y capacitamos a los jefes de obra para autonomía total. Hoy superviso 8 proyectos simultáneos trabajando 40 horas semanales. Mi equipo sabe exactamente qué hacer sin necesitar mi aprobación constante. Magia no es, es método.",
       results: {
-        hoursReduction: "45%",
+        hoursReduction: "64%",
         revenueIncrease: "35%",
         timeframe: "14 semanas"
       },
@@ -99,7 +100,7 @@ const Testimonials: React.FC = () => {
       company: "E-Commerce Fashion Lab",
       industry: "E-commerce",
       country: "Colombia",
-      image: "/lovable-uploads/dfb8fb00-5dee-4b16-9bac-410b330236fb.png",
+      image: "/assets/testimonials/laura_gimenez_profile.png",
       rating: 5,
       testimonial: "Mi e-commerce crecía rápido pero yo me estaba ahogando. Atención al cliente, logística, marketing, finanzas... todo pasaba por mí. El burnout era inminente. Claudio no solo me ayudó a sistematizar la operación sino que me enseñó a pensar como CEO y no como operadora. Automatizamos el 80% del customer service, delegamos marketing a un equipo especializado, e implementamos dashboards en tiempo real. Hoy facturamos 3x más con la mitad de mi tiempo invertido. Y por primera vez en 4 años, disfruto dirigir mi empresa.",
       results: {
@@ -170,9 +171,9 @@ const Testimonials: React.FC = () => {
               <Quote className="absolute top-4 right-4 h-12 w-12 text-consulting-gold opacity-20" />
               
               <div className="flex items-start gap-4 mb-6">
-                <img 
+                <SafeImage 
                   src={testimonial.image} 
-                  alt={testimonial.name}
+                  alt={`${testimonial.name} - ${testimonial.company}`}
                   className="w-16 h-16 rounded-full object-cover border-4 border-white shadow-md"
                 />
                 <div className="flex-1">
