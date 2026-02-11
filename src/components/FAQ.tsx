@@ -12,8 +12,8 @@ const FAQ: React.FC = () => {
 
   const faqData: FAQItem[] = [
     {
-      question: "¿Cómo sé si el Método P.U.D.E.R. es para mí?",
-      answer: "El Método P.U.D.E.R. es ideal para ti si: (1) Trabajas más de 50 horas semanales pero sientes que tu negocio no crece proporcionalmente, (2) Tu empresa depende completamente de ti y no puede funcionar sin tu presencia constante, (3) Estás sacrificando tu vida personal y familiar por el negocio, (4) Quieres aumentar la rentabilidad sin aumentar tus horas de trabajo. Si te identificas con al menos 2 de estos puntos, este método es para ti. En 17 años hemos ayudado a más de 500 empresarios en 22 países que estaban exactamente en tu situación.",
+      question: "¿Cómo sé si esto es para mí?",
+      answer: "El Método P.U.D.E.R. es ideal para ti si: (1) Trabajas más de 50 horas semanales pero sientes que tu negocio no crece proporcionalmente, (2) Tu empresa depende completamente de ti y no puede funcionar sin tu presencia constante, (3) Estás sacrificando tu vida personal y familiar por el negocio, (4) Quieres aumentar la rentabilidad sin aumentar tus horas de trabajo. Si te identificas con al menos 2 de estos puntos esto es para ti. En 17 años hemos ayudado a más de 500 empresarios en 22 países que estaban exactamente en tu situación.",
       category: 'general'
     },
     {
@@ -28,22 +28,22 @@ const FAQ: React.FC = () => {
     },
     {
       question: "¿Cuál es la inversión y cómo funciona el proceso?",
-      answer: "La inversión varía según el tamaño y complejidad de tu empresa, típicamente entre $15,000 y $50,000 USD. Esto incluye: (1) Programa completo de 12 semanas de implementación intensiva, (2) Sesiones semanales 1 a 1 conmigo, (3) Acceso a todas las herramientas, plantillas y sistemas, (4) Soporte directo vía WhatsApp durante todo el proceso, (5) Seguimiento de 3 meses adicionales para asegurar resultados. Ofrecemos planes de pago flexibles. La mayoría de nuestros clientes recuperan la inversión completa en los primeros 6 meses solo con el aumento de rentabilidad. Algunos en 90 días.",
+      answer: "La inversión varía según el tamaño y complejidad de tu empresa, típicamente entre US$1,500 y US$7,000. Esto incluye: (1) Programa completo de 12 semanas de implementación intensiva, (2) Sesiones semanales 1 a 1 conmigo, (3) Acceso a todas las herramientas, plantillas y sistemas, (4) Soporte directo vía WhatsApp durante todo el proceso, (5) Seguimiento de 3 meses adicionales para asegurar resultados. Ofrecemos planes de pago flexibles. Nuestros clientes recuperan la inversión completa en 3 meses solo con el aumento de rentabilidad. Garantía de Resultados",
       category: 'investment'
     },
     {
-      question: "¿Qué hace diferente al Método P.U.D.E.R. de otros programas?",
-      answer: "El Método P.U.D.E.R. no es teoría genérica, es un sistema específico diseñado para empresarios atrapados en su negocio. Las 5 diferencias clave son: (1) PERSONALIZACIÓN TOTAL: No hay dos empresas iguales, adaptamos TODO a tu realidad, (2) IMPLEMENTACIÓN PRÁCTICA: No solo consultamos, implementamos contigo paso a paso, (3) RESULTADOS MEDIBLES: Reducción de horas y aumento de rentabilidad verificables, (4) ACOMPAÑAMIENTO DIRECTO: Trabajas directamente conmigo, no con un equipo de juniors, (5) GARANTÍA DE RESULTADOS: Si sigues el método y no ves resultados en 90 días, trabajamos gratis hasta que los veas. 17 años de experiencia y 500+ casos de éxito nos respaldan.",
+      question: "¿Qué hace diferente a su Sistema de trabajo, respecto de otros programas?",
+      answer: "El Método P.U.D.E.R. no es teoría genérica, es un sistema específico diseñado por y para empresarios atrapados en su negocio. Las 5 diferencias clave son: (1) PERSONALIZACIÓN TOTAL: No hay dos empresas iguales, adaptamos TODO a tu realidad, (2) IMPLEMENTACIÓN PRÁCTICA: No solo consultamos, implementamos contigo paso a paso, (3) RESULTADOS MEDIBLES: Reducción de horas y aumento de rentabilidad verificables, (4) ACOMPAÑAMIENTO DIRECTO: Trabajas directamente conmigo, no con un equipo de juniors, (5) GARANTÍA DE RESULTADOS: Si sigues el método y no ves resultados en 90 días, trabajamos gratis hasta que los veas. 17 años de experiencia y 500+ casos de éxito nos respaldan.",
       category: 'method'
     },
     {
-      question: "¿Funciona el Método P.U.D.E.R. en mi industria?",
-      answer: "Sí. El Método P.U.D.E.R. ha funcionado exitosamente en más de 40 industrias diferentes en 22 países. Desde empresas de servicios profesionales (consultoría, contabilidad, legal) hasta manufactura, comercio, tecnología, salud, educación, construcción, y más. Los principios del método son universales: planificación estratégica, diferenciación, sistemas automatizados, desarrollo de equipos y escalamiento. Lo que cambia es la APLICACIÓN específica a tu industria, y eso es exactamente lo que personalizamos en tu caso. Cada cliente recibe una adaptación del método diseñada para su sector y sus desafíos particulares.",
+      question: "¿Funciona esto en mi industria?",
+      answer: "Sí. Nuestro Método ha funcionado exitosamente en más de 40 industrias diferentes en 22 países diferentes. Desde empresas de servicios profesionales (consultoría, contabilidad, legal) hasta manufactura, comercio, tecnología, salud, educación, construcción, y más. Los principios del método son universales: planificación estratégica, diferenciación, sistemas automatizados, desarrollo de equipos y escalamiento. Lo que cambia es la APLICACIÓN específica a tu industria, y eso es exactamente lo que personalizamos en tu caso. Cada cliente recibe una adaptación del método diseñada para su sector y sus desafíos particulares.",
       category: 'method'
     },
     {
       question: "¿Qué pasa si mi empresa es muy pequeña o muy grande?",
-      answer: "El Método P.U.D.E.R. se adapta a empresas desde 1 empleado hasta 100+ empleados. Para empresas pequeñas (1-5 personas), nos enfocamos en sistemas fundamentales y automatización básica. Para empresas medianas (6-30 personas), trabajamos en estructura organizacional y liderazgo de equipo. Para empresas grandes (31-100+ personas), implementamos sistemas complejos y cultura organizacional. El principio es el mismo: liberarte del día a día operativo. La aplicación varía según tu tamaño. En la Sesión Estratégica GRATUITA evaluamos si tu empresa está en el rango óptimo para el método.",
+      answer: "Nuestro Método se adapta a empresas desde 1 empleado hasta 100+ empleados. Para empresas pequeñas (1-5 personas), nos enfocamos en sistemas fundamentales y automatización básica. Para empresas medianas (6-30 personas), trabajamos en estructura organizacional y liderazgo de equipo. Para empresas grandes (31-100+ personas), implementamos sistemas complejos y cultura organizacional. El principio es el mismo: liberarte del día a día operativo. La aplicación varía según tu tamaño. En la Sesión Estratégica GRATUITA evaluamos si tu empresa está en el rango óptimo para el método.",
       category: 'general'
     },
     {
@@ -53,7 +53,7 @@ const FAQ: React.FC = () => {
     },
     {
       question: "¿Qué garantías tengo de que esto va a funcionar en mi caso?",
-      answer: "Ofrecemos una garantía clara y directa: Si implementas el Método P.U.D.E.R. siguiendo nuestras recomendaciones y no ves una reducción mínima del 30% en tus horas de trabajo o un aumento del 20% en rentabilidad en los primeros 90 días, continuamos trabajando contigo SIN COSTO ADICIONAL hasta lograr esos resultados. Además, si en los primeros 30 días decides que el método no es para ti, te devolvemos el 100% de tu inversión sin preguntas. Llevamos 17 años en el mercado y hemos transformado 500+ empresas. Nuestra reputación está en juego. No podemos garantizar resultados mágicos de la noche a la mañana, pero SÍ garantizamos que si haces tu parte, verás resultados medibles y significativos.",
+      answer: "Ofrecemos una garantía clara y directa: Si implementas las acciones siguiendo nuestras recomendaciones y no ves una reducción mínima del 30% en tus horas de trabajo o un aumento de tu rentabilidad en los primeros 90 días, continuamos trabajando contigo SIN COSTO ADICIONAL hasta lograr esos resultados. Además, si en los primeros 30 días decides que el método no es para ti, te devolvemos el 100% de tu inversión sin preguntas. Llevamos 17 años en el mercado y hemos transformado 500+ empresas. Nuestra reputación está en juego. No podemos garantizar resultados mágicos de la noche a la mañana, pero SÍ garantizamos que si haces tu parte, verás resultados medibles y significativos.",
       category: 'results'
     },
     {
@@ -68,7 +68,7 @@ const FAQ: React.FC = () => {
     },
     {
       question: "¿Qué pasa después de las 12 semanas? ¿Me quedaré solo?",
-      answer: "No, incluimos 3 meses de seguimiento post-programa (12 semanas de implementación + 12 semanas de seguimiento = 6 meses totales). Durante el seguimiento tienes: (1) 1 sesión mensual de revisión y ajustes, (2) Acceso a soporte vía WhatsApp para consultas específicas, (3) Materiales y actualizaciones del método, (4) Invitación a webinars exclusivos para alumni. Además, muchos clientes optan por una membresía de acompañamiento continuo ($500-1,500/mes) para seguir optimizando y escalando. Pero no es obligatorio. Al terminar las 12 semanas + seguimiento, tendrás todo lo necesario para continuar por tu cuenta: sistemas implementados, equipo capacitado, procesos documentados, y el conocimiento completo del método.",
+      answer: "No, incluimos 3 meses de seguimiento post-programa (12 semanas de implementación + 12 semanas de seguimiento = 6 meses totales). Durante el seguimiento tienes: (1) 1 sesión mensual de revisión y ajustes, (2) Acceso a soporte vía WhatsApp para consultas específicas, (3) Materiales y actualizaciones del método, (4) Invitación a webinars exclusivos para alumni. Además, muchos clientes optan por una membresía de acompañamiento continuo (US$500 a US$1,500/mes) para seguir optimizando y escalando. Pero no es obligatorio. Al terminar las 12 semanas + seguimiento, tendrás todo lo necesario para continuar por tu cuenta: sistemas implementados, equipo capacitado, procesos documentados, y el conocimiento completo del método.",
       category: 'method'
     }
   ];
