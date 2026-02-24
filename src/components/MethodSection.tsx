@@ -1,11 +1,7 @@
-
 import React from 'react';
-import { Clock, Target, BarChart4, MessageSquare, Linkedin, Shield, AlertTriangle } from 'lucide-react';
-import SafeImage from './SafeImage';
+import { Clock, Target, BarChart4, MessageSquare, Linkedin, RefreshCw, Settings, TrendingUp, Award, Layers } from 'lucide-react';
 
 const MethodSection: React.FC = () => {
-  console.log('MethodSection component rendering');
-
   return (
     <section id="metodo" className="section bg-white">
       <div className="container">
@@ -15,203 +11,170 @@ const MethodSection: React.FC = () => {
             Tu Camino Hacia la Libertad Empresarial
           </h2>
           <p className="text-xl text-consulting-gray mb-4">
-            Sistema probado que transforma tu empresa para que trabaje para ti.
+            Un sistema de dirección estratégica en 5 fases que transforma tu empresa
+            paso a paso, sin que tengas que parar de operar.
           </p>
           <p className="text-lg text-consulting-gray mb-6">
             • Recupera el control total de tu negocio<br />
-            • Optimiza procesos críticos<br />
+            • Construye estructura para crecer sin explotar<br />
             • Logra resultados medibles en 90 días
           </p>
-          
           <div className="bg-consulting-gray-light p-6 rounded-lg mb-6">
-            <h3 className="text-xl font-bold mb-4 text-consulting-navy">
+            <h3 className="text-xl font-bold mb-2 text-consulting-navy">
               P.U.D.E.R.: <span className="text-consulting-blue">Plan, Único, Desarrollo, Estándar, Repetir</span>
             </h3>
-            <p className="text-lg text-consulting-gray mb-4">
-              Vacuna tu empresa contra las 5 principales causas de fracaso empresarial:
+            <p className="text-lg text-consulting-gray">
+              Un ciclo continuo de transformación que lleva al dueño
+              de estar atrapado en el hoy, a construir una empresa que funciona sola hacia el futuro que él eligió.
             </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
-              <div className="flex items-start space-x-3">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 flex items-center justify-center">
-                  <span className="text-brand-red font-bold text-sm">1</span>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-brand-red">El problema de la Coyuntura</h4>
-                  <p className="text-sm text-consulting-gray">La Falta de Planificación a Largo Plazo</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-3">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 flex items-center justify-center">
-                  <span className="text-brand-red font-bold text-sm">2</span>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-brand-red">El problema de los mercados tradicionales</h4>
-                  <p className="text-sm text-consulting-gray">La Falta de diferenciación</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-3">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 flex items-center justify-center">
-                  <span className="text-brand-red font-bold text-sm">3</span>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-brand-red">El problema del Emprendedor/Empresario</h4>
-                  <p className="text-sm text-consulting-gray">La lentitud para la adaptación al cambio de roles que demanda la organización</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-3">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 flex items-center justify-center">
-                  <span className="text-brand-red font-bold text-sm">4</span>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-brand-red">El problema de la falta de financiamiento</h4>
-                  <p className="text-sm text-consulting-gray">La falta de preparación para buscar y obtener financiamientos</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-3 md:col-span-2 justify-center">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 flex items-center justify-center">
-                  <span className="text-brand-red font-bold text-sm">5</span>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-brand-red">El problema de la Innovación</h4>
-                  <p className="text-sm text-consulting-gray">La lentitud para actuar frente al contexto VICA (Volátil, Incierto, Cambiante y Ambiguo)</p>
-                </div>
-              </div>
-            </div>
           </div>
-          
-          <p className="text-lg text-consulting-gray">
-            El Método P.U.D.E.R. es el resultado de más de 17 años de experiencia trabajando con empresarios de 22 países diferentes, 
-            transformando negocios desde pequeñas empresas familiares hasta corporaciones medianas. Este sistema ha sido refinado 
-            y perfeccionado para garantizar resultados consistentes y duraderos.
+        </div>
+
+        {/* Las 5 fases */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+
+          {/* P */}
+          <div className="bg-consulting-gray-light p-8 rounded-lg hover:shadow-xl transition-all">
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-red flex items-center justify-center">
+                <span className="text-white font-bold text-sm">P</span>
+              </div>
+              <Target className="h-6 w-6 text-brand-red" />
+            </div>
+            <h4 className="text-xl font-bold mb-2">Plan Estratégico a Largo Plazo</h4>
+            <p className="text-consulting-gray mb-4">
+              Definimos juntos el futuro que querés para tu empresa y tu vida.
+              No el que te tocó: el que elegís. Sin visión clara, todo esfuerzo es ruido.
+            </p>
+            <p className="text-sm text-consulting-blue font-medium">
+              Incluye: análisis de situación, objetivos SMART, roadmap personalizado
+            </p>
+          </div>
+
+          {/* U */}
+          <div className="bg-consulting-gray-light p-8 rounded-lg hover:shadow-xl transition-all">
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-red flex items-center justify-center">
+                <span className="text-white font-bold text-sm">U</span>
+              </div>
+              <Award className="h-6 w-6 text-brand-red" />
+            </div>
+            <h4 className="text-xl font-bold mb-2">Posicionamiento Único</h4>
+            <p className="text-consulting-gray mb-4">
+              Identificamos las fortalezas reales de tu empresa y construimos una diferenciación
+              que tus competidores no pueden copiar fácilmente.
+              Tu empresa deja de competir por precio.
+            </p>
+            <p className="text-sm text-consulting-blue font-medium">
+              Incluye: análisis competitivo, propuesta de valor, ventajas diferenciales
+            </p>
+          </div>
+
+          {/* D */}
+          <div className="bg-consulting-gray-light p-8 rounded-lg hover:shadow-xl transition-all">
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-red flex items-center justify-center">
+                <span className="text-white font-bold text-sm">D</span>
+              </div>
+              <Layers className="h-6 w-6 text-brand-red" />
+            </div>
+            <h4 className="text-xl font-bold mb-2">Desarrollo de Estructura Interna</h4>
+            <p className="text-consulting-gray mb-4">
+              Preparamos a tu empresa para la siguiente etapa antes de llegar a ella:
+              procesos, métricas, estructura funcional, mentalidad del equipo.
+              Crecer sin estructura es crecer para explotar.
+            </p>
+            <p className="text-sm text-consulting-blue font-medium">
+              Incluye: documentación de procesos, organigrama funcional, capacitación de equipos
+            </p>
+          </div>
+
+          {/* E */}
+          <div className="bg-consulting-gray-light p-8 rounded-lg hover:shadow-xl transition-all">
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-red flex items-center justify-center">
+                <span className="text-white font-bold text-sm">E</span>
+              </div>
+              <Settings className="h-6 w-6 text-brand-red" />
+            </div>
+            <h4 className="text-xl font-bold mb-2">Estándares de lo que Funciona</h4>
+            <p className="text-consulting-gray mb-4">
+              Documentamos y fijamos los procesos que dan resultados.
+              Lo que funciona se convierte en sistema.
+              Lo que es sistema, no depende de que vos estés.
+            </p>
+            <p className="text-sm text-consulting-blue font-medium">
+              Incluye: KPIs, manuales operativos, indicadores de gestión, dashboards
+            </p>
+          </div>
+
+          {/* R */}
+          <div className="bg-consulting-gray-light p-8 rounded-lg hover:shadow-xl transition-all">
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-red flex items-center justify-center">
+                <span className="text-white font-bold text-sm">R</span>
+              </div>
+              <RefreshCw className="h-6 w-6 text-brand-red" />
+            </div>
+            <h4 className="text-xl font-bold mb-2">Revisión y Ciclo Continuo</h4>
+            <p className="text-consulting-gray mb-4">
+              Evaluamos resultados, ajustamos, y repetimos el ciclo.
+              Una empresa que no se revisa periódicamente vuelve al caos.
+              Una que sí lo hace, crece de forma predecible y sostenida.
+            </p>
+            <p className="text-sm text-consulting-blue font-medium">
+              Incluye: ciclo Planificar → Implementar → Evaluar → Mejorar, seguimiento continuo
+            </p>
+          </div>
+
+          {/* Por qué funciona */}
+          <div className="bg-consulting-navy p-8 rounded-lg text-white">
+            <TrendingUp className="h-8 w-8 text-brand-red mb-4" />
+            <h4 className="text-xl font-bold mb-4">¿Por Qué Funciona el Método?</h4>
+            <p className="text-gray-300 mb-4">
+              El ciclo Planificar → Implementar → Evaluar → Mejorar es la base del
+              mejoramiento continuo industrial. Aplicado a la dirección de empresas,
+              produce transformaciones duraderas y sostenibles.
+            </p>
+            <p className="text-gray-300">
+              Esto no es coaching motivacional. Es metodología con base técnica
+              aplicada al management real.
+            </p>
+          </div>
+        </div>
+
+        {/* Sobre Claudio */}
+        <div className="bg-consulting-gray-light rounded-2xl p-10 mb-16">
+          <h3 className="text-2xl font-bold mb-6 text-center">Sobre Claudio Flores</h3>
+          <p className="text-consulting-gray text-lg leading-relaxed mb-6 max-w-3xl mx-auto text-center">
+            Soy ingeniero de formación y estratega empresarial por vocación.
+            Durante 18 años acompañé a más de 270 empresarios en 17 países de 5 continentes.
+            El Método P.U.D.E.R. no lo construyé en una oficina: lo construyé
+            en el campo, trabajando con empresas reales que enfrentaban los problemas que vos tenés hoy.
+          </p>
+          <p className="text-consulting-gray text-lg leading-relaxed max-w-3xl mx-auto text-center">
+            Mi misión es clara: ayudarte a recuperar completamente tu vida personal
+            mientras simultáneamente hacés que tu empresa crezca, prospere y genere
+            los resultados que siempre quisiste.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-consulting-gray-light p-8 rounded-lg hover:shadow-xl transition-all">
-            <div className="p-4 bg-consulting-blue rounded-full inline-block mb-6">
-              <Target className="h-8 w-8 text-white" />
-            </div>
-            <h3 className="text-xl font-bold mb-4">Plan Estratégico Claro</h3>
-            <p className="text-consulting-gray mb-4">
-              • Elimina la confusión operativa<br />
-              • Define objetivos específicos y medibles<br />
-              • Identifica oportunidades de crecimiento<br />
-              • Crea un roadmap personalizado
-            </p>
-            <p className="text-consulting-gray">
-              Incluye análisis de mercado, objetivos SMART e identificación de prioridades que generan impacto inmediato.
-            </p>
-          </div>
-
-          <div className="bg-consulting-gray-light p-8 rounded-lg hover:shadow-xl transition-all">
-            <div className="p-4 bg-consulting-blue rounded-full inline-block mb-6">
-              <BarChart4 className="h-8 w-8 text-white" />
-            </div>
-            <h3 className="text-xl font-bold mb-4">Sistemas Automatizados</h3>
-            <p className="text-consulting-gray mb-4">
-              • Procesos que funcionan sin tu presencia<br />
-              • Estructuras organizacionales sólidas<br />
-              • Liberación completa de tu tiempo<br />
-              • Consistencia en resultados
-            </p>
-            <p className="text-consulting-gray">
-              Incluye documentación de procesos, software de gestión, KPIs y sistemas de monitoreo automatizado.
-            </p>
-          </div>
-
-          <div className="bg-consulting-gray-light p-8 rounded-lg hover:shadow-xl transition-all">
-            <div className="p-4 bg-consulting-blue rounded-full inline-block mb-6">
-              <Clock className="h-8 w-8 text-white" />
-            </div>
-            <h3 className="text-xl font-bold mb-4">Liderazgo y Cultura</h3>
-            <p className="text-consulting-gray mb-4">
-              • Fortalece tu liderazgo estratégico<br />
-              • Desarrolla equipos comprometidos<br />
-              • Crea visión compartida<br />
-              • Establece autonomía operativa
-            </p>
-            <p className="text-consulting-gray">
-              Incluye capacitación en liderazgo, comunicación efectiva e incentivos alineados con objetivos.
-            </p>
-          </div>
-        </div>
-
-        <div className="mb-12 bg-consulting-gray-light p-8 rounded-lg">
-          <h3 className="text-2xl font-bold mb-6 text-center">¿Por Qué Funciona el Método P.U.D.E.R.?</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h4 className="text-xl font-bold mb-3 text-consulting-blue">Enfoque Holístico e Integral</h4>
-              <p className="text-consulting-gray mb-4">
-                A diferencia de otros métodos que se enfocan solo en aspectos específicos, el Método P.U.D.E.R. 
-                aborda todos los elementos críticos de tu empresa: estrategia, operaciones, personas, tecnología 
-                y cultura organizacional. Esta aproximación integral garantiza transformaciones duraderas y sostenibles.
-              </p>
-            </div>
-            <div>
-              <h4 className="text-xl font-bold mb-3 text-consulting-blue">Resultados Medibles y Comprobables</h4>
-              <p className="text-consulting-gray mb-4">
-                Cada implementación del método incluye métricas específicas y KPIs claramente definidos que permiten 
-                medir el progreso de manera objetiva. Mis clientes experimentan mejoras promedio del 50% en 
-                eficiencia operativa y entre 25-40% de incremento en rentabilidad.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="md:flex items-center bg-consulting-navy text-white rounded-lg overflow-hidden">
-          <div className="md:w-1/2">
-            <SafeImage 
-              src="/lovable-uploads/0b84250d-4c53-48c5-9471-1227bf9ff0fb.png"
-              alt="Claudio Flores - Consultor Estratégico Empresarial" 
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="md:w-1/2 p-8 md:p-12">
-            <h3 className="text-2xl font-bold mb-4">Sobre Claudio Flores - Tu Mentor en Transformación Empresarial</h3>
-            <p className="mb-6">
-              Soy Claudio Flores, consultor estratégico empresarial, coach ejecutivo certificado y mentor especializado 
-              para empresarios y líderes empresariales. Con más de 17 años de experiencia internacional y colaboraciones 
-              exitosas en 22 países diferentes, he ayudado a más de 500 empresarios a liberar completamente su tiempo, 
-              reducir significativamente el estrés operativo y transformar radicalmente sus negocios.
-            </p>
-            <p className="mb-6">
-              Mi propia historia empresarial incluye haber estado personalmente atrapado en una empresa que consumía 
-              absolutamente todo mi tiempo y energía vital. A través de un proceso intensivo de aprendizaje, 
-              investigación y transformación personal, desarrollé el "Método P.U.D.E.R." que no solo cambió 
-              completamente mi vida personal y profesional, sino que ha transformado las vidas de cientos de 
-              empresarios alrededor del mundo.
-            </p>
-            <p className="text-consulting-gold font-semibold mb-6">
-              Mi misión de vida es absolutamente clara: ayudarte a recuperar completamente tu vida personal 
-              mientras simultáneamente haces que tu empresa crezca, prospere y genere los resultados financieros 
-              que siempre has soñado alcanzar.
-            </p>
-            
-            <a 
-              href="https://www.linkedin.com/in/claudioflores-coach/"
-              className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-all"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Linkedin className="mr-2 h-5 w-5" />
-              Ver mi perfil profesional completo en LinkedIn
-            </a>
-          </div>
-        </div>
-        
-        <div className="mt-10 text-center">
-          <a 
-            href="https://api.whatsapp.com/send/?phone=5493624236611&text=Hola%2C+quiero+conocer+más+sobre+el+Método+P.U.D.E.R.+y+cómo+puede+transformar+mi+empresa&type=phone_number&app_absent=0"
-            className="inline-flex items-center px-6 py-3 bg-green-600 hover:green-700 text-white font-medium rounded-lg transition-all"
+        {/* CTAs */}
+        <div className="text-center flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="https://www.linkedin.com/in/claudioflores-coach/"
             target="_blank"
             rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 border-2 border-consulting-navy text-consulting-navy font-semibold px-8 py-4 rounded-xl hover:bg-consulting-navy hover:text-white transition-colors"
           >
-            <MessageSquare className="mr-2 h-5 w-5" />
+            <Linkedin className="h-5 w-5" />
+            Ver perfil en LinkedIn
+          </a>
+          <a
+            href="https://api.whatsapp.com/send/?phone=5493624236611&text=Hola%2C+quiero+conocer+m%C3%A1s+sobre+el+M%C3%A9todo+P.U.D.E.R.+y+c%C3%B3mo+puede+transformar+mi+empresa&type=phone_number&app_absent=0"
+            className="inline-flex items-center gap-2 bg-brand-red text-white font-semibold px-8 py-4 rounded-xl hover:bg-red-700 transition-colors"
+          >
+            <MessageSquare className="h-5 w-5" />
             Consulta sobre el Método P.U.D.E.R.
           </a>
         </div>
