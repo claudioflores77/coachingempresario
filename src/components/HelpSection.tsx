@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { HelpCircle, ChevronDown, ChevronUp, MessageSquare } from 'lucide-react';
 
@@ -8,23 +7,23 @@ const HelpSection: React.FC = () => {
   const faqs = [
     {
       question: "¿Qué es el Método P.U.D.E.R. y cómo funciona?",
-      answer: "El Método P.U.D.E.R. es un sistema estructurado de 5 fases que transforma tu empresa para que trabaje para ti. Incluye Planificación estratégica, Unificación de procesos, Desarrollo de equipos, Ejecución sistemática y Resultados medibles. Cada fase tiene objetivos específicos y métricas claras de progreso."
+      answer: "El Método P.U.D.E.R. es un sistema de dirección estratégica en 5 fases: Plan (visión de largo plazo), Único (diferenciación competitiva), Desarrollo (estructura interna para la siguiente etapa), Estándar (fijar lo que funciona) y Repetir (ciclo continuo de planificación, implementación y evaluación). Es el resultado de aplicar los principios del mejoramiento continuo industrial a la dirección de empresas PyME."
     },
     {
       question: "¿Cuánto tiempo toma ver resultados con la consultoría?",
-      answer: "Los primeros resultados son visibles en las primeras 4-6 semanas con la implementación de sistemas básicos. La transformación completa típicamente toma entre 3-6 meses, dependiendo del tamaño y complejidad de tu empresa."
+      answer: "Los primeros resultados son visibles en las primeras 4-6 semanas con la implementación de sistemas básicos. Los programas son de 3 meses por etapa, abordando un tema estratégico a la vez. La transformación completa típicamente toma entre 6 meses y 2 años, dependiendo del tamaño y punto de partida de tu empresa."
     },
     {
       question: "¿Qué tipo de empresas se benefician más de este método?",
-      answer: "Empresas de servicios, retail, manufactura y tecnología con 5-100 empleados que dependen excesivamente del fundador. Especialmente efectivo para el empresario que trabaja más de 60 horas semanales y quiere recuperar su vida personal."
+      answer: "Empresas de servicios, retail, manufactura, distribución e industria con 5 a 60 empleados que dependen excesivamente del fundador o dueño. Especialmente efectivo para el empresario que trabaja más de 10 horas diarias, no puede delegar, no tiene vacaciones reales, y siente que por más que empuja, el techo siempre está ahí."
     },
     {
       question: "¿Cómo se realiza el proceso de consultoría?",
-      answer: "Iniciamos con una sesión estratégica gratuita para diagnosticar tu situación. Luego desarrollamos un plan personalizado que incluye sesiones virtuales semanales, implementación de sistemas, capacitación de equipos y seguimiento de métricas."
+      answer: "Iniciamos con una sesión estratégica gratuita de 45 minutos para diagnosticar tu situación. Luego desarrollamos programas de 3 meses con sesión virtual semanal, implementación de sistemas, capacitación de equipos y seguimiento de métricas. Cada programa tiene objetivos concretos y resultados medibles desde el inicio."
     },
     {
       question: "¿Qué garantías ofrecen en el proceso?",
-      answer: "Mi método está probado por más de 17 años y ha funcionado en más de 22 países diferentes, con empresas de todos los tamaños y complejidades. No hacemos reembolsos porque queremos clientes comprometidos. Nuestro trabajo es 50% del resultado, pero el 50% restante depende totalmente de tu compromiso y acciones. Mis clientes típicamente reducen 50% sus horas de trabajo y aumentan 25-40% su rentabilidad en el primer año."
+      answer: "En 18 años de trabajo, solo devolví dinero una vez. No porque el método fallara, sino porque el cliente no estaba dispuesto a hacer su parte del proceso. Mi compromiso es simple: si yo hago mi trabajo y vos hacés el tuyo, los resultados llegan. Si en algún momento siento que el proceso no está funcionando, hablo con vos antes de que tengas que pedirme nada. Así trabajé siempre. Así voy a seguir trabajando."
     }
   ];
 
@@ -33,70 +32,58 @@ const HelpSection: React.FC = () => {
   };
 
   return (
-    <section id="ayuda" className="section bg-consulting-gray-light">
-      <div className="container">
-        <div className="text-center max-w-4xl mx-auto mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Centro de Ayuda
-          </h1>
-          <p className="text-xl text-consulting-gray">
+    <section id="ayuda" className="section bg-white">
+      <div className="container max-w-4xl mx-auto">
+        <div className="text-center mb-12">
+          <span className="inline-block py-2 px-4 bg-brand-red text-white text-sm font-semibold rounded-full mb-6">
+            PREGUNTAS FRECUENTES
+          </span>
+          <h2 className="text-3xl font-bold mb-4">Centro de Ayuda</h2>
+          <p className="text-consulting-gray text-xl">
             Respuestas sobre consultoría empresarial y el Método P.U.D.E.R.
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <div 
-                key={index} 
-                className="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden"
+        <div className="space-y-2 mb-12">
+          {faqs.map((faq, index) => (
+            <div key={index} className="border border-gray-200 rounded-xl overflow-hidden">
+              <button
+                onClick={() => toggleFaq(index)}
+                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
+                aria-expanded={openFaq === index}
+                aria-controls={`faq-answer-${index}`}
               >
-                <button
-                  onClick={() => toggleFaq(index)}
-                  className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
-                  aria-expanded={openFaq === index}
-                  aria-controls={`faq-answer-${index}`}
-                >
-                  <h3 className="text-lg font-semibold text-consulting-navy pr-4">
-                    {faq.question}
-                  </h3>
-                  {openFaq === index ? (
-                    <ChevronUp className="h-5 w-5 text-consulting-blue flex-shrink-0" />
-                  ) : (
-                    <ChevronDown className="h-5 w-5 text-consulting-blue flex-shrink-0" />
-                  )}
-                </button>
-                {openFaq === index && (
-                  <div 
-                    id={`faq-answer-${index}`}
-                    className="px-6 pb-4 pt-2 animate-slide-down"
-                  >
-                    <p className="text-consulting-gray leading-relaxed">
-                      {faq.answer}
-                    </p>
-                  </div>
+                <h3 className="font-semibold text-lg pr-4">{faq.question}</h3>
+                {openFaq === index ? (
+                  <ChevronUp className="h-5 w-5 text-brand-red flex-shrink-0" />
+                ) : (
+                  <ChevronDown className="h-5 w-5 text-consulting-gray flex-shrink-0" />
                 )}
-              </div>
-            ))}
-          </div>
+              </button>
+              {openFaq === index && (
+                <div
+                  id={`faq-answer-${index}`}
+                  className="px-6 pb-6 text-consulting-gray leading-relaxed bg-gray-50"
+                >
+                  {faq.answer}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
 
-          <div className="mt-12 text-center bg-white rounded-lg p-8 shadow-md">
-            <h2 className="text-2xl font-bold mb-4 text-consulting-navy">
-              ¿Tienes Otras Preguntas?
-            </h2>
-            <p className="text-lg text-consulting-gray mb-6">
-              Hablemos directamente sobre tu situación específica
-            </p>
-            <a 
-              href="https://api.whatsapp.com/send/?phone=5493624236611&text=Hola%2C+tengo+una+pregunta+sobre+consultoría+empresarial+que+no+encontré+en+las+FAQ&type=phone_number&app_absent=0"
-              className="inline-flex items-center px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-all shadow-md hover:shadow-lg text-lg"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <MessageSquare className="mr-2 h-5 w-5" />
-              Contactar por WhatsApp
-            </a>
-          </div>
+        <div className="text-center bg-consulting-navy rounded-2xl p-10 text-white">
+          <h2 className="text-2xl font-bold mb-4">¿Tenés Otras Preguntas?</h2>
+          <p className="text-gray-300 mb-6">
+            Hablemos directamente sobre tu situación específica
+          </p>
+          <a
+            href="https://api.whatsapp.com/send/?phone=5493624236611&text=Hola%2C+tengo+una+pregunta+sobre+consultor%C3%ADa+empresarial+que+no+encontr%C3%A9+en+las+FAQ&type=phone_number&app_absent=0"
+            className="inline-flex items-center gap-2 bg-brand-red text-white font-semibold px-8 py-4 rounded-xl hover:bg-red-700 transition-colors"
+          >
+            <MessageSquare className="h-5 w-5" />
+            Contactar por WhatsApp
+          </a>
         </div>
       </div>
     </section>
