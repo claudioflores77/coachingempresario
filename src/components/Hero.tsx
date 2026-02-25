@@ -81,7 +81,7 @@ const Hero: React.FC = memo(() => {
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="h-4 w-4 text-yellow-400 fill-yellow-400" />
                 ))}
-                <span className="text-consulting-gray text-sm"> 5/5 (47) </span>
+                <span className="text-consulting-gray text-sm"> 5/5 (47 reseñas Google verificadas) </span>
               </div>
 
               {/* ACCIÓN 1: NUEVO TÍTULO - Responsive */}

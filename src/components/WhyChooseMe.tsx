@@ -25,7 +25,7 @@ const WhyChooseMe: React.FC = () => {
           <div className="order-2 lg:order-1">
             <div className="relative">
               <SafeImage
-                src="/lovable-uploads/0b84250d-4c53-48c5-9471-1227bf9ff0fb.png"
+                src="/assets/claudio-flores-profile.jpeg"
                 alt="Claudio Flores - Consultor Estratégico Empresarial"
                 className="w-full h-96 object-cover rounded-2xl shadow-2xl"
               />
