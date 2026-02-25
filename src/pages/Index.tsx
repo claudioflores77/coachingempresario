@@ -33,7 +33,6 @@ const Index = () => {
   const [currentSection, setCurrentSection] = useState('hero');
 
   useEffect(() => {
-    console.log('Index page loading...');
     
     // Update page title and meta description for better SEO
     document.title = "Claudio Flores - Consultoría Estratégica Empresarial | Método P.U.D.E.R.";
@@ -66,7 +65,7 @@ const Index = () => {
       if (element) observer.observe(element);
     });
 
-    console.log('Index page loaded successfully');
+
 
     return () => {
       observer.disconnect();
@@ -94,7 +93,7 @@ const Index = () => {
     }
   ];
 
-  console.log('Index component rendering');
+
 
   return (
     <div className="min-h-screen">
