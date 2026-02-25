@@ -12,7 +12,7 @@ const HEADLINE_VARIANTS = {
     mainMobile: "El Sistema Que Libera Tu Tiempo Sin Sacrificar Rentabilidad",
     highlight: "Con el Método P.U.D.E.R.",
     sublineDesktop: "Crea sistemas automatizados y equipos autónomos que trabajan sin ti",
-    sublineMobile: "Sistemas automatizados + equipos autónomos"
+    sublineMobile: "Crea sistemas automatizados y equipos autónomos que trabajan sin ti"
   },
   B: {
     mainDesktop: "Empresas Autónomas y Rentables Para Emprendedores Atrapados",
@@ -143,15 +143,15 @@ const Hero: React.FC = memo(() => {
                 {/* PRUEBA SOCIAL - Grid 3 columnas */}
                 <div className="grid grid-cols-3 gap-2 md:gap-3 animate-slide-up" style={{ animationDelay: '0.15s' }}>
                   <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-lg p-3 border border-white/20 text-center hover:border-brand-yellow/50 transition-all">
-                    <div className="text-2xl md:text-3xl font-black text-white mb-1">17+</div>
+                    <div className="text-2xl md:text-3xl font-black text-white mb-1">18+</div>
                     <div className="text-xs text-white/70 uppercase font-medium">Años Exp.</div>
                   </div>
                   <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-lg p-3 border border-white/20 text-center hover:border-brand-yellow/50 transition-all">
-                    <div className="text-2xl md:text-3xl font-black text-white mb-1">22</div>
+                    <div className="text-2xl md:text-3xl font-black text-white mb-1">17</div>
                     <div className="text-xs text-white/70 uppercase font-medium">Países</div>
                   </div>
                   <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-lg p-3 border border-white/20 text-center hover:border-brand-yellow/50 transition-all">
-                    <div className="text-2xl md:text-3xl font-black text-white mb-1">500+</div>
+                    <div className="text-2xl md:text-3xl font-black text-white mb-1">270+</div>
                     <div className="text-xs text-white/70 uppercase font-medium">Clientes</div>
                   </div>
                 </div>
@@ -235,7 +235,7 @@ const Hero: React.FC = memo(() => {
 
                     {/* ACCIÓN 3: Badge sin emoji */}
                     <div className="absolute -bottom-6 -right-6 bg-brand-yellow text-brand-black px-8 py-4 rounded-xl shadow-2xl font-bold text-center hover:scale-105 transition-transform">
-                      <div className="text-3xl font-black">17 años</div>
+                      <div className="text-3xl font-black">18 años</div>
                       <div className="text-sm">transformando empresas</div>
                     </div>
                   </div>
@@ -282,7 +282,7 @@ const Hero: React.FC = memo(() => {
               {/* Contador Social */}
               <div className="bg-brand-green/20 rounded-lg md:rounded-xl p-4 md:p-6 max-w-md mx-auto border border-brand-green/50">
                 <p className="text-center text-base md:text-xl mb-2 md:mb-3">
-                  <span className="text-brand-yellow font-bold text-xl md:text-2xl">500+</span> 
+                  <span className="text-brand-yellow font-bold text-xl md:text-2xl">270+</span>
                   <span className="text-white/90"> empresarios liberados</span>
                 </p>
                 <div className="flex justify-center items-center gap-2 text-xs md:text-sm text-white/70">
@@ -303,17 +303,17 @@ const Hero: React.FC = memo(() => {
                 <div className="flex items-center justify-center gap-2 flex-wrap text-xs md:text-sm text-white/70">
                   <span className="flex items-center gap-1">
                     <Award className="h-3 w-3" />
-                    17 años
+                    18 años
                   </span>
                   <span className="hidden sm:inline">•</span>
                   <span className="flex items-center gap-1">
                     <Globe className="h-3 w-3" />
-                    22 países
+                    17 países
                   </span>
                   <span className="hidden sm:inline">•</span>
                   <span className="flex items-center gap-1">
                     <Star className="h-3 w-3" />
-                    500+ clientes
+                    270+ clientes
                   </span>
                 </div>
               </div>
