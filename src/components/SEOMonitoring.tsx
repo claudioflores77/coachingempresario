@@ -12,17 +12,7 @@ const SEOMonitoring: React.FC = () => {
         });
       }
       
-      // Custom tracking for SEO metrics
-      const seoData = {
-        url: window.location.href,
-        title: document.title,
-        timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent,
-        referrer: document.referrer
-      };
-      
-      // Store SEO tracking data (could be sent to analytics service)
-      localStorage.setItem('seo_tracking', JSON.stringify(seoData));
+      // SEO metrics tracked via analytics only (no local storage)
     };
 
     // Track on mount
