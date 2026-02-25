@@ -129,9 +129,9 @@ const Hero: React.FC = memo(() => {
                 
                 {/* SUBTÍTULO */}
                 <div className="bg-black/30 backdrop-blur-md rounded-xl lg:rounded-2xl p-4 md:p-6 lg:p-8 border border-white/10 shadow-2xl">
-                  <p className="text-base md:text-lg lg:text-xl text-white/95 leading-relaxed">
-                    Para emprendedores que viven apagando incendios y quieren recuperar su vida personal en 90 días
-                  </p>
+                  <p className="text-base md:text-lg lg:text-xl text-white/95 leading-relaxed">Para Directores y Dueños que están atrapados por su empresa y quieren recuperar su vida personal en 90 días
+
+                </p>
                   <div className="mt-3 pt-3 border-t border-white/10">
                     <p className="text-sm md:text-base lg:text-lg text-brand-yellow font-semibold">
                       <Clock className="inline h-4 w-4 mr-1" />
@@ -143,15 +143,15 @@ const Hero: React.FC = memo(() => {
                 {/* PRUEBA SOCIAL - Grid 3 columnas */}
                 <div className="grid grid-cols-3 gap-2 md:gap-3 animate-slide-up" style={{ animationDelay: '0.15s' }}>
                   <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-lg p-3 border border-white/20 text-center hover:border-brand-yellow/50 transition-all">
-                    <div className="text-2xl md:text-3xl font-black text-white mb-1">17+</div>
+                    <div className="text-2xl md:text-3xl font-black text-white mb-1">18+</div>
                     <div className="text-xs text-white/70 uppercase font-medium">Años Exp.</div>
                   </div>
                   <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-lg p-3 border border-white/20 text-center hover:border-brand-yellow/50 transition-all">
-                    <div className="text-2xl md:text-3xl font-black text-white mb-1">22</div>
+                    <div className="text-2xl md:text-3xl font-black text-white mb-1">17</div>
                     <div className="text-xs text-white/70 uppercase font-medium">Países</div>
                   </div>
                   <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-lg p-3 border border-white/20 text-center hover:border-brand-yellow/50 transition-all">
-                    <div className="text-2xl md:text-3xl font-black text-white mb-1">500+</div>
+                    <div className="text-2xl md:text-3xl font-black text-white mb-1">270+</div>
                     <div className="text-xs text-white/70 uppercase font-medium">Clientes</div>
                   </div>
                 </div>
@@ -264,7 +264,7 @@ const Hero: React.FC = memo(() => {
                 
                 <div className="bg-white/5 backdrop-blur-sm rounded-lg md:rounded-xl p-4 md:p-6 border border-white/10 hover:border-brand-yellow/50 transition-all group">
                   <Clock className="h-8 w-8 md:h-10 md:w-10 text-brand-yellow mb-2 md:mb-3 mx-auto" />
-                  <p className="text-base md:text-lg font-semibold text-brand-yellow mb-1 md:mb-2">En 3 Minutos</p>
+                  <p className="text-base md:text-lg font-semibold text-brand-yellow mb-1 md:mb-2">En 30 Minutos</p>
                   <p className="text-xs md:text-sm text-white/70">Resultados instantáneos</p>
                 </div>
                 
@@ -282,7 +282,7 @@ const Hero: React.FC = memo(() => {
               {/* Contador Social */}
               <div className="bg-brand-green/20 rounded-lg md:rounded-xl p-4 md:p-6 max-w-md mx-auto border border-brand-green/50">
                 <p className="text-center text-base md:text-xl mb-2 md:mb-3">
-                  <span className="text-brand-yellow font-bold text-xl md:text-2xl">500+</span> 
+                  <span className="text-brand-yellow font-bold text-xl md:text-2xl">270+</span> 
                   <span className="text-white/90"> empresarios liberados</span>
                 </p>
                 <div className="flex justify-center items-center gap-2 text-xs md:text-sm text-white/70">
@@ -299,7 +299,7 @@ const Hero: React.FC = memo(() => {
                   </div>
                   <p className="text-xl md:text-2xl font-bold text-brand-yellow">Claudio Flores</p>
                 </div>
-                <p className="text-sm md:text-base text-white/90 font-medium mb-2 md:mb-3">Consultor Estratégico | Creador del Método P.U.D.E.R.</p>
+                <p className="text-sm md:text-base text-white/90 font-medium mb-2 md:mb-3">Gestión Estratégica | Creador del Método P.U.D.E.R.</p>
                 <div className="flex items-center justify-center gap-2 flex-wrap text-xs md:text-sm text-white/70">
                   <span className="flex items-center gap-1">
                     <Award className="h-3 w-3" />
