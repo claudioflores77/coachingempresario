@@ -55,23 +55,23 @@ const Hero: React.FC = memo(() => {
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070')] bg-cover bg-center"></div>
         <div className="absolute inset-0 bg-gradient-to-br from-brand-black/95 via-brand-black/92 to-brand-green/95"></div>
         <div className="absolute inset-0 opacity-5" style={{
-          backgroundImage: `repeating-linear-gradient(
+        backgroundImage: `repeating-linear-gradient(
             45deg,
             transparent,
             transparent 10px,
             rgba(255,255,255,.03) 10px,
             rgba(255,255,255,.03) 20px
           )`
-        }}></div>
+      }}></div>
         
         <div className="container relative z-10 my-4 md:my-8">
           <div id="hero-content" className="max-w-7xl mx-auto">
             
-            {process.env.NODE_ENV === 'development' && (
-              <div className="mb-4 text-xs text-brand-yellow opacity-50 text-center">
+            {process.env.NODE_ENV === 'development' &&
+          <div className="mb-4 text-xs text-brand-yellow opacity-50 text-center">
                 A/B Test: Variant {variant} | OPTIMIZADO - 5 Acciones
               </div>
-            )}
+          }
             
             <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-6 lg:gap-12 items-start lg:items-center">
               
@@ -81,22 +81,22 @@ const Hero: React.FC = memo(() => {
                 {/* MOBILE: Foto pequeña + Badge */}
                 <div className="lg:hidden flex flex-col items-center gap-3 mb-4">
                   <div className="relative inline-block">
-                    <img 
-                      src="/assets/claudio-flores-profile.jpeg"
-                      alt="Claudio Flores - Consultor Estratégico"
-                      className="w-24 h-24 object-cover rounded-full border-3 border-brand-yellow/50 shadow-xl"
-                      loading="eager"
-                    />
+                    <img
+                    src="/assets/claudio-flores-profile.jpeg"
+                    alt="Claudio Flores - Consultor Estratégico"
+                    className="w-24 h-24 object-cover rounded-full border-3 border-brand-yellow/50 shadow-xl"
+                    loading="eager" />
+
                     {/* ACCIÓN 3: Badge sin emoji, solo texto */}
-                    <div className="absolute -bottom-2 -right-2 bg-brand-yellow text-brand-black px-2 py-1 rounded-lg shadow-lg text-xs font-bold">
-                      17 años
-                    </div>
+                    <div className="absolute -bottom-2 -right-2 bg-brand-yellow text-brand-black px-2 py-1 rounded-lg shadow-lg text-xs font-bold">18 años
+
+                  </div>
                   </div>
                   <div className="flex items-center gap-2 bg-gray-800/50 rounded-full px-3 py-1.5 border border-gray-700">
                     <div className="flex">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="h-3 w-3 text-brand-yellow fill-brand-yellow" />
-                      ))}
+                      {[...Array(5)].map((_, i) =>
+                    <Star key={i} className="h-3 w-3 text-brand-yellow fill-brand-yellow" />
+                    )}
                     </div>
                     <span className="text-xs text-white/90 font-medium">4.9/5 (500+)</span>
                   </div>
@@ -141,7 +141,7 @@ const Hero: React.FC = memo(() => {
                 </div>
 
                 {/* PRUEBA SOCIAL - Grid 3 columnas */}
-                <div className="grid grid-cols-3 gap-2 md:gap-3 animate-slide-up" style={{animationDelay: '0.15s'}}>
+                <div className="grid grid-cols-3 gap-2 md:gap-3 animate-slide-up" style={{ animationDelay: '0.15s' }}>
                   <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-lg p-3 border border-white/20 text-center hover:border-brand-yellow/50 transition-all">
                     <div className="text-2xl md:text-3xl font-black text-white mb-1">17+</div>
                     <div className="text-xs text-white/70 uppercase font-medium">Años Exp.</div>
@@ -157,14 +157,14 @@ const Hero: React.FC = memo(() => {
                 </div>
 
                 {/* ACCIÓN 4: CTA UNIFICADO - Mismo texto en toda la landing */}
-                <div className="animate-slide-up" style={{animationDelay: '0.2s'}}>
-                  <a 
-                    href="https://estrategiaempresaria.systeme.io/sesionestrategica1a1"
-                    className="flex items-center justify-center gap-2 md:gap-3 bg-brand-yellow hover:bg-yellow-500 text-brand-black px-6 md:px-8 py-4 md:py-5 rounded-xl text-base md:text-xl font-bold shadow-2xl hover:shadow-3xl transition-all hover:scale-105 group w-full"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => handleCTAClick('CTA Principal Hero')}
-                  >
+                <div className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
+                  <a
+                  href="https://estrategiaempresaria.systeme.io/sesionestrategica1a1"
+                  className="flex items-center justify-center gap-2 md:gap-3 bg-brand-yellow hover:bg-yellow-500 text-brand-black px-6 md:px-8 py-4 md:py-5 rounded-xl text-base md:text-xl font-bold shadow-2xl hover:shadow-3xl transition-all hover:scale-105 group w-full"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => handleCTAClick('CTA Principal Hero')}>
+
                     <CheckCircle className="h-5 w-5 md:h-6 md:w-6 flex-shrink-0" />
                     <span className="text-center">Agenda Tu Sesión Estratégica GRATUITA</span>
                     <ArrowRight className="h-5 w-5 md:h-6 md:w-6 group-hover:translate-x-2 transition-transform flex-shrink-0" />
@@ -188,34 +188,34 @@ const Hero: React.FC = memo(() => {
                 </div>
 
                 {/* CTAs Secundarios */}
-                <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start items-center pt-3 border-t border-white/10 animate-slide-up text-sm md:text-base" style={{animationDelay: '0.25s'}}>
-                  <a 
-                    href="#sobre-metodo" 
-                    className="text-brand-yellow hover:text-white underline transition-colors flex items-center gap-1.5 group"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleCTAClick('Ver Método P.U.D.E.R.');
-                      const element = document.getElementById('sobre-metodo');
-                      if (element) {
-                        const headerHeight = 80;
-                        const targetPosition = element.offsetTop - headerHeight;
-                        window.scrollTo({ top: targetPosition, behavior: 'smooth' });
-                      }
-                    }}
-                  >
+                <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start items-center pt-3 border-t border-white/10 animate-slide-up text-sm md:text-base" style={{ animationDelay: '0.25s' }}>
+                  <a
+                  href="#sobre-metodo"
+                  className="text-brand-yellow hover:text-white underline transition-colors flex items-center gap-1.5 group"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleCTAClick('Ver Método P.U.D.E.R.');
+                    const element = document.getElementById('sobre-metodo');
+                    if (element) {
+                      const headerHeight = 80;
+                      const targetPosition = element.offsetTop - headerHeight;
+                      window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+                    }
+                  }}>
+
                     <span>Ver el Método</span>
                     <ArrowRight className="h-3.5 w-3.5 md:h-4 md:w-4 group-hover:translate-x-1 transition-transform" />
                   </a>
                   
                   <span className="text-white/40 hidden sm:inline">•</span>
                   
-                  <a 
-                    href="https://api.whatsapp.com/send/?phone=5493624236611&text=Hola%2C+quiero+hacer+una+pregunta+sobre+consultoría+empresarial&type=phone_number&app_absent=0" 
-                    className="flex items-center gap-1.5 text-green-400 hover:text-green-300 transition-colors group"
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    onClick={() => handleCTAClick('WhatsApp Hero')}
-                  >
+                  <a
+                  href="https://api.whatsapp.com/send/?phone=5493624236611&text=Hola%2C+quiero+hacer+una+pregunta+sobre+consultoría+empresarial&type=phone_number&app_absent=0"
+                  className="flex items-center gap-1.5 text-green-400 hover:text-green-300 transition-colors group"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => handleCTAClick('WhatsApp Hero')}>
+
                     <MessageSquare className="h-3.5 w-3.5 md:h-4 md:w-4 group-hover:scale-110 transition-transform" />
                     <span>WhatsApp</span>
                   </a>
@@ -224,15 +224,15 @@ const Hero: React.FC = memo(() => {
               </div>
 
               {/* COLUMNA DERECHA: Foto Grande (Desktop Only) */}
-              <div className="hidden lg:block animate-slide-up" style={{animationDelay: '0.3s'}}>
+              <div className="hidden lg:block animate-slide-up" style={{ animationDelay: '0.3s' }}>
                 <div className="relative">
                   <div className="relative w-full max-w-md mx-auto">
-                    <img 
-                      src="/assets/claudio-flores-profile.jpeg"
-                      alt="Claudio Flores - Consultor Estratégico Empresarial con 17 años de experiencia transformando empresas"
-                      className="w-full h-auto object-cover rounded-2xl shadow-2xl border-4 border-brand-yellow/50 hover:border-brand-yellow/70 transition-all"
-                      loading="eager"
-                    />
+                    <img
+                    src="/assets/claudio-flores-profile.jpeg"
+                    alt="Claudio Flores - Consultor Estratégico Empresarial con 17 años de experiencia transformando empresas"
+                    className="w-full h-auto object-cover rounded-2xl shadow-2xl border-4 border-brand-yellow/50 hover:border-brand-yellow/70 transition-all"
+                    loading="eager" />
+
                     {/* ACCIÓN 3: Badge sin emoji */}
                     <div className="absolute -bottom-6 -right-6 bg-brand-yellow text-brand-black px-8 py-4 rounded-xl shadow-2xl font-bold text-center hover:scale-105 transition-transform">
                       <div className="text-3xl font-black">17 años</div>
@@ -245,7 +245,7 @@ const Hero: React.FC = memo(() => {
             </div>
 
             {/* SECCIÓN INFERIOR: Garantías + FOMO */}
-            <div className="text-center mt-8 md:mt-12 space-y-4 md:space-y-6 animate-slide-up" style={{animationDelay: '0.35s'}}>
+            <div className="text-center mt-8 md:mt-12 space-y-4 md:space-y-6 animate-slide-up" style={{ animationDelay: '0.35s' }}>
               
               {/* ACCIÓN 3: Garantías SIN emojis, usando iconos */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 max-w-4xl mx-auto">
