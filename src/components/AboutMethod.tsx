@@ -1,6 +1,8 @@
 import React from 'react';
+import { Clock, Target, BarChart4, CheckCircle } from 'lucide-react';
 
 const AboutMethod: React.FC = () => {
+  console.log('AboutMethod component rendering');
   return (
     <section id="sobre-metodo" className="section bg-white">
       <div className="container">
@@ -16,80 +18,114 @@ const AboutMethod: React.FC = () => {
           </p>
         </div>
 
-        <div className="bg-consulting-gray-light p-6 rounded-lg mb-8 text-center max-w-3xl mx-auto">
-          <p className="text-lg text-consulting-gray font-medium">
-            Un sistema de dirección estratégica en 5 fases que transforma tu empresa paso a paso, sin que tengas que parar de operar.
+        {/* ✅ OPTIMIZACIÓN FASE 3.1: Eliminada sección de "5 causas de muerte empresarial" */}
+        {/* Razón: Repetición del dolor (ya está en ProblemSection) */}
+        {/* Ahorro: ~80 líneas, ~300 palabras, 15-20 segundos de lectura */}
+
+        <div className="bg-consulting-gray-light p-6 rounded-lg mb-6">
+          <h3 className="text-xl font-bold mb-4 text-consulting-navy">
+            P.U.D.E.R.: <span className="text-consulting-blue">Plan, Único, Desarrollo, Estándar, Repetir</span>
+          </h3>
+          <p className="text-lg text-consulting-gray">
+            Un sistema probado con 270+ empresarios en 17 países que convierte tu negocio caótico
+            en una máquina predecible y rentable.
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-6">
-
-          {/* P */}
-          <div className="bg-consulting-gray-light p-8 rounded-lg hover:shadow-xl transition-all border border-transparent hover:border-consulting-blue/20 w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)]">
-            <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-12 rounded-full bg-consulting-blue text-white flex items-center justify-center text-2xl font-bold shadow-md shrink-0">
-                P
-              </div>
-              <h3 className="text-xl font-bold text-consulting-navy">Plan Estratégico</h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="bg-consulting-gray-light p-8 rounded-lg hover:shadow-xl transition-all">
+            <div className="p-4 bg-consulting-blue-light rounded-full inline-block mb-6">
+              <Target className="h-8 w-8 text-consulting-blue" />
             </div>
-            <p className="text-consulting-gray leading-relaxed">
-              Definimos juntos a dónde querés llegar. Sin visión clara de largo plazo, todo esfuerzo es ruido. Construimos el mapa antes de empezar a caminar.
+            <h3 className="text-xl font-bold mb-4">Fase 1: Claridad y Enfoque Estratégico</h3>
+            <p className="text-consulting-gray mb-4">
+              Despejamos completamente la confusión operativa y trazamos un plan estratégico
+              claro para alcanzar tus metas. Identificamos lo verdaderamente importante.
             </p>
+            <ul className="space-y-2">
+              <li className="flex items-center gap-2">
+                <CheckCircle className="h-4 w-4 text-brand-red flex-shrink-0" />
+                <span className="text-sm">Análisis profundo de tu situación actual</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <CheckCircle className="h-4 w-4 text-brand-red flex-shrink-0" />
+                <span className="text-sm">Definición de objetivos SMART</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <CheckCircle className="h-4 w-4 text-brand-red flex-shrink-0" />
+                <span className="text-sm">Identificación de oportunidades</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <CheckCircle className="h-4 w-4 text-brand-red flex-shrink-0" />
+                <span className="text-sm">Roadmap estratégico personalizado</span>
+              </li>
+            </ul>
           </div>
 
-          {/* U */}
-          <div className="bg-consulting-gray-light p-8 rounded-lg hover:shadow-xl transition-all border border-transparent hover:border-consulting-blue/20 w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)]">
-             <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-12 rounded-full bg-consulting-blue text-white flex items-center justify-center text-2xl font-bold shadow-md shrink-0">
-                U
-              </div>
-              <h3 className="text-xl font-bold text-consulting-navy">Único Posicionamiento</h3>
+          <div className="bg-consulting-gray-light p-8 rounded-lg hover:shadow-xl transition-all">
+            <div className="p-4 bg-consulting-blue-light rounded-full inline-block mb-6">
+              <BarChart4 className="h-8 w-8 text-consulting-blue" />
             </div>
-            <p className="text-consulting-gray leading-relaxed">
-              Identificamos tus fortalezas reales y lo que te diferencia de la competencia. Tu empresa deja de competir por precio y empieza a ganar por valor.
+            <h3 className="text-xl font-bold mb-4">Fase 2: Sistemas y Procesos</h3>
+            <p className="text-consulting-gray mb-4">
+              Implementamos sistemas operativos robustos que permiten a tu empresa
+              funcionar eficientemente sin depender de tu presencia física.
             </p>
+            <ul className="space-y-2">
+              <li className="flex items-center gap-2">
+                <CheckCircle className="h-4 w-4 text-brand-red flex-shrink-0" />
+                <span className="text-sm">Documentación completa de procesos</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <CheckCircle className="h-4 w-4 text-brand-red flex-shrink-0" />
+                <span className="text-sm">Implementación de software de gestión</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <CheckCircle className="h-4 w-4 text-brand-red flex-shrink-0" />
+                <span className="text-sm">Establecimiento de KPIs</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <CheckCircle className="h-4 w-4 text-brand-red flex-shrink-0" />
+                <span className="text-sm">Sistemas de monitoreo automático</span>
+              </li>
+            </ul>
           </div>
 
-          {/* D */}
-          <div className="bg-consulting-gray-light p-8 rounded-lg hover:shadow-xl transition-all border border-transparent hover:border-consulting-blue/20 w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)]">
-             <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-12 rounded-full bg-consulting-blue text-white flex items-center justify-center text-2xl font-bold shadow-md shrink-0">
-                D
-              </div>
-              <h3 className="text-xl font-bold text-consulting-navy">Desarrollo de Estructura</h3>
+          <div className="bg-consulting-gray-light p-8 rounded-lg hover:shadow-xl transition-all">
+            <div className="p-4 bg-consulting-blue-light rounded-full inline-block mb-6">
+              <Clock className="h-8 w-8 text-consulting-blue" />
             </div>
-            <p className="text-consulting-gray leading-relaxed">
-              Diseñamos los procesos, métricas, roles y la mentalidad necesaria para la próxima etapa de crecimiento. Tu equipo empieza a funcionar sin que estés en todo.
+            <h3 className="text-xl font-bold mb-4">Fase 3: Liderazgo y Equipos</h3>
+            <p className="text-consulting-gray mb-4">
+              Fortalecemos la cultura organizacional y desarrollamos equipos comprometidos
+              que trabajan autónomamente hacia los objetivos.
             </p>
+            <ul className="space-y-2">
+              <li className="flex items-center gap-2">
+                <CheckCircle className="h-4 w-4 text-brand-red flex-shrink-0" />
+                <span className="text-sm">Programas de capacitación en liderazgo</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <CheckCircle className="h-4 w-4 text-brand-red flex-shrink-0" />
+                <span className="text-sm">Desarrollo de competencias del equipo</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <CheckCircle className="h-4 w-4 text-brand-red flex-shrink-0" />
+                <span className="text-sm">Sistemas de comunicación efectiva</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <CheckCircle className="h-4 w-4 text-brand-red flex-shrink-0" />
+                <span className="text-sm">Cultura de alto rendimiento</span>
+              </li>
+            </ul>
           </div>
-
-          {/* E */}
-          <div className="bg-consulting-gray-light p-8 rounded-lg hover:shadow-xl transition-all border border-transparent hover:border-consulting-blue/20 w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)]">
-             <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-12 rounded-full bg-consulting-blue text-white flex items-center justify-center text-2xl font-bold shadow-md shrink-0">
-                E
-              </div>
-              <h3 className="text-xl font-bold text-consulting-navy">Estándares de lo que Funciona</h3>
-            </div>
-            <p className="text-consulting-gray leading-relaxed">
-              Lo que funciona se convierte en sistema. Lo que es sistema no depende de que vos estés presente. Tu empresa gana consistencia y previsibilidad.
-            </p>
-          </div>
-
-          {/* R */}
-          <div className="bg-consulting-gray-light p-8 rounded-lg hover:shadow-xl transition-all border border-transparent hover:border-consulting-blue/20 w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)]">
-             <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-12 rounded-full bg-consulting-blue text-white flex items-center justify-center text-2xl font-bold shadow-md shrink-0">
-                R
-              </div>
-              <h3 className="text-xl font-bold text-consulting-navy">Repetir el Ciclo</h3>
-            </div>
-            <p className="text-consulting-gray leading-relaxed">
-              Evaluamos resultados, ajustamos y volvemos a ejecutar. Una empresa que revisa crece de forma predecible. Este ciclo es el que garantiza resultados sostenidos en el tiempo.
-            </p>
-          </div>
-
         </div>
+
+        {/* ✅ OPTIMIZACIÓN FASE 3.1: Eliminada card de resultados "50%, 40%, 90 días" */}
+        {/* Razón: Números ya aparecen en Hero y ProblemSection (redundante) */}
+        {/* ✅ OPTIMIZACIÓN FASE 3.1: Eliminado CTA de AboutMethod */}
+        {/* Razón: Ya hay CTA en ProblemSection (antes) y en CallToAction (después) */}
+
       </div>
     </section>
   );

@@ -93,7 +93,7 @@ const StickyButton: React.FC<StickyButtonProps> = memo(({
             <div className="flex items-center justify-center gap-3 mt-2 text-[10px] text-white/60">
               <span className="flex items-center gap-1">
                 <CheckCircle className="h-2.5 w-2.5 text-brand-yellow" />
-                45 min
+                3 min
               </span>
               <span>•</span>
               <span className="flex items-center gap-1">
