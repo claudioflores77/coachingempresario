@@ -150,7 +150,7 @@ const Index = () => {
       {/* NUEVO: Sticky Button Mobile */}
       <StickyButton 
         ctaUrl="https://coachingempresario.lovable.app/"
-        ctaText="Diagnóstico Gratis"
+        ctaText="Sesión Estratégica GRATUITA"
         showAfterScroll={400}
       />
       
