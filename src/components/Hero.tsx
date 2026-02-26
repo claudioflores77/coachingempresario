@@ -15,8 +15,8 @@ const HEADLINE_VARIANTS = {
     sublineMobile: "Sistemas automatizados + equipos autónomos"
   },
   B: {
-    mainDesktop: "Empresas Autónomas y Rentables Para Emprendedores Atrapados",
-    mainMobile: "Empresas Autónomas Para Emprendedores Atrapados",
+    mainDesktop: "Empresas Independientes y Rentables Para Empresarios Atrapados",
+    mainMobile: "Empresas Independientes Para Empresarios Atrapados",
     highlight: "Método P.U.D.E.R.",
     sublineDesktop: "Que Viven Apagando Incendios y Quieren Recuperar Su Vida",
     sublineMobile: "Recupera tu vida en 90 días"
