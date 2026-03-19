@@ -27,8 +27,8 @@ const WhyChooseMe: React.FC = () => {
               <SafeImage
                 src="/lovable-uploads/0b84250d-4c53-48c5-9471-1227bf9ff0fb.png"
                 alt="Claudio Flores - Consultor Estratégico Empresarial"
-                className="w-full h-96 object-cover rounded-2xl shadow-2xl"
-              />
+                className="w-full h-96 object-cover rounded-2xl shadow-2xl" />
+
               <div className="absolute -bottom-6 -right-6 bg-brand-red text-white p-4 rounded-xl shadow-lg">
                 <div className="text-2xl font-bold">18+</div>
                 <div className="text-sm">Años</div>
@@ -42,7 +42,7 @@ const WhyChooseMe: React.FC = () => {
               <div className="flex items-start gap-4">
                 <Wrench className="h-7 w-7 text-brand-red mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="font-bold text-lg mb-2">Ingeniero de formación, estratega por vocación</h3>
+                  <h3 className="font-bold text-lg mb-2">Formación en Ingeniería Química, vocación de Estratega  </h3>
                   <p className="text-consulting-gray">
                     Cuando entro a tu empresa, no traigo intuición. Traigo método, métricas y sistema.
                     El Método P.U.D.E.R. aplica los principios del mejoramiento continuo industrial
@@ -57,10 +57,10 @@ const WhyChooseMe: React.FC = () => {
                 <TrendingUp className="h-7 w-7 text-brand-red mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="font-bold text-lg mb-2">Casos reales, números reales</h3>
-                  <p className="text-consulting-gray">
-                    Una empresa distribuidora: de USD 10.000 a USD 120.000 mensuales.
-                    Una empresaria metalurgia que hoy vive donde siempre quiso y hace lo que ama.
-                    Esos no son promedios. Son transformaciones reales, documentadas.
+                  <p className="text-consulting-gray">Una empresa distribuidora: de USD 10.000 a USD 120.000 mensuales. Una empresaria metalurgia que hoy vive donde siempre quiso y hace lo que ama. Esos no son promedios. Son transformaciones reales, documentadas.
+
+
+
                   </p>
                 </div>
               </div>
@@ -155,21 +155,21 @@ const WhyChooseMe: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="https://estrategiaempresaria.systeme.io/sesionestrategica1a1"
-              className="bg-brand-red text-white font-semibold px-8 py-4 rounded-xl hover:bg-red-700 transition-colors"
-            >
+              className="bg-brand-red text-white font-semibold px-8 py-4 rounded-xl hover:bg-red-700 transition-colors">
+
               Sesión Estratégica Gratuita
             </a>
             <a
               href="https://api.whatsapp.com/send/?phone=5493624236611&text=Hola%2C+quiero+saber+m%C3%A1s+sobre+tu+experiencia+y+m%C3%A9todo&type=phone_number&app_absent=0"
-              className="bg-white text-consulting-navy font-semibold px-8 py-4 rounded-xl hover:bg-gray-100 transition-colors"
-            >
+              className="bg-white text-consulting-navy font-semibold px-8 py-4 rounded-xl hover:bg-gray-100 transition-colors">
+
               WhatsApp
             </a>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default WhyChooseMe;

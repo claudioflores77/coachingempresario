@@ -31,8 +31,6 @@ const Footer: React.FC = memo(() => {
               const currentUrl = window.location.href;
               const currentDomain = window.location.hostname;
               
-              console.log('Metricool tracking URL:', currentUrl);
-              console.log('Metricool tracking domain:', currentDomain);
               
               // Initialize tracker with additional parameters to force domain recognition
               window.beTracker.t({
@@ -44,16 +42,16 @@ const Footer: React.FC = memo(() => {
               });
             }
           } catch (error) {
-            console.log('Error initializing Metricool tracker:', error);
+            // Error initializing Metricool tracker
           }
         };
         script.onerror = () => {
-          console.log('Metricool script failed to load');
+          // Metricool script failed to load
         };
         
         document.head.appendChild(script);
       } catch (error) {
-        console.log('Error loading Metricool script:', error);
+        // Error loading Metricool script
       }
     };
 

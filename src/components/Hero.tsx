@@ -15,8 +15,8 @@ const HEADLINE_VARIANTS = {
     sublineMobile: "Crea sistemas automatizados y equipos autónomos que trabajan sin ti"
   },
   B: {
-    mainDesktop: "Empresas Autónomas y Rentables Para Emprendedores Atrapados",
-    mainMobile: "Empresas Autónomas Para Emprendedores Atrapados",
+    mainDesktop: "Empresas Independientes y Rentables Para Empresarios Atrapados",
+    mainMobile: "Empresas Independientes Para Empresarios Atrapados",
     highlight: "Método P.U.D.E.R.",
     sublineDesktop: "Que Viven Apagando Incendios y Quieren Recuperar Su Vida",
     sublineMobile: "Recupera tu vida en 90 días"
@@ -129,9 +129,9 @@ const Hero: React.FC = memo(() => {
                 
                 {/* SUBTÍTULO */}
                 <div className="bg-black/30 backdrop-blur-md rounded-xl lg:rounded-2xl p-4 md:p-6 lg:p-8 border border-white/10 shadow-2xl">
-                  <p className="text-base md:text-lg lg:text-xl text-white/95 leading-relaxed">
-                    Para emprendedores que viven apagando incendios y quieren recuperar su vida personal en 90 días
-                  </p>
+                  <p className="text-base md:text-lg lg:text-xl text-white/95 leading-relaxed">Para Directores y Dueños que están atrapados por su empresa y quieren recuperar su vida personal en 90 días
+
+                </p>
                   <div className="mt-3 pt-3 border-t border-white/10">
                     <p className="text-sm md:text-base lg:text-lg text-brand-yellow font-semibold">
                       <Clock className="inline h-4 w-4 mr-1" />
@@ -264,7 +264,7 @@ const Hero: React.FC = memo(() => {
                 
                 <div className="bg-white/5 backdrop-blur-sm rounded-lg md:rounded-xl p-4 md:p-6 border border-white/10 hover:border-brand-yellow/50 transition-all group">
                   <Clock className="h-8 w-8 md:h-10 md:w-10 text-brand-yellow mb-2 md:mb-3 mx-auto" />
-                  <p className="text-base md:text-lg font-semibold text-brand-yellow mb-1 md:mb-2">En 3 Minutos</p>
+                  <p className="text-base md:text-lg font-semibold text-brand-yellow mb-1 md:mb-2">En 30 Minutos</p>
                   <p className="text-xs md:text-sm text-white/70">Resultados instantáneos</p>
                 </div>
                 
@@ -299,7 +299,7 @@ const Hero: React.FC = memo(() => {
                   </div>
                   <p className="text-xl md:text-2xl font-bold text-brand-yellow">Claudio Flores</p>
                 </div>
-                <p className="text-sm md:text-base text-white/90 font-medium mb-2 md:mb-3">Consultor Estratégico | Creador del Método P.U.D.E.R.</p>
+                <p className="text-sm md:text-base text-white/90 font-medium mb-2 md:mb-3">Gestión Estratégica | Creador del Método P.U.D.E.R.</p>
                 <div className="flex items-center justify-center gap-2 flex-wrap text-xs md:text-sm text-white/70">
                   <span className="flex items-center gap-1">
                     <Award className="h-3 w-3" />
