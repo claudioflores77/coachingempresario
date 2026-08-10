@@ -8,7 +8,7 @@ const AboutMethod: React.FC = () => {
       <div className="container">
         <div className="text-center max-w-4xl mx-auto mb-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            El Método <span className="text-consulting-gold">P.U.D.E.R.</span>
+            El Método <span className="text-consulting-gold">P.U.D.E.R.®</span>
           </h1>
           <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-consulting-navy">
             El Sistema Que YA Liberó a 270+ Empresarios
@@ -24,7 +24,7 @@ const AboutMethod: React.FC = () => {
 
         <div className="bg-consulting-gray-light p-6 rounded-lg mb-6">
           <h3 className="text-xl font-bold mb-4 text-consulting-navy">
-            P.U.D.E.R.: <span className="text-consulting-blue">Plan, Único, Desarrollo, Estándar, Repetir</span>
+            P.U.D.E.R.®: <span className="text-consulting-blue">Plan, Único, Desarrollo, Estándar, Repetir</span>
           </h3>
           <p className="text-lg text-consulting-gray">
             Un sistema probado con 270+ empresarios en 17 países que convierte tu negocio caótico
