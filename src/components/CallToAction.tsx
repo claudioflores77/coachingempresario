@@ -13,7 +13,7 @@ const CallToAction: React.FC = () => {
               </span>
               <h2 className="text-3xl font-bold mb-4">¿Listo para Recuperar Tu Vida Personal?</h2>
               <p className="text-lg text-consulting-gray mb-6">
-                No elijas entre tu negocio y tu vida. Con el Método P.U.D.E.R. tienes ambos.<br />
+                No elijas entre tu negocio y tu vida. Con el Método P.U.D.E.R.® tienes ambos.<br />
                 <span className="font-bold text-brand-red">Sesión Estratégica 100% GRATUITA</span> - Sin compromisos.
               </p>
 
@@ -59,7 +59,7 @@ const CallToAction: React.FC = () => {
               <div className="mb-8">
                 <p className="text-gray-300 italic mb-6">
                   "Mi misión es ayudar a empresarios como vos a construir negocios que funcionen
-                  sin su presencia constante, permitiéndoles recuperar su tiempo
+                  sin su presencia constante, permitiéndoles recuperar su tiempo, sus relaciones
                   y disfrutar de la vida que merecen."
                 </p>
               </div>
@@ -105,7 +105,7 @@ const CallToAction: React.FC = () => {
                 <ul className="space-y-2">
                   <li>
                     <a
-                      href="https://www.instagram.com/claudio.flores.negocios/"
+                      href="https://www.instagram.com/empresario.consultor/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-blue-300 hover:text-blue-100 transition-colors"
