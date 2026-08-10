@@ -13,7 +13,7 @@ const FAQ: React.FC = () => {
   const faqData: FAQItem[] = [
     {
       question: "¿Cómo sé si esto es para mí?",
-      answer: "El Método P.U.D.E.R. es ideal para ti si: (1) Trabajas más de 50 horas semanales pero sientes que tu negocio no crece proporcionalmente, (2) Tu empresa depende completamente de ti y no puede funcionar sin tu presencia constante, (3) Estás sacrificando tu vida personal y familiar por el negocio, (4) Quieres aumentar la rentabilidad sin aumentar tus horas de trabajo. Si te identificas con al menos 2 de estos puntos esto es para ti. En 17 años hemos ayudado a más de 500 empresarios en 22 países que estaban exactamente en tu situación.",
+      answer: "El Método P.U.D.E.R. es ideal para ti si: (1) Trabajas más de 50 horas semanales pero sientes que tu negocio no crece proporcionalmente, (2) Tu empresa depende completamente de ti y no puede funcionar sin tu presencia constante, (3) Estás sacrificando tu vida personal y familiar por el negocio, (4) Quieres aumentar la rentabilidad sin aumentar tus horas de trabajo. Si te identificas con al menos 2 de estos puntos esto es para ti. En 17 años hemos ayudado a más de 270 empresarios en 17 países que estaban exactamente en tu situación.",
       category: 'general'
     },
     {
@@ -23,7 +23,7 @@ const FAQ: React.FC = () => {
     },
     {
       question: "¿En cuánto tiempo voy a ver resultados concretos?",
-      answer: "Los primeros resultados tangibles aparecen en 90 días, aunque muchos clientes reportan cambios significativos en las primeras 4-6 semanas. En el primer mes implementamos sistemas básicos que te liberan 5-10 horas semanales. Al segundo mes, comenzamos el desarrollo de tu equipo y procesos automatizados. Al tercer mes, ya tienes un negocio que funciona con menos dependencia de ti. A los 6 meses, el promedio de reducción de horas es del 50% con un incremento del 40% en rentabilidad. Esto no es magia, es metodología probada en 500+ empresas.",
+      answer: "Los primeros resultados tangibles aparecen en 90 días, aunque muchos clientes reportan cambios significativos en las primeras 4-6 semanas. En el primer mes implementamos sistemas básicos que te liberan 5-10 horas semanales. Al segundo mes, comenzamos el desarrollo de tu equipo y procesos automatizados. Al tercer mes, ya tienes un negocio que funciona con menos dependencia de ti. A los 6 meses, el promedio de reducción de horas es del 50% con un incremento del 40% en rentabilidad. Esto no es magia, es metodología probada en 270+ empresas.",
       category: 'results'
     },
     {
@@ -33,12 +33,12 @@ const FAQ: React.FC = () => {
     },
     {
       question: "¿Qué hace diferente a su Sistema de trabajo, respecto de otros programas?",
-      answer: "El Método P.U.D.E.R. no es teoría genérica, es un sistema específico diseñado por y para empresarios atrapados en su negocio. Las 5 diferencias clave son: (1) PERSONALIZACIÓN TOTAL: No hay dos empresas iguales, adaptamos TODO a tu realidad, (2) IMPLEMENTACIÓN PRÁCTICA: No solo consultamos, implementamos contigo paso a paso, (3) RESULTADOS MEDIBLES: Reducción de horas y aumento de rentabilidad verificables, (4) ACOMPAÑAMIENTO DIRECTO: Trabajas directamente conmigo, no con un equipo de juniors, (5) GARANTÍA DE RESULTADOS: Si sigues el método y no ves resultados en 90 días, trabajamos gratis hasta que los veas. 17 años de experiencia y 500+ casos de éxito nos respaldan.",
+      answer: "El Método P.U.D.E.R. no es teoría genérica, es un sistema específico diseñado por y para empresarios atrapados en su negocio. Las 5 diferencias clave son: (1) PERSONALIZACIÓN TOTAL: No hay dos empresas iguales, adaptamos TODO a tu realidad, (2) IMPLEMENTACIÓN PRÁCTICA: No solo consultamos, implementamos contigo paso a paso, (3) RESULTADOS MEDIBLES: Reducción de horas y aumento de rentabilidad verificables, (4) ACOMPAÑAMIENTO DIRECTO: Trabajas directamente conmigo, no con un equipo de juniors, (5) GARANTÍA DE RESULTADOS: Si sigues el método y no ves resultados en 90 días, trabajamos gratis hasta que los veas. 17 años de experiencia y 270+ casos de éxito nos respaldan.",
       category: 'method'
     },
     {
       question: "¿Funciona esto en mi industria?",
-      answer: "Sí. Nuestro Método ha funcionado exitosamente en más de 40 industrias diferentes en 22 países diferentes. Desde empresas de servicios profesionales (consultoría, contabilidad, legal) hasta manufactura, comercio, tecnología, salud, educación, construcción, y más. Los principios del método son universales: planificación estratégica, diferenciación, sistemas automatizados, desarrollo de equipos y escalamiento. Lo que cambia es la APLICACIÓN específica a tu industria, y eso es exactamente lo que personalizamos en tu caso. Cada cliente recibe una adaptación del método diseñada para su sector y sus desafíos particulares.",
+      answer: "Sí. Nuestro Método ha funcionado exitosamente en más de 40 industrias diferentes en 17 países diferentes. Desde empresas de servicios profesionales (consultoría, contabilidad, legal) hasta manufactura, comercio, tecnología, salud, educación, construcción, y más. Los principios del método son universales: planificación estratégica, diferenciación, sistemas automatizados, desarrollo de equipos y escalamiento. Lo que cambia es la APLICACIÓN específica a tu industria, y eso es exactamente lo que personalizamos en tu caso. Cada cliente recibe una adaptación del método diseñada para su sector y sus desafíos particulares.",
       category: 'method'
     },
     {
@@ -53,7 +53,7 @@ const FAQ: React.FC = () => {
     },
     {
       question: "¿Qué garantías tengo de que esto va a funcionar en mi caso?",
-      answer: "Ofrecemos una garantía clara y directa: Si implementas las acciones siguiendo nuestras recomendaciones y no ves una reducción mínima del 30% en tus horas de trabajo o un aumento de tu rentabilidad en los primeros 90 días, continuamos trabajando contigo SIN COSTO ADICIONAL hasta lograr esos resultados. Además, si en los primeros 30 días decides que el método no es para ti, te devolvemos el 100% de tu inversión sin preguntas. Llevamos 17 años en el mercado y hemos transformado 500+ empresas. Nuestra reputación está en juego. No podemos garantizar resultados mágicos de la noche a la mañana, pero SÍ garantizamos que si haces tu parte, verás resultados medibles y significativos.",
+      answer: "Ofrecemos una garantía clara y directa: Si implementas las acciones siguiendo nuestras recomendaciones y no ves una reducción mínima del 30% en tus horas de trabajo o un aumento de tu rentabilidad en los primeros 90 días, continuamos trabajando contigo SIN COSTO ADICIONAL hasta lograr esos resultados. Además, si en los primeros 30 días decides que el método no es para ti, te devolvemos el 100% de tu inversión sin preguntas. Llevamos 17 años en el mercado y hemos transformado 270+ empresas. Nuestra reputación está en juego. No podemos garantizar resultados mágicos de la noche a la mañana, pero SÍ garantizamos que si haces tu parte, verás resultados medibles y significativos.",
       category: 'results'
     },
     {
@@ -223,8 +223,8 @@ const FAQ: React.FC = () => {
         {/* Información adicional */}
         <div className="mt-8 text-center text-sm text-gray-600">
           <p>
-            Más de <span className="font-bold text-consulting-blue">500 empresarios</span> en{' '}
-            <span className="font-bold text-consulting-blue">22 países</span> ya transformaron sus empresas con P.U.D.E.R.
+            Más de <span className="font-bold text-consulting-blue">270 empresarios</span> en{' '}
+            <span className="font-bold text-consulting-blue">17 países</span> ya transformaron sus empresas con P.U.D.E.R.
           </p>
         </div>
       </div>
