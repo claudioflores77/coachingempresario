@@ -8,8 +8,8 @@ const PersonSchema: React.FC = () => {
     "name": "Claudio Flores",
     "jobTitle": "Consultor Estratégico Empresarial",
     "description": "Especialista en transformación empresarial con 17 años de experiencia y más de 500 empresas transformadas utilizando el Método P.U.D.E.R.",
-    "url": "https://claudioflores.lovable.app",
-    "image": "https://claudioflores.lovable.app/lovable-uploads/135f3f99-d5f9-4f4d-8213-675e650f3f18.png",
+    "url": "https://coachingempresario.lovable.app",
+    "image": "https://coachingempresario.lovable.app/lovable-uploads/135f3f99-d5f9-4f4d-8213-675e650f3f18.png",
     "worksFor": {
       "@type": "Organization",
       "name": "Claudio Flores Consultoría Empresarial"
