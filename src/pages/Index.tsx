@@ -15,8 +15,7 @@ const Testimonials = lazy(() => import('../components/Testimonials'));
 const FAQ = lazy(() => import('../components/FAQ'));
 const BackToTop = lazy(() => import('../components/BackToTop'));
 const NotificationSystem = lazy(() => import('../components/NotificationSystem'));
-const PersonSchema = lazy(() => import('../components/PersonSchema'));
-const ContactSchema = lazy(() => import('../components/ContactSchema'));
+const UnifiedSchema = lazy(() => import('../components/UnifiedSchema'));
 const SEOMonitoring = lazy(() => import('../components/SEOMonitoring'));
 
 interface Notification {
@@ -98,8 +97,7 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Suspense fallback={null}>
-        <PersonSchema />
-        <ContactSchema />
+        <UnifiedSchema />
         <SEOMonitoring />
       </Suspense>
       

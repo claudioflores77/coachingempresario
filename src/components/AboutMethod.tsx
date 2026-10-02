@@ -7,12 +7,12 @@ const AboutMethod: React.FC = () => {
     <section id="sobre-metodo" className="section bg-white">
       <div className="container">
         <div className="text-center max-w-4xl mx-auto mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
             El Método <span className="text-consulting-gold">P.U.D.E.R.®</span>
-          </h1>
-          <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-consulting-navy">
-            El Sistema Que YA Liberó a 270+ Empresarios
           </h2>
+          <h3 className="text-2xl md:text-3xl font-semibold mb-6 text-consulting-navy">
+            El Sistema Que YA Liberó a 270+ Empresarios
+          </h3>
           <p className="text-xl text-consulting-gray mb-6">
             Transforma tu empresa para que trabaje para ti. Hasta 40% más rentabilidad, 50% menos horas.
           </p>
