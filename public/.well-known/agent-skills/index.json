@@ -1,0 +1,12 @@
+{
+  "$schema": "https://agentskills.io/schema/v0.2.0/agent-skills.json",
+  "skills": [
+    {
+      "name": "business-coaching-puder",
+      "type": "coaching",
+      "description": "Consultation and information retrieval regarding the Método P.U.D.E.R. business coaching framework.",
+      "url": "https://coachingempresario.lovable.app/.well-known/agent-skills/business-coaching/SKILL.md",
+      "sha256": "4a73e3a47d2f9bc6e11894a896d860d5bf45b1237e16cb030a00e572013f9c63"
+    }
+  ]
+}

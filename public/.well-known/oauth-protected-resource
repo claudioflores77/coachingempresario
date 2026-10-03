@@ -1,0 +1,14 @@
+{
+  "resource": "https://coachingempresario.lovable.app",
+  "authorization_servers": [
+    "https://coachingempresario.lovable.app"
+  ],
+  "scopes_supported": [
+    "public",
+    "consultation_booking"
+  ],
+  "bearer_methods_supported": [
+    "header"
+  ],
+  "resource_documentation": "https://coachingempresario.lovable.app/auth.md"
+}

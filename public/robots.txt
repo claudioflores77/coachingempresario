@@ -96,3 +96,6 @@ Sitemap: https://coachingempresario.lovable.app/sitemap.xml
 
 # Crawl-delay para crawling respetuoso
 Crawl-delay: 1
+
+# === CONTENT SIGNALS FOR AI ===
+Content-Signal: ai-train=yes, search=yes, ai-input=yes

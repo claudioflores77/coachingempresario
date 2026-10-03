@@ -1,0 +1,42 @@
+{
+  "specVersion": "1.0.0",
+  "host": {
+    "name": "Claudio Flores Consultoría Empresarial",
+    "domain": "coachingempresario.lovable.app",
+    "description": "Consultoría estratégica empresarial con el Método P.U.D.E.R. para optimización y automatización de empresas."
+  },
+  "entries": [
+    {
+      "id": "urn:air:coachingempresario.lovable.app:services:metodo-puder",
+      "displayName": "Método P.U.D.E.R. Business Consulting Overview",
+      "type": "text/html",
+      "url": "https://coachingempresario.lovable.app/#metodo-puder-resumen",
+      "representativeQueries": [
+        "¿Qué es el Método PUDER de Claudio Flores?",
+        "Cómo reducir horas de trabajo y aumentar rentabilidad empresarial",
+        "Servicios de consultoría estratégica y coaching para empresarios"
+      ]
+    },
+    {
+      "id": "urn:air:coachingempresario.lovable.app:mcp:server-card",
+      "displayName": "MCP Server Card Specification",
+      "type": "application/json",
+      "url": "https://coachingempresario.lovable.app/.well-known/mcp/server-card.json",
+      "representativeQueries": [
+        "MCP server tools for coaching empresario",
+        "Model Context Protocol capabilities for Claudio Flores website",
+        "WebMCP tools for business coaching consultation"
+      ]
+    },
+    {
+      "id": "urn:air:coachingempresario.lovable.app:skills:index",
+      "displayName": "Agent Skills Discovery Index",
+      "type": "application/json",
+      "url": "https://coachingempresario.lovable.app/.well-known/agent-skills/index.json",
+      "representativeQueries": [
+        "Agent skills index for business coaching",
+        "Skills list for Claudio Flores AI agent integration"
+      ]
+    }
+  ]
+}

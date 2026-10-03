@@ -9,6 +9,7 @@ import Footer from '../components/Footer';
 import BreadcrumbNav from '../components/BreadcrumbNav';
 import LoadingSpinner from '../components/LoadingSpinner';
 import StickyButton from '../components/StickyButton'; // NUEVO
+import WebMCPInitializer from '../components/WebMCPInitializer';
 
 // Lazy load non-critical components
 const Testimonials = lazy(() => import('../components/Testimonials'));
@@ -96,6 +97,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <WebMCPInitializer />
       <Suspense fallback={null}>
         <UnifiedSchema />
         <SEOMonitoring />
