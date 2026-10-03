@@ -1,0 +1,25 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://coachingempresario.lovable.app/",
+      "service-desc": [
+        {
+          "href": "https://coachingempresario.lovable.app/.well-known/ai-catalog.json",
+          "type": "application/json"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://coachingempresario.lovable.app/auth.md",
+          "type": "text/markdown"
+        }
+      ],
+      "status": [
+        {
+          "href": "https://coachingempresario.lovable.app/",
+          "type": "text/html"
+        }
+      ]
+    }
+  ]
+}

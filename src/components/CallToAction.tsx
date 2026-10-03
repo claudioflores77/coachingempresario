@@ -41,13 +41,41 @@ const CallToAction: React.FC = () => {
                 </ul>
               </div>
 
-              {/* ACCIÓN 4: CTA UNIFICADO */}
-              <a
-                href="https://estrategiaempresaria.systeme.io/sesionestrategica1a1"
-                className="block w-full text-center bg-brand-red text-white font-bold py-4 px-6 rounded-xl hover:bg-red-700 transition-colors text-lg mb-3"
+              {/* ACCIÓN 4: CTA UNIFICADO Y FORMULARIO DECLARATIVO WEBMCP */}
+              <form
+                action="https://estrategiaempresaria.systeme.io/sesionestrategica1a1"
+                method="GET"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mb-3 space-y-3"
+                {...{
+                  toolname: "agendar_sesion_estrategica",
+                  tooldescription: "Formulario para solicitar la Sesión Estratégica Gratuita de 45 minutos con Claudio Flores"
+                }}
               >
-                Agenda Tu Sesión Estratégica GRATUITA
-              </a>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <input
+                    type="text"
+                    name="nombre"
+                    placeholder="Tu nombre completo"
+                    className="w-full px-3 py-2 border rounded-lg text-sm text-gray-800"
+                    {...{ toolparamdescription: "Nombre completo del empresario o directivo" }}
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Tu correo electrónico"
+                    className="w-full px-3 py-2 border rounded-lg text-sm text-gray-800"
+                    {...{ toolparamdescription: "Correo electrónico de contacto" }}
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="w-full text-center bg-brand-red text-white font-bold py-4 px-6 rounded-xl hover:bg-red-700 transition-colors text-lg"
+                >
+                  Agenda Tu Sesión Estratégica GRATUITA
+                </button>
+              </form>
               <p className="text-center text-sm text-consulting-gray">
                 45 minutos &nbsp;•&nbsp; Sin compromiso &nbsp;•&nbsp; Valor $250 USD
               </p>

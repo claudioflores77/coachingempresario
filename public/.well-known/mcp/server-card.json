@@ -1,0 +1,24 @@
+{
+  "$schema": "https://modelcontextprotocol.io/schemas/mcp-server-card.json",
+  "serverInfo": {
+    "name": "Claudio Flores Consultoria Empresarial MCP Server",
+    "version": "1.0.0",
+    "description": "MCP Server providing agent tools to consult Método P.U.D.E.R. business coaching information, FAQs, and request strategic sessions."
+  },
+  "transport": {
+    "type": "webmcp",
+    "endpoint": "https://coachingempresario.lovable.app/"
+  },
+  "capabilities": {
+    "tools": {
+      "listChanged": false
+    },
+    "resources": {
+      "subscribe": false,
+      "listChanged": false
+    },
+    "prompts": {
+      "listChanged": false
+    }
+  }
+}
